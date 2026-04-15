@@ -28,7 +28,6 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
   gameStats,
   isSelected,
   onOpenDetails,
-  classTypeName,
   onSelect
 }) => {
   return (
