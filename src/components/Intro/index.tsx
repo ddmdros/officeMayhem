@@ -3,7 +3,6 @@ import './Intro.css';
 const Intro = () => {
   return (
     <section className="snap-section story-section">
-      <div className="story-content">
         <div className="story-body">
         <h2 className="brand-title  text-shadow">São Paulo, Brazil.</h2>
           <p className="narrative-text">
@@ -32,7 +31,6 @@ const Intro = () => {
             Choose your team wisely. The climb begins now.
           </p>
         </div>
-      </div>
 
     </section>
   );

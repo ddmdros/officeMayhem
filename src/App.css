@@ -13,13 +13,10 @@ html, body, #root {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    background-color: var(--main-purple);
 
     scrollbar-width: none;
     -ms-overflow-style: none;
-    background-image: url(https://media.ffycdn.net/eu/supercell/is3tMt7AUHHdmKxh2aVH.png?width=2400);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat; 
 }
 
 .snap-container::-webkit-scrollbar{
