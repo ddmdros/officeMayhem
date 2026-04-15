@@ -1,0 +1,88 @@
+/* EncounterRoom.css */
+.result-stress-bad { color: #ff4747; font-weight: bold; }
+.result-stress-good { color: #47ff7e; font-weight: bold; }
+.result-caffeine { color: #47ccff; font-weight: bold; }
+
+
+.choice-card {
+    background: rgba(30, 10, 50, 0.85); 
+    border: 3px solid #444;
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.choice-card:hover {
+    border-color: #FFD700;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background: rgba(50, 20, 80, 0.95);
+}
+
+.brawler-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brawler-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    background: #000;
+}
+
+.brawler-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.class-badge {
+    font-size: 0.7rem;
+    background: #FFD700;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.action-details {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 10px;
+}
+
+.action-label {
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.action-effect {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.result-preview {
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.text-red { color: #ff4747; }
+.text-green { color: #47ff7e; }
+.energy-gain { color: #47ccff; }

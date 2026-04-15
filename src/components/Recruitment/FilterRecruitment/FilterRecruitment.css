@@ -1,0 +1,70 @@
+.filter-wrapper {
+    background: rgba(15, 5, 26, 0.9);
+    border: 2px solid var(--purple-light);
+    border-radius: 15px;
+    padding: 20px;
+    width: 95%;
+    max-width: 800px;
+    margin: 15px auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    font-family: 'BrawlStars-Main', sans-serif;
+    color: var(--yellow-brawler);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.search-group { flex: 2; }
+.cost-group { flex: 1.5; }
+.class-group { flex: 1.5; }
+
+/* inputs */
+.filter-group input[type="text"],
+.filter-group select {
+    background: #000;
+    border: 2px solid var(--purple-light);
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-family: inherit;
+    outline: none;
+}
+
+.filter-group input[type="text"]:focus {
+    border-color: var(--yellow-brawler);
+}
+
+/* Slider (Range) */
+.filter-group input[type="range"] {
+    accent-color: var(--yellow-brawler);
+    cursor: pointer;
+}
+
+.range-steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    color: #666;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .filter-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+}

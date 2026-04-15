@@ -1,0 +1,111 @@
+.dialogue-screen{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 40px;
+    background: rgba(15, 5, 26, 0.95); 
+    border-top: 5px solid var(--yellow-brawler);
+    height: 30%;
+    cursor: pointer;
+}
+
+.portrait-area img{
+    height: 150px;
+}
+
+.dialogue-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+.character-name {
+    display: block;
+    color: var(--yellow-brawler);
+    font-family: 'BrawlStars-Main', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.dialogue-text {
+    color: white;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 300;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.portrait-area{
+
+    padding: 45px 30px;
+    flex-wrap: wrap;
+        
+}
+
+
+.next-indicator {
+    position: absolute;
+    font-weight: bold;
+    bottom: 20px;
+    right: 40px;
+    color: var(--yellow-brawler);
+    animation: blink 1s infinite;
+    animation: bounce 1s infinite;
+    font-size: 0.8rem;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+@media screen and (max-width: 768px){
+
+    .character-name{
+        font-size: 1rem;
+    }
+
+    .portrait-area{
+        padding: 55px 30px;
+        flex-wrap: wrap;
+    }
+
+    .dialogue-text {
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    font-weight: 300;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    }
+    .dialogue-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    flex-wrap: wrap;
+    padding-right: 10px;
+    }
+    .portrait-area img{
+    height: 80px;
+    }
+
+}

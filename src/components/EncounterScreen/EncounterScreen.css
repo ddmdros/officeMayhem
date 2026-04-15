@@ -1,0 +1,111 @@
+.encounter-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #2a0a4d 0%, #10051a 100%);
+    padding: 20px;
+    color: white;
+}
+
+.encounter-content {
+    scrollbar-width: none;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.encounter-title {
+    font-family: var(--font-main), sans-serif; 
+    font-size: 2.5rem;
+    color: var(--yellow-brawler);
+    text-shadow: 3px 3px 0px #000;
+    margin-bottom: 10px;
+}
+
+.encounter-desc {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.choices-grid {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--white-main);
+}
+
+
+.status-bar {
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* width: 70%; */
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 30px;
+    border-radius: 15px;
+    border: 3px solid #000;
+    box-shadow: 0 8px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.stress-meter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 45%;
+}
+
+.stress-meter span {
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 1px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px; 
+    background: #1a052d;
+    border: 2px solid #000;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(to bottom, #ff4b4b, #a30000); 
+    border-right: 2px solid rgba(255,255,255,0.3);
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff4747, #ff9147);
+    transition: width 0.5s ease-in-out;
+}
+
+.energy-meter {
+    background: linear-gradient(180deg, #47ccff 0%, #0055ff 100%);
+    border: 3px solid #000;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 3px 3px 0px #000;
+    box-shadow: 0 4px 0px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

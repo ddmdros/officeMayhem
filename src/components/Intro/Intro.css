@@ -1,0 +1,85 @@
+.story-section{
+    background: radial-gradient(circle, var(--purple-main) 0%, var(--purple-dark) 100%);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .story-section {
+        padding: 80px 20px;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        background: none;
+        background-color: var(--purple-dark);
+    }
+    
+}
+
+.story-body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.story-content .brand-title{
+    font-family: 'BrawlStars-Main', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    line-height: 1;
+
+    color: var(--yellow-brawler);
+    text-shadow: 3px 3px 0px #000; 
+    -webkit-text-fill-color: initial;
+    background: none;
+}
+
+.narrative-text {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+.rules-box {
+    background-color: var(--purple-main);
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.rules-box h3 {
+    font-size: 1.4rem;
+    color: var(--yellow-brawler);
+    text-shadow: 3px 3px 0px var(--purple-dark); 
+
+}
+
+.rules-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-box li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.rules-box li strong {
+    /* color: var(--red-brawler); */
+    border-bottom: 2px dashed var(--yellow-brawler);
+    text-transform: uppercase;
+}
+
+.rules-box li span {
+    color: var(--yellow-brawler);
+}
+
+.call-to-action {
+    font-family: 'BrawlStars-Main', sans-serif;
+    color: var(--yellow-brawler);
+    border: none;
+    font-size: 1.3rem;
+}
+

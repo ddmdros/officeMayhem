@@ -1,0 +1,54 @@
+
+* {
+    scrollbar-width: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+*::-webkit-scrollbar {
+    display: none !important;
+}
+
+@font-face {
+  font-family: 'BrawlStars-Main';
+  src: url('./assets/fonts/lilitaone-regular-webfont\ \(2\).ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrawlStars-Secondary';
+  src: url('./assets/fonts/nougat-extrablack-webfont\ \(2\).ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-main: 'BrawlStars-Main', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-tech: 'Roboto Mono', monospace;
+  --white-main: #f9e8ce;
+  --white-light: rgba(124, 114, 123, 0.8);
+  --purple-main: #6522a6;
+  --purple-dark: #31174a;
+  --purple-light: #7a2fd6;
+
+  --red-brawler: #ff4747;
+  --yellow-brawler: #fecb00;
+  --blue-bg: #0b1422;
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6; 
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  background-color: var(--purple-dark);
+  backdrop-filter: brightness(0.8);
+}
+
+
