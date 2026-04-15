@@ -6,7 +6,6 @@ interface BrawlerCardProps {
   gameStats: {
     efficiency: number;
     resilience: number;
-    caffeine: number;
     special: string;
   };
   isSelected: boolean;
@@ -35,10 +34,6 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
       className={`brawler-card ${isSelected ? 'card-selected' : ''}`}
       onClick={onSelect}
     >
-
-      <div className="card-energy-cost">
-        {gameStats.caffeine}
-      </div>
   
       <div className="card-image-container">
         <img src={imageUrl} alt={name} className="brawler-img" />
@@ -68,5 +63,6 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
 
     </div>
   );
-}; // Fechamento correto do componente
+}; 
+
 export default BrawlerCard;

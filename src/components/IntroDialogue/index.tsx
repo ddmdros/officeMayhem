@@ -8,35 +8,41 @@ const MINA_IMAGES = {
     sad: "https://media.ffycdn.net/eu/supercell/RS476M78pHpz3trKdEqh.png?width=2400",
     phew: "https://media.ffycdn.net/eu/supercell/JYUzckQ3H668Lj32hRUz.png?width=2400",
     facePalm: "https://media.ffycdn.net/eu/supercell/k7Cp4Ro6agLbxK1f6qqm.png?width=2400",
-    thanks: "https://media.ffycdn.net/eu/supercell/oYQj3JvPtBWTmqFwkzeQ.png?width=2400",
+    thanks: "https://media.ffycdn.net/eu/supercell/oYj3JvPtBWTmqFwkzeQ.png?width=2400",
     clap: "https://media.ffycdn.net/eu/supercell/oYSe1fznh2GAvtCUJ2nk.png?width=2400",
     angry: "https://media.ffycdn.net/eu/supercell/RPcZGHbhrYvWiUdHdRcM.png?width=2400"
 };
 
-const DIALOGUES = [
-    {
-        text: "Listen up, intern! The HR coffee machine just exploded, and the São Paulo office has turned into a total Battle Royale.",
-        character: "Mina",
-        image: MINA_IMAGES.regular
-    },
-    {
-        text: "We need to get to the 13th floor, but the emergency brakes kicked in. We're stuck in this elevator!",
-        character: "Mina",
-        image: MINA_IMAGES.sad 
-    },
-    {
-        text: "One of your specialists needs to get us out of here. Choose wisely—every action has a cost!",
-        character: "Mina",
-        image: MINA_IMAGES.gg
-    }
-];
+type DialogueKey = 'intro' | 'elevator_crisis' | 'performance_review';
 
-const IntroDialogue = ({ onFinish }: { onFinish: () => void }) => {
+const DIALOGUES: Record<DialogueKey, { name: string; text: string; image: string }[]> = {
+  intro: [
+    { name: "Mina", text: "Welcome to the Brazil Branch! Don't touch the walls, they're wet.", image: MINA_IMAGES.regular },
+    { name: "Mina", text: "First, we need to assemble a team that can actually read a spreadsheet.", image: MINA_IMAGES.happy }
+  ],
+  elevator_crisis: [
+    { name: "Mina", text: "Great team! Now... BAD NEWS. The elevator is possessed by a 1990s printer demon.", image: MINA_IMAGES.facePalm },
+    { name: "Mina", text: "We're taking the stairs. Get ready.", image: MINA_IMAGES.angry }
+  ],
+  performance_review: [
+    { name: "Mina", text: "Not bad! You guys actually survived the first floor. I'm impressed... and $50 richer from a bet.", image: MINA_IMAGES.gg }
+  ]
+};
+
+interface IntroDialogueProps {
+    scriptType: 'intro' | 'elevator_crisis' | 'performance_review';
+    onFinish: () => void;
+}
+
+const IntroDialogue = ({ scriptType, onFinish }: IntroDialogueProps) => {
     const [index, setIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [isTyping, setIsTyping] = useState(true);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-    const currentFullText = DIALOGUES[index].text;
+
+    // Pega a lista de falas baseada no tipo passado por prop
+    const currentScript = DIALOGUES[scriptType];
+    const currentLine = currentScript[index];
 
     const stopTyping = () => {
         if (timerRef.current) {
@@ -54,23 +60,24 @@ const IntroDialogue = ({ onFinish }: { onFinish: () => void }) => {
         if (timerRef.current) clearInterval(timerRef.current);
 
         timerRef.current = setInterval(() => {
-            setDisplayedText(currentFullText.slice(0, i + 1));
+            setDisplayedText(currentLine.text.slice(0, i + 1));
             i++;
 
-            if (i >= currentFullText.length) {
+            if (i >= currentLine.text.length) {
                 stopTyping();
             }
         }, 30);
 
         return () => stopTyping();
-    }, [index, currentFullText]);
+    }, [index, currentLine.text]);
 
     const handleNext = () => {
         if (isTyping) {
             stopTyping();
-            setDisplayedText(currentFullText);
+            setDisplayedText(currentLine.text);
         } else {
-            if (index < DIALOGUES.length - 1) {
+            // Verifica o tamanho da lista correta
+            if (index < currentScript.length - 1) {
                 setIndex(prev => prev + 1);
             } else {
                 onFinish();
@@ -80,19 +87,18 @@ const IntroDialogue = ({ onFinish }: { onFinish: () => void }) => {
 
     return (
         <div className="dialogue-screen" onClick={handleNext}>
-                <div className="portrait-area">
-                    <img
-                        src={DIALOGUES[index].image}
-                        alt="Mina HR"
-                        className="mina-portrait"
-                        key={index}
-                    />
-                </div>
+            <div className="portrait-area">
+                <img
+                    src={currentLine.image}
+                    alt="Mina HR"
+                    className="mina-portrait"
+                    key={currentLine.image} // Key muda para resetar animação da imagem
+                />
+            </div>
                 
             <div className="dialogue-box">
-
                 <span className="character-name">
-                    {DIALOGUES[index].character} | Starr Corp HR
+                    {currentLine.name} | Starr Corp HR
                 </span>
                 <p className="dialogue-text">{displayedText}</p>
 

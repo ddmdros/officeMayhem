@@ -19,15 +19,14 @@ const cleanBrawlText = (text: string) => {
 }
 
 
-type GameScene = "RECRUITING" | "DIALOGUE" | "ENCOUNTER" | "BOSS";
-
+type GameScene = "START" | "INTRO_DIALOGUE" | "RECRUITING" | "PRE_ENCOUNTER_DIALOGUE" | "ENCOUNTER" | "POST_ENCOUNTER_DIALOGUE" | "BOSS";
 function App() {
     const [brawlers, setBrawlers] = useState<any[]>([]);
     const [selectedTeam, setSelectedTeam] = useState<any[]>([]);
     const [viewingBrawler, setViewingBrawler] = useState<any | null>(null);
-    const [currentScene, setCurrentScene] = useState<GameScene>('RECRUITING');
-    const [stress, setStress] = useState(0);
-    const [energy, setEnergy] = useState(3);
+    const [currentScene, setCurrentScene] = useState<GameScene>('START');
+    const [overtime, setOvertime] = useState(0);
+    const [chaos, setChaos] = useState(0);
     const [encounterIndex, setEncounterIndex] = useState(0);
 
     useEffect(() => {
@@ -95,64 +94,67 @@ function App() {
     }
 
     const handleChoice = (result: any) => {
-        setStress(prev => Math.max(0, Math.min(100, prev + (result.stress || 0))));
-        setEnergy(prev => Math.max(0, prev + (result.energy || 0)));
 
-        if (encounterIndex < Encounter.length - 1) {
-            setEncounterIndex(prev => prev + 1);
-        } else {
-            setCurrentScene("BOSS");
-        }
+        setOvertime(prev => Math.max(0, Math.min(100, prev + (result.overtime || 0))));
+        setChaos(prev => Math.max(0, Math.min(100, prev + (result.chaos || 0))));
+
+        setCurrentScene("POST_ENCOUNTER_DIALOGUE");
     };
 
 
     return (
         <main className='snap-container'>
-            {currentScene === "RECRUITING" && (
+            {currentScene === "START" && (
                 <>
-
                     <Banner
                         title="STARR CORP: OFFICE MAYHEM"
                         tagline="An interactive fan-made strategy experience powered by the Brawl Stars API."
                     />
+                    <Intro onStart={() => setCurrentScene("INTRO_DIALOGUE")} />
+                </>
+            )}
 
-                    <Intro />
+            {currentScene === "INTRO_DIALOGUE" && (
+                <div className="game-container">
+                    <div className='blur-background'>
+                        <Recruitment brawlers={brawlers} selectedTeam={[]} toggleSelection={() => { }} onOpenDetails={() => { }} onStartMission={() => { }} />
+                    </div>
+                    <IntroDialogue
+                        scriptType="intro"
+                        onFinish={() => setCurrentScene("RECRUITING")} />
+                </div>
+            )}
 
-                    <Recruitment
+            {currentScene === "RECRUITING" && (
+                <Recruitment
                     brawlers={brawlers}
                     selectedTeam={selectedTeam}
                     toggleSelection={toggleSelection}
                     onOpenDetails={setViewingBrawler}
-                    onStartMission={() => setCurrentScene("DIALOGUE")}
-                    />
+                    onStartMission={() => setCurrentScene("PRE_ENCOUNTER_DIALOGUE")}
+                />
 
-                    {viewingBrawler && (
-                        <BrawlerModal
-                            brawler={viewingBrawler}
-                            onClose={() => setViewingBrawler(null)}
-                        />
-                    )}
-
-           
-                </>
             )}
 
-            {currentScene === "DIALOGUE" && (
+            {currentScene === "PRE_ENCOUNTER_DIALOGUE" && (
+
                 <div className="game-container">
-                    <div className='encounter-background-blur'>
-                        <IntroDialogue onFinish={() => setCurrentScene("ENCOUNTER")} />
+                    <div className='blur-background'>
+                        <section className='encounter-section'></section>
                     </div>
+                    <IntroDialogue
+                        scriptType="elevator_crisis"
+                        onFinish={() => setCurrentScene("ENCOUNTER")}
+                    />
                 </div>
             )}
 
 
             {currentScene === "ENCOUNTER" && (
                 <section className='encounter-section'>
-
                     <div className='encounter-container'>
                         <h2 className='encounter-title'>{Encounter[encounterIndex].title}</h2>
                         <p className='encounter-desc'>{Encounter[encounterIndex].description}</p>
-
                         <div className='choices-grid'>
                             {selectedTeam.map(brawler => (
                                 <EncounterRoom
@@ -165,23 +167,71 @@ function App() {
                         </div>
                     </div>
 
-                    <div className='status-bar'>
-                        <div className='stress-meter'>
-                            <span>STRESS LEVEL: {stress}%</span>
-                            <div className='progress-bar'><div className='fill' style={{ width: `${stress}%` }}></div></div>
+                    {/* HUD PERSISTENTE DENTRO DO ENCONTRO */}
+                    <div className='status-bar-minimal'>
+                        <div className='stat-item'>
+                            <div className='stat-header'>
+                                <span>OFFICE CHAOS</span>
+                                <span className={chaos > 70 ? 'danger-text' : ''}>{chaos}%</span>
+                            </div>
+                            <div className='stat-bar-bg'>
+                                <div className='stat-bar-fill chaos' style={{ width: `${chaos}%` }}></div>
+                            </div>
                         </div>
-                        <div className='energy-meter'>☕ {energy} ENERGY LEFT</div>
+                        <div className='stat-item'>
+                            <div className='stat-header'>
+                                <span>OVERTIME</span>
+                                <span className={overtime > 70 ? 'danger-text' : ''}>{overtime}%</span>
+                            </div>
+                            <div className='stat-bar-bg'>
+                                <div className='stat-bar-fill overtime' style={{ width: `${overtime}%` }}></div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             )}
 
+{currentScene === "POST_ENCOUNTER_DIALOGUE" && (
+                <div className="game-container">
+                    <div className='blur-background'>
+                        {/* Mostramos o HUD borrado ao fundo para dar continuidade */}
+                        <div className='status-bar-minimal' style={{position: 'absolute', bottom: '20px'}}>
+                             {/* ... mesmos itens de chaos/overtime ... */}
+                        </div>
+                    </div>
+                    <IntroDialogue
+                        scriptType="performance_review"
+                        onFinish={() => {
+                            // SÓ AQUI decidimos o futuro do jogador
+                            if (encounterIndex < Encounter.length - 1) {
+                                setEncounterIndex(prev => prev + 1);
+                                setCurrentScene("ENCOUNTER");
+                            } else {
+                                setCurrentScene("BOSS");
+                            }
+                        }}
+                    />
+                </div>
+            )}
+
+
+           {/* CENA: BOSS FINAL */}
             {currentScene === "BOSS" && (
                 <section className='boss-screen'>
                     <h2 className='brand-title'>FINAL BOSS: 8-BIT</h2>
-                    <p>Your team arrived with {stress}% Stress and {energy} Energy!</p>
+                    <p>Chaos: {chaos}% | Overtime: {overtime}%</p>
                 </section>
             )}
 
+            {/* MODAL (Fora das cenas pois pode ser aberto em qualquer uma) */}
+            {viewingBrawler && (
+                <BrawlerModal
+                    brawler={viewingBrawler}
+                    onClose={() => setViewingBrawler(null)}
+                />
+            )}
+
+            
         </main>
     )
 }

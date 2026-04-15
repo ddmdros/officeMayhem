@@ -1,6 +1,7 @@
 import './Intro.css';
 
-const Intro = () => {
+
+const Intro = ({ onStart }: { onStart: () => void }) => {
   return (
     <section className="snap-section story-section">
         <div className="story-body">
@@ -25,6 +26,15 @@ const Intro = () => {
                 <strong>DELIVER:</strong> Get the <span>Q1 Report</span> to the CEO's desk on the top floor.
               </li>
             </ul>
+          </div>
+
+
+          <div className='deploy-container'>
+            <button
+            className="deploy-button active"
+            onClick={onStart}>
+              START MISSION
+            </button>
           </div>
 
           <p className="call-to-action">

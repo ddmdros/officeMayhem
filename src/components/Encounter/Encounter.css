@@ -1,0 +1,37 @@
+.status-bar-minimal {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(15, 5, 26, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid var(--yellow-brawler);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'BrawlStars-Main', sans-serif;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+.stat-bar-bg {
+    height: 14px;
+    background: #000;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,0.2);
+    overflow: hidden;
+}
+
+.stat-bar-fill { height: 100%; transition: width 0.4s ease; }
+.stat-bar-fill.chaos { background: #ff9900; box-shadow: 0 0 10px #ff990055; }
+.stat-bar-fill.overtime { background: #ff3300; box-shadow: 0 0 10px #ff330055; }
+
+.danger-text { color: #ff0000; animation: blink 1s infinite; }
