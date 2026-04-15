@@ -14,7 +14,6 @@ interface BrawlerCardProps {
   description: string;
   starPowers?: SpecialItem[];
   gadgets?: SpecialItem[];
-  classIcon: string;
   onOpenDetails: () => void;
 }
 
@@ -27,7 +26,6 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
   name,
   imageUrl,
   gameStats,
-  classIcon,
   isSelected,
   onOpenDetails,
   classTypeName,
