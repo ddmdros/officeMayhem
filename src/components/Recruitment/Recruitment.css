@@ -2,13 +2,11 @@
 .recruitment-section{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    height: 100dvh;
+    min-height: 100vh;
     width: 100%;
     padding: 20px 15px;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
 }
 /* #endregion */
 
@@ -17,13 +15,14 @@
     display: flex;
     gap: 20px;
 }
+
 .selected-team-container {
     background: #0f051a;
     border: 3px solid var(--purple-dark);
     border-radius: 15px;
     padding: 15px;
     width: 95%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 10px auto;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -105,23 +104,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
-    padding: 10px;
+    justify-content: flex-end; 
+    padding: 0; 
     height: 100%;
+    width: 100%;
+    position: relative;
 }
 
-.slot-info{
+.slot-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, var(--purple-main) 0%, rgba(101, 34, 166, 0.8) 30%, rgba(101, 34, 166, 0.6) 50%, rgba(101, 34, 166, 0.1) 100%);
+    padding: 5px 2px;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .slot-avatar {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(254, 203, 0, 0.5));
-    transition: transform 0.3s ease;
+width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .slot-name {
@@ -162,7 +171,7 @@
 
 
 .team-slot.filled:hover .remove-indicator {
-    opacity: 1; /* Aparece só no hover do slot */
+    opacity: 1; 
     border-color: var(--red-brawler);
     box-shadow: 0 0 20px rgba(255, 71, 71, 0.4);
     background: linear-gradient(135deg, #2d134d 0%, #4d1313 100%);
@@ -187,10 +196,12 @@
 /* #region brawler-grid */
 .brawler-grid {
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    flex: 1;
+    flex-grow: 1;
+    min-height: 300px;
     overflow-y: auto;
-    width: 100%;
+    max-width: 900px;
     gap: 20px;
     overflow-y: auto;
     padding: 10px;
@@ -367,3 +378,120 @@
 
 
 
+@media screen and (max-width: 768px) {
+
+    .recruitment-section {
+        padding: 40px 8px 20px 8px;
+    }
+
+    .title-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+
+    .brand-title {
+        display: block !important; 
+        font-size: 1.4rem;
+        color: var(--yellow-brawler);
+        text-shadow: 2px 2px 0px #000;
+        margin: 0;    
+    }
+
+    .selected-team-container {
+        padding: 5px;
+        margin: 0 auto 10px auto; 
+    }
+
+    .team-header {
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+    }
+
+    .task-force-label {
+        font-size: 0.8rem;
+    }
+
+    .slots-grid {
+        gap: 5px;
+    }
+    
+    .brawler-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); 
+        gap: 8px;
+        padding: 5px;
+        flex: 1;
+        max-width: 100vw;
+    }
+
+    .slot-class {
+        font-size: 0.6rem;
+        letter-spacing: 0;
+    }
+
+    .slot-name {
+        font-size: 0.65rem; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .brawler-card {
+        border-width: 2px;
+        border-radius: 8px;
+    }
+
+    .card-energy-cost {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        top: -5px;
+        left: -5px;
+    }
+
+    .card-info {
+        width: 95%;
+        margin-bottom: 12px; 
+    }
+
+    .card-info .brawler-name {
+        font-size: 0.65rem; 
+    }
+
+    .card-stats-row {
+        min-height: 25px; 
+        font-size: 0.6rem;
+    }
+
+    .class-icon-badge img {
+        width: 12px;
+    }
+    
+    .card-energy-cost {
+        width: 22px; 
+        height: 22px;
+        font-size: 0.7rem;
+        border-width: 2px;
+    }
+    .details-btn {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+        bottom: -8px;
+    }
+
+    .deploy-container {
+        padding: 15px 0;
+    }
+
+    .deploy-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+
+}

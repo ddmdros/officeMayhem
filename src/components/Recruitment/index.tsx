@@ -22,15 +22,12 @@ export const Recruitment: React.FC<RecruitmentProps> = ({
   onStartMission
 }) => {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
-const [selectedClass, setSelectedClass] = useState('All');
-const [maxCaffeine, setMaxCaffeine] = useState(4);
+  const [selectedClass, setSelectedClass] = useState('All');
 
 const filteredBrawlers = brawlers.filter(b => {
-  const matchesName = b.name.toLowerCase().includes(searchTerm.toLowerCase());
-  const matchesClass = selectedClass === 'All' || b.class.name === selectedClass;
-  const matchesCost = b.gameStats.caffeine <= maxCaffeine;
-  return matchesName && matchesClass && matchesCost;
+  if (selectedClass === "All") return true;
+  const brawlerClassName = typeof b.class === 'string' ? b.class : b.class?.name;
+  return brawlerClassName?.trim() === selectedClass;
 });
 
   return (
@@ -40,19 +37,15 @@ const filteredBrawlers = brawlers.filter(b => {
       <button className='info-help-btn' onClick={() => setIsHelpOpen(true)}>?</button>
       </div>
 
-  <FilterRecruitment 
-      searchTerm={searchTerm}
-      onSearchChange={setSearchTerm}
-      selectedClass={selectedClass}
-      onClassChange={setSelectedClass}
-      maxCaffeine={maxCaffeine}
-      onCaffeineChange={setMaxCaffeine}
-    />
+    
       <SelectedTeam 
         team={selectedTeam} 
         onRemove={toggleSelection} 
       />
-
+<FilterRecruitment 
+      selectedClass={selectedClass}
+      onClassChange={setSelectedClass}
+    />
       <div className="brawler-grid">
         {filteredBrawlers.map((b) => (
           <BrawlerCard 

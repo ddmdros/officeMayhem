@@ -40,6 +40,14 @@
     cursor: pointer;
 }
 
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre o texto e o botão */
+    margin-bottom: 20px;
+    width: 100%;
+}
 .info-title {
     font-family: 'BrawlStars-Main', sans-serif;
     color: var(--yellow-brawler);
@@ -78,28 +86,48 @@
 }
 
 
-.info-help-btn{
-    border-radius: 15px;
+.info-help-btn {
+    /* Tamanho fixo para garantir que seja um círculo perfeito */
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%; /* Deixa redondo */
     background-color: var(--white-main);
     color: var(--purple-main);
-    font-weight: 700;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: 900;
     font-family: var(--font-tech);
-    font-size: 3rem;
-    padding: 0;
-    margin: 0;
-    /* padding: 3px 3px; */
-    aspect-ratio: 1/1;
+    font-size: 1.5rem; /* Diminuído de 3rem para 1.5rem */
+    
+    cursor: pointer;
+    border: 3px solid var(--purple-dark); /* Borda para dar profundidade */
+    box-shadow: 0 3px 0 rgba(0,0,0,0.3); /* Sombra de botão de jogo */
+    transition: transform 0.1s, background-color 0.2s;
+    flex-shrink: 0; /* Impede o botão de amassar em telas pequenas */
+}
+.info-help-btn:hover {
+    background-color: var(--yellow-brawler); /* Muda para amarelo ao passar o mouse */
+    transform: scale(1.1);
 }
 
-.info-help-btn:hover{
-    background-color: var(--white-light);
-    color: var(--white-main);
+.info-help-btn:active {
+    transform: scale(0.95) translateY(2px);
+    box-shadow: none;
 }
 
 @media screen and (max-width: 768px) {
-    .info-help-btn{
-        font-size: 1rem;
-        border-radius: 5px;
+.title-wrapper {
+        gap: 10px;
+    }
 
-    }    
+    .info-help-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+        border-width: 2px;
+    }
 }
