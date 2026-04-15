@@ -3,14 +3,16 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+
+    height: 100vh;
+    height: 100dvh;
+
     background: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     backdrop-filter: blur(10px);
-    z-index: 1000;
 }
 
 .modal-content {
@@ -137,3 +139,44 @@
     font-size: 0.9rem;
 }
 
+@media screen and (max-width: 768px) {
+    .modal-content {
+        padding: 15px; /* Reduzi de 30px */
+        max-height: 95vh; /* Quase a tela toda se precisar, mas sem folgas */
+        overflow: hidden; /* Se o conteúdo é pouco, desativamos o scroll */
+    }
+
+    .modal-header {
+        padding: 0;
+    }
+
+    .modal-header h2 {
+        font-size: 1.3rem !important;
+        margin-bottom: 5px;
+    }
+
+    .modal-headline {
+        padding-bottom: 5px;
+    }
+
+    .modal-content * {
+        margin-block-start: 0;
+        margin-block-end: 10px;
+    }
+    
+    .modal-content *:last-child {
+        margin-bottom: 0;
+    }
+
+    .modal-description{
+        font-size: 1rem;
+    }
+
+    .modal-stats{
+        font-size: 0.8rem;
+        padding: 0;
+        padding-top: 6px;
+    }
+
+
+}

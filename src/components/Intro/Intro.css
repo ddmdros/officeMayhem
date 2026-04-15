@@ -2,12 +2,17 @@
     background: radial-gradient(circle, var(--purple-main) 0%, var(--purple-dark) 100%);
     color: white;
     width: 100%;
-    min-height: 100vh; 
+
+    height: 100vh;
+    height: 100dvh;
+
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem; 
     box-sizing: border-box;
+
+    scroll-snap-align: start;
 }
 
 .story-body {
@@ -23,6 +28,7 @@
 .brand-title{
     font-family: 'BrawlStars-Main', sans-serif;
     font-size: clamp(2rem, 8vw, 4.5rem); 
+    
     line-height: 1.1;
     color: var(--yellow-brawler) !important; /* Adicionei o !important caso haja conflito */
     text-shadow: 4px 4px 0px #000; 
@@ -98,8 +104,8 @@
 
 @media screen and (max-width: 600px) {
     .story-section {
-        padding: 1.5rem 1rem;
-        height: auto; 
+    height: 100dvh; 
+        padding: 1rem;
     }
 
     .rules-box {
@@ -111,8 +117,13 @@
     }
 
     .brand-title {
-        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        font-size: clamp(2rem, 10vw, 3rem) !important;
+        line-height: 0.9;
         padding: 10px 0px;
         color: var(--yellow-brawler);
+    }
+
+    .story-body{
+        gap: 0.8rem;
     }
 }
