@@ -70,7 +70,6 @@ const handleRestartGame = () => {
                 const cleanedList = data.list.map((brawler: any) => {
                     const patchData = BRAWLER_DATA_PATCH[brawler.name.toUpperCase()];
                     const bClass = brawler.class.name as BrawlerClass;
-                    const stats = CLASS_BALANCING[bClass] || CLASS_BALANCING["Damage Dealer"];
 
                     let currentBrawler = { ...brawler };
 
