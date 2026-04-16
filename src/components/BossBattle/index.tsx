@@ -1,88 +1,88 @@
 import { useState } from 'react';
 import './BossBattle.css';
 
-interface BossProps {
-    team: any[];
-    chaos: number;
-    overtime: number;
-    onReset: () => void;
-}
+export const BossBattle = ({ team, chaos, onReset }: any) => {
+    const [bossHp, setBossHp] = useState(100);
+    const [isPlayerTurn, setIsPlayerTurn] = useState(true);
+    const [battleLog, setBattleLog] = useState("8-BIT IS OVERCLOCKING!");
+    const [isVictory, setIsVictory] = useState(false);
 
-export const BossBattle = ({ team, chaos, overtime, onReset }: BossProps) => {
-    // HP do Boss aumenta conforme o Overtime
-    const [bossHp, setBossHp] = useState(500 + overtime * 5);
-    const [playerTurn, setPlayerTurn] = useState(true);
-    const [battleLog, setBattleLog] = useState("8-BIT HAS INFECTED THE MAINFRAME!");
-    const [isDead, setIsDead] = useState(false);
+    // Função de Ataque Única por Classe
+    const executeAction = (brawler: any) => {
+        if (!isPlayerTurn || isVictory) return;
 
-    const calculateDamage = (brawler: any) => {
-        // Eficiência base menos a penalidade de Caos
-        const baseDmg = brawler.gameStats.efficiency * 10;
-        const penalty = (chaos / 100) * 20;
-        return Math.max(10, Math.floor(baseDmg - penalty));
-    };
+        let dmg = 0;
+        let effect = "";
+        const bClass = brawler.classTypeName || brawler.class?.name;
 
-    const handleAttack = (brawler: any) => {
-        if (!playerTurn || isDead) return;
+        // Mecânica de "Especialista": Cada classe faz algo único na luta
+        switch (bClass) {
+            case 'Tank': 
+                dmg = 80; effect = "TANK SMASH! 8-BIT is stunned!"; break;
+            case 'Support': 
+                dmg = 40; effect = "DEBUG! Chaos reduced by 10%!"; break;
+            case 'Assassin': 
+                dmg = 150; effect = "CRITICAL GLITCH! Huge damage!"; break;
+            default: 
+                dmg = 60; effect = "Standard attack deployed.";
+        }
 
-        const dmg = calculateDamage(brawler);
-        setBossHp(prev => Math.max(0, prev - dmg));
-        setBattleLog(`${brawler.name} dealt ${dmg} damage to the Glitch!`);
-        
-        if (bossHp - dmg <= 0) {
-            setIsDead(true);
-            setBattleLog("STARR CORP SAVED! 8-BIT DEFEATED!");
+        const finalDmg = Math.floor(dmg * (1 - (chaos / 200))); // Caos reduz seu dano
+        setBossHp(prev => Math.max(0, prev - finalDmg));
+        setBattleLog(`${brawler.name}: ${effect} (${finalDmg} DMG)`);
+
+        if (bossHp - finalDmg <= 0) {
+            setIsVictory(true);
             return;
         }
 
-        setPlayerTurn(false);
-        // Contra-ataque do Boss automático após 1 segundo
-        setTimeout(bossCounterAttack, 1000);
-    };
-
-    const bossCounterAttack = () => {
-        setBattleLog("8-BIT uses LASER BEAM! System stability decreasing...");
-        setPlayerTurn(true);
+        setIsPlayerTurn(false);
+        setTimeout(() => {
+            setBattleLog("8-BIT uses REBOOT BEAM! System integrity failing...");
+            setIsPlayerTurn(true);
+        }, 1000);
     };
 
     return (
-        <div className={`boss-screen ${chaos > 70 ? 'glitch-bg' : ''}`}>
-            <div className="boss-header">
-                <h1 className="boss-title">FINAL BOSS: 8-BIT</h1>
-                <div className="boss-hp-container">
-                    <div className="hp-bar-fill" style={{ width: `${(bossHp / (500 + overtime * 5)) * 100}%` }}></div>
-                    <span>{bossHp} HP</span>
+        <div className="boss-battle-overlay">
+            <div className="boss-ui-top">
+                <h1 className="boss-name">GLITCHED 8-BIT</h1>
+                <div className="boss-hp-bar">
+                    <div className="hp-fill" style={{ width: `${(bossHp / 1000) * 100}%` }}></div>
                 </div>
+                <p className="hp-text">{bossHp} / 100 HP</p>
             </div>
 
-            <div className="boss-visual">
-                <img src="https://vignette.wikia.nocookie.net/brawlstars/images/2/2a/8-Bit_Portrait.png" className="boss-img" alt="8-bit" />
+            <div className="boss-stage">
+                <img src="https://media.ffycdn.net/eu/supercell/igkeo5dNSVQagGzt8uYW.gif?width=2400" alt="8bit" 
+                     className={`boss-sprite ${!isPlayerTurn ? 'attacking' : ''}`} />
             </div>
 
-            <p className="battle-log">{battleLog}</p>
+            <div className="battle-feed">{battleLog}</div>
 
-            <div className="boss-team-actions">
-                {team.map(brawler => (
+            <div className="action-grid">
+                {team.map((b: any) => (
                     <button 
-                        key={brawler.id} 
-                        className="boss-attack-btn"
-                        onClick={() => handleAttack(brawler)}
-                        disabled={!playerTurn || isDead}
+                        key={b.id} 
+                        className={`attack-btn ${!isPlayerTurn ? 'disabled' : ''}`}
+                        onClick={() => executeAction(b)}
                     >
-                        {brawler.name} ATTACK
+                        <img src={b.imageUrl || b.imageUrl2} alt="" />
+                        <div className="btn-label">
+                            <span>{b.name}</span>
+                            <small>{b.classTypeName || b.class?.name}</small>
+                        </div>
                     </button>
                 ))}
             </div>
-/* Dentro do BossBattle.tsx */
-{isDead && (
-    <div className="victory-overlay">
-        <h2>MISSION ACCOMPLISHED</h2>
-        <p>You survived another day at Starr Corp.</p>
-        <button className="reset-btn" onClick={onReset}>
-            REBOOT SYSTEM
-        </button>
-    </div>
-)}
+
+            {isVictory && (
+                <div className="victory-modal">
+                    <h2>SYSTEM STABILIZED</h2>
+                    <p>Overtime avoided. For now.</p>
+                    <button onClick={onReset} className="reboot-btn">REBOOT SYSTEM</button>
+                </div>
+            )}
         </div>
     );
 };

@@ -1,66 +1,170 @@
-.boss-screen {
-    width: 100%;
-    height: 100vh;
+/* CONTAINER PRINCIPAL: Cobre a tela toda e garante o clique */
+.boss-battle-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: radial-gradient(circle, #1a052d 0%, #000 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #000;
-    color: #0f0; /* Verde matrix/arcade */
-    font-family: 'Courier New', Courier, monospace;
+    justify-content: space-between; /* Garante que o HUD fique no topo e os botões no pé */
     padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    color: #0f0;
 }
 
-.glitch-bg {
-    animation: glitch-anim 0.2s infinite;
+/* Efeito de Glitch se o Caos estiver alto (aplicar via JS) */
+.glitch-mode {
+    animation: glitch-flash 0.15s infinite;
 }
 
-@keyframes glitch-anim {
-    0% { background: #000; }
-    50% { background: #100; }
-    100% { background: #000; }
+@keyframes glitch-flash {
+    0% { background: #0a0014; }
+    50% { background: #1a0000; } /* Pisca levemente em vermelho */
+    100% { background: #0a0014; }
+}
+
+/* BARRA DE HP DO 8-BIT */
+.boss-ui-top {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 10;
 }
 
 .boss-hp-container {
-    width: 300px;
-    height: 30px;
-    background: #333;
-    border: 3px solid #fff;
+    width: 100%;
+    height: 25px;
+    background: #111;
+    border: 2px solid #0f0;
+    border-radius: 5px;
     position: relative;
-    margin: 20px 0;
+    margin-top: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
 }
 
 .hp-bar-fill {
     height: 100%;
-    background: #f00;
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, #0f0, #006600);
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* O BOSS (8-BIT) */
+.boss-stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }
 
 .boss-img {
-    width: 200px;
-    filter: drop-shadow(0 0 10px #0f0);
+    width: 180px;
     image-rendering: pixelated;
+    filter: drop-shadow(0 0 20px #0f0);
+    transition: transform 0.1s;
 }
 
-.boss-attack-btn {
+.boss-img.boss-attacking {
+    animation: shake 0.5s;
+    filter: drop-shadow(0 0 30px #f00);
+}
+
+/* LOG DE BATALHA: Terminal Style */
+.battle-log {
+    width: 90%;
+    max-width: 600px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #0f0;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+/* GRID DE ATAQUE: Onde os botões moram */
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 20px;
+    z-index: 100; /* Garante que os botões fiquem clicáveis */
+}
+
+.attack-btn {
+    background: #051a05;
+    border: 3px solid #0f0;
+    border-radius: 12px;
+    padding: 10px;
+    color: #0f0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: 0.1s;
+}
+
+.attack-btn:not(:disabled):hover {
+    background: #0f330f;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+}
+
+.attack-btn:disabled {
+    opacity: 0.3;
+    filter: grayscale(1);
+    cursor: not-allowed;
+    border-color: #333;
+}
+
+.attack-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #0f0;
+}
+
+.attack-btn span {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* OVERLAY DE VITÓRIA */
+.victory-modal {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.reboot-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
     background: #0f0;
     color: #000;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-weight: bold;
+    font-family: 'BrawlStars-Main', sans-serif;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
-.boss-attack-btn:disabled {
-    background: #333;
-    color: #666;
-}
-
-.battle-log {
-    background: rgba(0, 255, 0, 0.1);
-    padding: 10px;
-    border: 1px solid #0f0;
-    width: 80%;
-    text-align: center;
-    margin: 20px 0;
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
 }
