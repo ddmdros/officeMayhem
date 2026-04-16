@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import Banner from './components/Banner'
 import Intro from './components/Intro'
 import { BRAWLER_DATA_PATCH } from './constants/brawlerPatch'
-import { CLASS_BALANCING, type BrawlerClass } from './constants/gameLogic'
 import { CLASS_ICONS } from './constants/gameAssets'
 import BrawlerModal from './components/BrawlerModal'
 import IntroDialogue from './components/IntroDialogue'
@@ -69,7 +68,6 @@ const handleRestartGame = () => {
                 const data = await response.json();
                 const cleanedList = data.list.map((brawler: any) => {
                     const patchData = BRAWLER_DATA_PATCH[brawler.name.toUpperCase()];
-                    const bClass = brawler.class.name as BrawlerClass;
 
                     let currentBrawler = { ...brawler };
 
