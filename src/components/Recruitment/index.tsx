@@ -36,7 +36,6 @@ const filteredBrawlers = brawlers.filter(b => {
       <h2 className="brand-title text-shadow">Recruit your Team</h2>
       <button className='info-help-btn' onClick={() => setIsHelpOpen(true)}>?</button>
       </div>
-
     
       <SelectedTeam 
         team={selectedTeam} 

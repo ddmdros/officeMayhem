@@ -1,30 +1,19 @@
+import React from 'react';
+
 interface BrawlerCardProps {
   name: string;
-  rarity: { name: string };
-  classTypeName: string;
+  classTypeName: string; // Usando a string que você definiu na interface
   imageUrl?: string;
-  gameStats: {
-    efficiency: number;
-    resilience: number;
-    special: string;
-  };
   isSelected: boolean;
   onSelect: () => void;
-  description: string;
-  starPowers?: SpecialItem[];
-  gadgets?: SpecialItem[];
   onOpenDetails: () => void;
+  // Removi gameStats, rarity e descriptions para limpar o componente
 }
 
-interface SpecialItem {
-  name: string;
-  description: string;
-  descriptionHtml?: string;
-}
 const BrawlerCard: React.FC<BrawlerCardProps> = ({
   name,
+  classTypeName, // Pegamos o nome da classe aqui
   imageUrl,
-  gameStats,
   isSelected,
   onOpenDetails,
   onSelect
@@ -41,19 +30,15 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
 
       <div className="card-info">
         <h3 className="brawler-name">{name}</h3>
-
-        <div className="card-stats-row">
-          <div className="stat efficiency">💼 {gameStats.efficiency}</div>
-          <div className="stat resilience">🧘 {gameStats.resilience}</div>
-
-        </div>
+        {/* CORRIGIDO: Agora usamos a variável classTypeName que vem das props */}
+        <span className="class-tag">{classTypeName}</span>
       </div>
 
       <div className="card-selection-footer">
         <button
           className="details-btn"
           onClick={(e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // Evita selecionar o card ao clicar em detalhes
             onOpenDetails();
           }}
         >

@@ -13,30 +13,34 @@ export const HelpRecruitment: React.FC<HelpRecruitmentProps> = ({ isOpen, onClos
     <div className="info-overlay" onClick={onClose}>
       <div className="info-modal" onClick={(e) => e.stopPropagation()}>
         <button className="close-info" onClick={onClose}>×</button>
-        <h3 className="info-title">MISSION SPECS</h3>
+        <h3 className="info-title">CORPORATE GUIDELINES</h3>
         
         <div className="info-item">
-          <span className="info-icon">☕</span>
+          <span className="info-icon">🧨</span>
           <div>
-            <h4>CAFFEINE</h4>
-            <p>The fuel of action. Total espresso shots needed to deploy the squad. High-tier brawlers require more coffee.</p>
+            <h4>OFFICE CHAOS</h4>
+            <p>The measure of workplace sanity. If this hits 100%, HR (Mina) has a meltdown and the mission is aborted. Keep it low!</p>
           </div>
         </div>
 
         <div className="info-item">
-          <span className="info-icon">💼</span>
+          <span className="info-icon">⏰</span>
           <div>
-            <h4>EFFICIENCY</h4>
-            <p>The power to crush deadlines. Clears corporate crises faster and improves mission success rates.</p>
+            <h4>OVERTIME</h4>
+            <p>Your shift is ticking. Poor decisions add hours to your workday. Reach 100% and you're stuck in the office... forever.</p>
           </div>
         </div>
 
         <div className="info-item">
-          <span className="info-icon">🧘</span>
+          <span className="info-icon">🏢</span>
           <div>
-            <h4>RESILIENCE</h4>
-            <p>Mental stamina. Protects the team from global Stress impact when facing catastrophic office failures.</p>
+            <h4>SPECIALISTS</h4>
+            <p>Each Class (Tank, Support, etc.) reacts differently to crises. Strategy isn't about numbers anymore; it's about who you trust to fix the copier.</p>
           </div>
+        </div>
+
+        <div className="info-footer">
+          <p>“Safety is a suggestion. Productivity is a requirement.” — Starr Corp Management</p>
         </div>
       </div>
     </div>

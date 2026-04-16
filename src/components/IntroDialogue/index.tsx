@@ -17,8 +17,26 @@ type DialogueKey = 'intro' | 'elevator_crisis' | 'performance_review';
 
 const DIALOGUES: Record<DialogueKey, { name: string; text: string; image: string }[]> = {
   intro: [
-    { name: "Mina", text: "Welcome to the Brazil Branch! Don't touch the walls, they're wet.", image: MINA_IMAGES.regular },
-    { name: "Mina", text: "First, we need to assemble a team that can actually read a spreadsheet.", image: MINA_IMAGES.happy }
+    { 
+      name: "Mina", 
+      text: "Welcome to the Starr Corp Brazil Branch! Ignore the flickering lights and the smell of burnt coffee. It's just... corporate charm.", 
+      image: MINA_IMAGES.regular 
+    },
+    { 
+      name: "Mina", 
+      text: "Your first task: Recruit 3 Brawlers for our Special Task Force. Try to pick ones that won't cry when they see a 50-page contract.", 
+      image: MINA_IMAGES.happy 
+    },
+    { 
+      name: "Mina", 
+      text: "We have 3 floors of pure bureaucratic chaos to navigate. If the elevators try to bite you, just kick them back.", 
+      image: MINA_IMAGES.facePalm 
+    },
+    { 
+      name: "Mina", 
+      text: "Our goal is to deliver the Q1 Report to the CEO at the top floor. If we fail, we're stuck in Overtime FOREVER. Ready? Let's go!", 
+      image: MINA_IMAGES.angry 
+    }
   ],
   elevator_crisis: [
     { name: "Mina", text: "Great team! Now... BAD NEWS. The elevator is possessed by a 1990s printer demon.", image: MINA_IMAGES.facePalm },

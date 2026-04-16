@@ -60,17 +60,6 @@ export const CLASS_BALANCING: Record<BrawlerClass, ClassStat> = {
     }
 };
 
-export const RARITY_ECONOMY = {
-    "Rare": { cost: 1, buff: 1.0 },
-    "Super Rare": { cost: 2, buff: 1.1 },
-    "Epic": { cost: 2, buff: 1.2 },
-    "Mythic": { cost: 3, buff: 1.4 },
-    "Legendary": { cost: 3, buff: 1.6 },
-    "Ultra Legendary": { cost: 4, buff: 2.0 }
-};
-
-
-
 export const CLASS_CONTENT = {
   "Damage Dealer": {
     slogan: "The Productivity Engines",
