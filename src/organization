@@ -1,0 +1,22 @@
+src/
+├── @types/              # Definições globais de tipos TypeScript
+├── assets/              # Imagens, fontes e sons (Starr Corp branding)
+├── core/                # O "Coração" (Domain Layer)
+│   ├── constants/       # RARITY_ECONOMY, CLASS_BALANCING
+│   ├── domain/          # Lógica pura de negócio (ex: cálculo de Stress)
+│   └── utils/           # Helpers genéricos (ex: cleanBrawlText)
+├── data/                # Infrastructure Layer
+│   ├── api/             # Chamadas fetch (Brawlify API)
+│   └── repositories/    # Adaptadores que tratam os dados antes de chegar no UI
+├── hooks/               # Application Layer
+│   ├── useBrawlers.ts   # Hook que gerencia o fetch e o "buff" dos dados
+│   └── useRecruitment.ts# Gerencia a seleção do time (max 3, custos, etc)
+├── presentation/        # UI Layer (Presentation)
+│   ├── components/      # Componentes compartilhados (Botões, Modais)
+│   ├── layouts/         # SnapContainer, PageWrappers
+│   └── scenes/          # As grandes telas (Recruitment, Encounter, Boss)
+│       └── Recruitment/
+│           ├── Recruitment.tsx
+│           ├── Recruitment.css
+│           └── components/ (Filtros, TimeSelecionado)
+└── App.tsx              # Apenas o orquestrador de cenas

@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.title-banner {
+.banner .title-banner {
     position: absolute; 
     top: 0;
     left: 0;
@@ -17,8 +17,7 @@
     z-index: 1;
 }
 
-
-.banner-text {
+.banner .banner-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,7 +31,7 @@
 
 }
 
-.brand-title {
+.banner .brand-title {
     font-family: 'BrawlStars-Main', sans-serif;
     font-size: clamp(2.5rem, 8vw, 5rem); 
     margin: 0;
@@ -42,7 +41,7 @@
     color: var(--white-main);
 }
 
-.title-banner img{
+.banner .title-banner img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -50,7 +49,7 @@
     filter: brightness(0.3);
 }
 
-.project-tagline {
+.banner .project-tagline {
     font-family: var(--font-body);
     font-size: clamp(1rem, 3vw, 1.2rem);
     margin-top: 1rem;

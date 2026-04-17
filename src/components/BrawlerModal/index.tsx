@@ -22,11 +22,6 @@ const BrawlerModal = ({ brawler, onClose }: { brawler: any, onClose: () => void 
 
 
           <div className="modal-body">
-            <div className="modal-stats">
-              <span>💼 Efficiency: {brawler.gameStats.efficiency}</span>
-              <span>🧘 Resilience: {brawler.gameStats.resilience}</span>
-              <span>☕ Cost: {brawler.gameStats.caffeine}</span>
-            </div>
             
             <p className="modal-description">{brawler.description}</p>
           
