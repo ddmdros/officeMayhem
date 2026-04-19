@@ -1,62 +1,38 @@
 export type BrawlerClass = "Damage Dealer" | "Tank" | "Assassin" | "Marksman" | "Artillery" | "Support" | "Controller";
 
 interface ClassStat {
-    baseEfficiency: number;
-    baseResilience: number;
     advantageVs: BrawlerClass[];
     weaknessVs: BrawlerClass[];
-    specialAbility: string;
 }
 
 export const CLASS_BALANCING: Record<BrawlerClass, ClassStat> = {
     "Damage Dealer": {
-        baseEfficiency: 8,
-        baseResilience: 10,
         advantageVs: ["Tank", "Assassin"],
         weaknessVs: ["Marksman", "Artillery"],
-        specialAbility: "Heat: +25% de dano constante."
     },
     "Tank": {
-        baseEfficiency: 5,
-        baseResilience: 18,
         advantageVs: ["Assassin"],
         weaknessVs: ["Damage Dealer"],
-        specialAbility: "Vanguard: Bloqueia 2 de dano de cada ataque."
     },
     "Assassin": {
-        baseEfficiency: 10,
-        baseResilience: 6,
         advantageVs: ["Marksman", "Artillery"],
         weaknessVs: ["Tank", "Damage Dealer"],
-        specialAbility: "Blitz: Sempre ataca primeiro na rodada."
     },
     "Marksman": {
-        baseEfficiency: 9,
-        baseResilience: 7,
         advantageVs: ["Damage Dealer", "Support"],
         weaknessVs: ["Assassin", "Artillery"],
-        specialAbility: "Eagle Eye: Ignora escudos e barreiras."
     },
     "Artillery": {
-        baseEfficiency: 7,
-        baseResilience: 7,
         advantageVs: ["Controller", "Marksman"],
         weaknessVs: ["Tank", "Assassin"],
-        specialAbility: "Indirect: Dano em área (atinge o obstáculo e o andar)."
     },
     "Support": {
-        baseEfficiency: 4,
-        baseResilience: 8,
         advantageVs: [],
         weaknessVs: ["Damage Dealer", "Assassin"],
-        specialAbility: "Cura: Restaura 4 de HP ao time todo por turno."
     },
     "Controller": {
-        baseEfficiency: 6,
-        baseResilience: 9,
         advantageVs: ["Support"],
         weaknessVs: ["Marksman"],
-        specialAbility: "Stun: Chance de pular o turno do obstáculo."
     }
 };
 
@@ -105,29 +81,3 @@ export const CLASS_CONTENT = {
   }
 };
 
-export const LEVEL_CONTENT = [
-  {
-    level: 1,
-    title: "Floor 1: The Lobby Chaos",
-    boss: "Broken Turnstile (The Gatekeeper)",
-    description: "Your mission starts at the ground floor. If your badge doesn't scan, your career ends here.",
-    flavor: "Entry denied. Please contact an administrator who hasn't been hired yet.",
-    objective: "Bypass the security glitch."
-  },
-  {
-    level: 2,
-    title: "Floor 2: The HR Labyrinth",
-    boss: "Passive-Aggressive Email",
-    description: "Navigate through cubicles filled with radioactive coffee and forced group-bonding activities.",
-    flavor: "As per our previous conversation, your survival is not a priority for this department.",
-    objective: "Survive the dynamic group interview."
-  },
-  {
-    level: 3,
-    title: "Floor 3: CEO's Penthouse",
-    boss: "The Q1 Performance Report",
-    description: "The air is thin, the carpet is expensive, and the pressure is lethal. Deliver the report.",
-    flavor: "The numbers don't lie, but they sure can kill. Welcome to the top floor.",
-    objective: "Deliver the report to the CEO's desk."
-  }
-];

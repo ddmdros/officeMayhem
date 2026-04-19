@@ -1,12 +1,12 @@
 import React from "react";
-import Banner from "../../components/Banner";
-import Intro from "../../components/Intro";
-import Recruitment from "../../components/Recruitment";
-import IntroDialogue from "../../components/IntroDialogue";
-import { Encounter } from "../../components/Encounter";
-import { EncounterRoom } from "../../components/EncounterRoom";
-import { BossBattle } from "../../components/BossBattle";
-import type { GameScene } from "./types/game";
+import Intro from "./Intro";
+import Recruitment from "./Recruitment";
+import IntroDialogue from "./IntroDialogue";
+import { EncounterRoom } from "./EncounterRoom";
+import { BossBattle } from "../components/BossBattle";
+import { Encounter } from "../../core/content";
+import type { GameScene } from "../../types/game";
+import StartScreen from "./StartScreen";
 
 interface SceneManagerProps {
     currentScene: GameScene;
@@ -37,7 +37,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
         case "START":
             return (
                 <>
-                    <Banner />
+                    <StartScreen />
                     <Intro onStart={() => setCurrentScene("INTRO_DIALOGUE")} />
                 </>
             );
@@ -139,15 +139,12 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
             return(
                 <div className="game-container">
                     <div className='blur-background'>
-                        {/* Mostramos o HUD borrado ao fundo para dar continuidade */}
                         <div className='status-bar-minimal' style={{position: 'absolute', bottom: '20px'}}>
-                             {/* ... mesmos itens de chaos/overtime ... */}
                         </div>
                     </div>
                     <IntroDialogue
                         scriptType="performance_review"
                         onFinish={() => {
-                            // SÓ AQUI decidimos o futuro do jogador
                             if (encounterIndex < Encounter.length - 1) {
                                 setEncounterIndex(prev => prev + 1);
                                 setCurrentScene("ENCOUNTER");

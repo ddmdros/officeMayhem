@@ -1,7 +1,7 @@
-import './Banner.css';
-import { UI_TEXT } from '../../core/content';
+import './StartScreen.css';
+import { UI_TEXT } from '../../../core/content';
 
-const Banner: React.FC = () => {
+const StartScreen: React.FC = () => {
   const lang = "en";
   const { title, tagline } = UI_TEXT[lang].banner;
   
@@ -18,4 +18,4 @@ const Banner: React.FC = () => {
   );
 };
 
-export default Banner;
+export default StartScreen;

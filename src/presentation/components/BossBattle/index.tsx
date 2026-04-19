@@ -7,7 +7,6 @@ export const BossBattle = ({ team, chaos, onReset }: any) => {
     const [battleLog, setBattleLog] = useState("8-BIT IS OVERCLOCKING!");
     const [isVictory, setIsVictory] = useState(false);
 
-    // Função de Ataque Única por Classe
     const executeAction = (brawler: any) => {
         if (!isPlayerTurn || isVictory) return;
 
@@ -15,7 +14,6 @@ export const BossBattle = ({ team, chaos, onReset }: any) => {
         let effect = "";
         const bClass = brawler.classTypeName || brawler.class?.name;
 
-        // Mecânica de "Especialista": Cada classe faz algo único na luta
         switch (bClass) {
             case 'Tank': 
                 dmg = 80; effect = "TANK SMASH! 8-BIT is stunned!"; break;
