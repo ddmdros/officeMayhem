@@ -388,6 +388,7 @@ width: 100%;
     .recruitment-section {
         padding: 30px 8px 10px 8px;
         height: 100dvh;
+        scroll-snap-align: start;
         
     }
 

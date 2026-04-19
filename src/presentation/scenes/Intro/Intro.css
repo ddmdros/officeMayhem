@@ -118,15 +118,15 @@
     overflow: hidden;
 }
 
-/* Garante que o diálogo fique sempre no topo de tudo */
 .dialogue-screen {
     z-index: 100;
 }
 
 @media screen and (max-width: 600px) {
     .story-section {
-    height: 100dvh; 
+        height: 100dvh; 
         padding: 1rem;
+        scroll-snap-align: start;
     }
 
     .rules-box {

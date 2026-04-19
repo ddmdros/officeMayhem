@@ -1,6 +1,5 @@
 import './Intro.css';
 
-
 const Intro = ({ onStart }: { onStart: () => void }) => {
   return (
     <section className="snap-section story-section">
