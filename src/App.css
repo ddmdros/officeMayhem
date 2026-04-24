@@ -9,11 +9,16 @@ html, body, #root {
 
 .snap-container {
     height: 100vh;
+    height: 100dvh;
+
     max-width: 100vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     background-color: var(--main-purple);
+
+    overscroll-behavior-y: none;
+    scroll-padding-top: 0;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
