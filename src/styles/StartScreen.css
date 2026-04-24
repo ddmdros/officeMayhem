@@ -74,6 +74,10 @@
     filter: brightness(1.2);
 }
 
+.banner-highlight{
+    color: var(--yellow-brawler);
+}
+
 
 /* #region language-switcher */
 
@@ -133,3 +137,46 @@
 
 
 
+/* #region legal-footer */
+.legal-footer {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+    z-index: 5; 
+    pointer-events: none;
+}
+
+.footer-text {
+    font-family: var(--font-body);
+    font-size: 0.7rem; 
+    color: rgba(255, 255, 255, 0.5); 
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto;
+    pointer-events: auto; 
+}
+
+.footer-text a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-text a:hover {
+    color: var(--yellow-brawler); 
+}
+
+@media screen and (max-width: 600px) {
+    .footer-text{
+        font-size: 0.6rem;
+    }
+
+    .footer-text a{
+        color:var(--yellow-brawler)
+    }
+}
+
+/* #endregion */

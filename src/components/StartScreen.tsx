@@ -26,6 +26,11 @@ const StartScreen: React.FC = () => {
         dangerouslySetInnerHTML={{__html: uiText.banner_intro.tagline}}></p>
       </div>
 
+<footer className="legal-footer">
+  <p className='footer-text'
+        dangerouslySetInnerHTML={{__html: uiText.legal_footer.disclaimer}}></p>
+</footer>
+
     </section>
 
   );
