@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './BossBattle.css';
+import "../styles/BossBattle.css"
 
 export const BossBattle = ({ team, chaos, onReset }: any) => {
     const [bossHp, setBossHp] = useState(100);
@@ -25,7 +25,7 @@ export const BossBattle = ({ team, chaos, onReset }: any) => {
                 dmg = 60; effect = "Standard attack deployed.";
         }
 
-        const finalDmg = Math.floor(dmg * (1 - (chaos / 200))); // Caos reduz seu dano
+        const finalDmg = Math.floor(dmg * (1 - (chaos / 200)));
         setBossHp(prev => Math.max(0, prev - finalDmg));
         setBattleLog(`${brawler.name}: ${effect} (${finalDmg} DMG)`);
 

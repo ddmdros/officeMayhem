@@ -1,4 +1,5 @@
-import './BrawlerModal.css';
+import "../styles/BrawlerModal.css"
+
 
 const BrawlerModal = ({ brawler, onClose }: { brawler: any, onClose: () => void }) => {
   if (!brawler) return null;

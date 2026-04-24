@@ -1,5 +1,6 @@
 import React from 'react';
-import './FilterRecruitment.css';
+import "../styles/FilterRecruitment.css"
+
 
 interface FilterRecruitmentProps {
   selectedClass: string;

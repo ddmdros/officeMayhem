@@ -1,12 +1,12 @@
 import React from "react";
-import Intro from "./Intro";
-import Recruitment from "./Recruitment";
-import IntroDialogue from "./IntroDialogue";
-import { EncounterRoom } from "./EncounterRoom";
+import Intro from "../components/Intro";
+import Recruitment from "../components/Recruitment";
+import IntroDialogue from "../components/IntroDialogue";
+import { EncounterRoom } from "../components/EncounterRoom";
 import { BossBattle } from "../components/BossBattle";
-import { Encounter } from "../../core/content";
-import type { GameScene } from "../../types/game";
-import StartScreen from "./StartScreen";
+import { ENCOUNTER } from "../core/content/encounter";
+import type { GameScene } from "../types/game";
+import StartScreen from "../components/StartScreen";
 
 interface SceneManagerProps {
     currentScene: GameScene;
@@ -82,8 +82,8 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
             return (
                 <section className='encounter-section'>
                     <div className='encounter-container'>
-                        <h2 className='encounter-title'>{Encounter[encounterIndex].title}</h2>
-                        <p className='encounter-desc'>{Encounter[encounterIndex].description}</p>
+                        <h2 className='encounter-title'>{ENCOUNTER[encounterIndex].title}</h2>
+                        <p className='encounter-desc'>{ENCOUNTER[encounterIndex].description}</p>
 
                         <div className="deck-selector-container">
                             <button className="nav-btn prev" onClick={prevCard}>◀</button>
@@ -98,7 +98,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                                         <EncounterRoom
                                             key={brawler.id}
                                             brawler={brawler}
-                                            encounter={Encounter[encounterIndex]}
+                                            encounter={ENCOUNTER[encounterIndex]}
                                             onChoice={handleChoice}
                                             position={position}
                                             isActive={index === activeIndex}
@@ -145,7 +145,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                     <IntroDialogue
                         scriptType="performance_review"
                         onFinish={() => {
-                            if (encounterIndex < Encounter.length - 1) {
+                            if (encounterIndex < ENCOUNTER.length - 1) {
                                 setEncounterIndex(prev => prev + 1);
                                 setCurrentScene("ENCOUNTER");
                             } else {

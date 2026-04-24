@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BRAWLER_DATA_PATCH } from '../core/constants/brawlerPatch';
-import { CLASS_ICONS } from '../core/constants/gameAssets';
-import { cleanBrawlText } from '../core/utils/textUtils';
+import { CLASS_ICONS } from '../assets/images/imagesLinks';
+import { cleanBrawlText } from '../utils/textUtils';
 
 export const useBrawlers = () => {
     const [brawlers, setBrawlers] = useState<any[]>([]);

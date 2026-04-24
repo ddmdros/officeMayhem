@@ -1,5 +1,6 @@
 import React from 'react';
-import './HelpRecruitment.css';
+import "../styles/HelpRecruitment.css"
+
 
 interface HelpRecruitmentProps {
   isOpen: boolean;

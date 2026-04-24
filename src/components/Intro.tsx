@@ -1,31 +1,36 @@
-import './Intro.css';
+import { useLanguage } from "../hooks/useLanguage";
+import "../styles/Intro.css"
 
 const Intro = ({ onStart }: { onStart: () => void }) => {
+  const { uiText } = useLanguage();
+  const { location, narrative, cto, startBtn } = uiText.intro_page;
+
   return (
+
     <section className="snap-section story-section">
+      
       <div className="story-body">
-        <h2 className="brand-title  text-shadow">São Paulo, Brazil.</h2>
+        <h2 className="brand-title  text-shadow">{location}</h2>
         <p className="narrative-text">
-          Mina wanted to show off the Brazilian branch to the crew,
-          but Starr Corp's bureaucracy is a literal battlefield.
-          The elevators are possessed, the coffee is radioactive,
-          and HR is... well, we don't talk about HR.
+          {narrative}
         </p>
 
         <p className="call-to-action">
-          Choose your team wisely. The climb begins now.
+          {cto}
         </p>
 
         <div className='deploy-container'>
           <button
             className="deploy-button active"
             onClick={onStart}>
-            ENTER THE OFFICE
+            {startBtn}
           </button>
         </div>
       </div>
 
     </section>
+    
+
   );
 };
 

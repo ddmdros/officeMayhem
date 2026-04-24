@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import './IntroDialogue.css';
-import { DIALOGUES, UI_TEXT } from '../../../core/content';
+import "../styles/IntroDialogue.css"
+import { useLanguage } from '../hooks/useLanguage';
 
 interface IntroDialogueProps {
     scriptType: 'intro' | 'elevator_crisis' | 'performance_review';
@@ -8,12 +8,14 @@ interface IntroDialogueProps {
 }
 
 const IntroDialogue = ({ scriptType, onFinish }: IntroDialogueProps) => {
+    const{dialogues, uiText} = useLanguage();
+
     const [index, setIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [isTyping, setIsTyping] = useState(true);
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    const currentScript = DIALOGUES[scriptType];
+    const currentScript = dialogues[scriptType];
     const currentLine = currentScript[index];
 
     const stopTyping = () => {
@@ -73,7 +75,7 @@ const IntroDialogue = ({ scriptType, onFinish }: IntroDialogueProps) => {
                 </span>
                 <p className="dialogue-text">{displayedText}</p>
 
-                {!isTyping && <div className="next-indicator">{UI_TEXT.en.dialogueScreen.clickToContinueBtn}</div>}
+                {!isTyping && <div className="next-indicator">{uiText.dialogueScreen.clickToContinueBtn}</div>}
             </div>
         </div>
     );

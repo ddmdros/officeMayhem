@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
-import './Recruitment.css';
+import "../styles/Recruitment.css"
 import SelectedTeam from './SelectedTeam';
-import BrawlerCard from '../../components/BrawlerCard';
-import HelpRecruitment from '../../components/BrawlerCard/HelpRecruitment';
-import FilterRecruitment from "../../components/FilterRecruitment"
+import BrawlerCard from './BrawlerCard';
+import HelpRecruitment from './HelpRecruitment';
+import FilterRecruitment from "./FilterRecruitment"
 
 interface RecruitmentProps {
   brawlers: any[];
