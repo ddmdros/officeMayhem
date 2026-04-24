@@ -60,11 +60,12 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 .project-tagline a {
-    color: var(--yellow-brawler);
-    text-decoration: underline;
+   
+    text-decoration: none;
     font-weight: bold;
     pointer-events: auto;
     cursor: pointer;
@@ -75,7 +76,9 @@
 }
 
 .banner-highlight{
-    color: var(--yellow-brawler);
+    color: #f9c908;
+    font-weight: 700;
+    
 }
 
 
@@ -160,23 +163,20 @@
 }
 
 .footer-text a {
-    color: rgba(255, 255, 255, 0.6);
+    color: #ceb54f;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .footer-text a:hover {
-    color: var(--yellow-brawler); 
+    text-decoration: underline;
+    color: var(--yellow-brawler)
+
 }
 
 @media screen and (max-width: 600px) {
-    .footer-text{
-        font-size: 0.6rem;
-    }
 
-    .footer-text a{
-        color:var(--yellow-brawler)
-    }
+    
 }
 
 /* #endregion */

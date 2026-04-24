@@ -2,7 +2,7 @@ export const UI_TEXT = {
     en: {
         banner_intro: {
             title: "STARR CORP: OFFICE MAYHEM",
-            tagline: "A non-commercial interactive fan-made strategy experience. Built with <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span>, and the <span class='banner-highlight'>Brawlify API</span>."
+            tagline: "A non-commercial fan-made academic project. Built with <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span>, and the <span class='banner-highlight'>Brawlify API</span>."
         },
         intro_page: {
             location: "São Paulo, Brazil",
@@ -14,14 +14,14 @@ export const UI_TEXT = {
             clickToContinueBtn: "CLICK TO CONTINUE ▼"
         },
         legal_footer: {
-            disclaimer: "This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell. Refer to Supercell's <a href='https://supercell.com/en/terms-of-service/' target='_blank'>Terms of Service</a> and <a href='https://supercell.com/en/fan-content-policy/' target='_blank'>Fan Content Policy</a>. For detailed information, check out the <a href='LINK_DO_SEU_GITHUB' target='_blank'>project documentation</a>."
+            disclaimer: "This content is not affiliated with, endorsed, sponsored, or approved by Supercell. Refer to Supercell's <a href='https://supercell.com/en/terms-of-service/' target='_blank'>Terms of Service</a> and <a href='https://supercell.com/en/fan-content-policy/' target='_blank'>Fan Content Policy</a>. For detailed information, check out the <a href='LINK_DO_SEU_GITHUB' target='_blank'>project documentation</a>."
         }
     },
 
     pt: {
         banner_intro: {
             title: "STARR CORP: CAOS NO ESCRITÓRIO",
-            tagline: "Uma experiência não comercial de estratégia interativa feita por fã. Feita em <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span> e alimentada pela <span class='banner-highlight'>API do Brawlify</span>."
+            tagline: "Um projeto de estudos não comercial feito por fã. Construído em <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span> e alimentada pela <span class='banner-highlight'>API do Brawlify</span>."
         },
         intro_page: {
             location: "São Paulo, Brasil",
@@ -33,7 +33,7 @@ export const UI_TEXT = {
             clickToContinueBtn: "CLIQUE PARA CONTINUAR ▼"
         },
         legal_footer: {
-            disclaimer: "Este conteúdo não é afiliado, endossado ou aprovado pela Supercell. Consulte os <a href='https://supercell.com/en/terms-of-service/pt' target='_blank'>Termos de Serviço</a> e a <a href='https://supercell.com/en/fan-content-policy/pt/' target='_blank'>Política de Conteúdo para Fãs</a>. Para informações detalhadas do projeto, confira a <a href='LINK_DO_SEU_GITHUB' target='_blank'>documentação do projeto</a>."
+            disclaimer: "Este conteúdo não é afiliado, endossado ou aprovado pela Supercell. Consulte os <a href='https://supercell.com/en/terms-of-service/pt' target='_blank'>Termos de Serviço</a> e a <a href='https://supercell.com/en/fan-content-policy/pt/' target='_blank'>Política de Conteúdo para Fãs</a> da Supercell. Para informações detalhadas, confira a <a href='LINK_DO_SEU_GITHUB' target='_blank'>documentação do projeto</a>."
         }
     }
 };
