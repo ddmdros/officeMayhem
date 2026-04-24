@@ -16,6 +16,7 @@ export const useLanguage = () => {
         setLang: setLanguage,
         uiText: content.ui,
         dialogues: content.dialogues,
+        encounter: content.encounter,
 
         isPt: language === "pt",
         isEn: language === "en",
