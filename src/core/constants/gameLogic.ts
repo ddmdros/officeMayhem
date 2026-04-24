@@ -1,41 +1,5 @@
 export type BrawlerClass = "Damage Dealer" | "Tank" | "Assassin" | "Marksman" | "Artillery" | "Support" | "Controller";
 
-interface ClassStat {
-    advantageVs: BrawlerClass[];
-    weaknessVs: BrawlerClass[];
-}
-
-export const CLASS_BALANCING: Record<BrawlerClass, ClassStat> = {
-    "Damage Dealer": {
-        advantageVs: ["Tank", "Assassin"],
-        weaknessVs: ["Marksman", "Artillery"],
-    },
-    "Tank": {
-        advantageVs: ["Assassin"],
-        weaknessVs: ["Damage Dealer"],
-    },
-    "Assassin": {
-        advantageVs: ["Marksman", "Artillery"],
-        weaknessVs: ["Tank", "Damage Dealer"],
-    },
-    "Marksman": {
-        advantageVs: ["Damage Dealer", "Support"],
-        weaknessVs: ["Assassin", "Artillery"],
-    },
-    "Artillery": {
-        advantageVs: ["Controller", "Marksman"],
-        weaknessVs: ["Tank", "Assassin"],
-    },
-    "Support": {
-        advantageVs: [],
-        weaknessVs: ["Damage Dealer", "Assassin"],
-    },
-    "Controller": {
-        advantageVs: ["Support"],
-        weaknessVs: ["Marksman"],
-    }
-};
-
 export const CLASS_CONTENT = {
   "Damage Dealer": {
     slogan: "The Productivity Engines",

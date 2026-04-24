@@ -33,12 +33,22 @@ export const useGameEngine = () => {
         setActiveIndex(1);
     };
 
+    const handleResultDialogue = (result: { overtime: number; chaos: number }) => {
+    if (result.overtime >= 80 && result.chaos >= 80) {
+        return "Your team went ALL-IN on the risky move, causing an unprecedented corporate meltdown! The CEO is furious, and you're all sent to Overtime for eternity. Game Over.";        
+    } else if (result.overtime >= 80) {
+        return "Your team went all-in on the risky move, causing a catastrophic failure! The CEO is furious, and you're all sent to Overtime for eternity. Game Over.";
+    }
+}
+
     return {
         currentScene, setCurrentScene,
         selectedTeam, toggleSelection,
         overtime, chaos,
         encounterIndex, setEncounterIndex,
         activeIndex, setActiveIndex,
-        handleChoice, handleRestartGame
+        handleChoice, handleRestartGame, handleResultDialogue
     };
+
+    
 };

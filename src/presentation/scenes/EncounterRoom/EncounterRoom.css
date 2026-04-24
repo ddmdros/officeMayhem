@@ -1,21 +1,6 @@
 /* ============================================================
    1. ESTRUTURA GLOBAL (CONTAINER)
    ============================================================ */
-/* .encounter-section {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background: radial-gradient(circle, #2a0a4d 0%, #10051a 100%);
-    padding: 20px;
-    padding-bottom: 140px; 
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-} */
 
 .encounter-section {
     width: 100%;
@@ -24,35 +9,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* MUDANÇA AQUI: Centraliza tudo no meio da tela */
     justify-content: center; 
     background: radial-gradient(circle, #2a0a4d 0%, #10051a 100%);
     
-    /* Removemos o padding-top alto e deixamos um respiro equilibrado */
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
 }
 
-/* Garante que o container de texto não fique "grudado" no card */
 .encounter-container {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    margin-bottom: 30px; /* Aumentamos o espaço entre o texto e o card */
+    margin-bottom: 30px;
     flex-shrink: 0;
     z-index: 5;
 }
-
-/* .encounter-container {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 10px;
-    flex-shrink: 0;
-    z-index: 5;
-} */
 
 .encounter-title {
     font-family: 'BrawlStars-Main', sans-serif;
@@ -67,63 +40,47 @@
     font-size: 0.95rem;
     line-height: 1.4;
     color: #ddd;
-    padding: 0 15px;
+    padding: 10px 15px;
+    margin: 20px 0px;
 }
 
-/* ============================================================
-   2. SISTEMA DE CARDS (DECK 3D)
-   ============================================================ */
-/* .deck-selector-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 320px; 
-    margin: 10px 0;
-    perspective: 1000px;
-    z-index: 10;
-} */
-
-/* Ajuste no seletor de cards para ele não crescer infinitamente */
 .deck-selector-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* Flex-grow 0 para ele respeitar o tamanho do deck-wrapper */
     flex: 0 1 auto; 
     perspective: 1000px;
-    margin: 0; /* Removemos as margens externas */
+    margin: 0;
 }
+
 .deck-wrapper {
     position: relative;
     width: 280px;
-    /* Forçamos a altura aqui para os cards absolute aparecerem */
-    height: 280px; 
+    height: 200px; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .choice-card {
     position: absolute;
-    /* Em vez de 'auto', vamos garantir que o card preencha o wrapper */
-    width: 100%;
-    height: 100%; 
+    height: auto;
+    padding: 0px 60px;
     background: linear-gradient(145deg, #2a0a4d, #1a052d);
+    
     border: 3px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 18px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     pointer-events: none;
-    box-sizing: border-box; /* Importante para o padding não estourar */
+    box-sizing: border-box;
+    
 }
-/* Posicionamento do Carrossel */
+
 .choice-card.active {
     z-index: 10;
     opacity: 1;
@@ -131,6 +88,8 @@
     pointer-events: all;
     box-shadow: 0 15px 35px rgba(0,0,0,0.5);
     border-color: var(--yellow-brawler);
+    padding: 10px 30px;
+    
 }
 
 .choice-card.prev {
@@ -138,6 +97,7 @@
     opacity: 0.5;
     transform: translateX(-50%) scale(0.8) rotateY(25deg);
     filter: blur(2px) grayscale(0.5);
+    
 }
 
 .choice-card.next {
@@ -150,6 +110,7 @@
 .choice-card:active {
     transform: scale(0.95);
     filter: brightness(1.2);
+    
 }
 
 /* ============================================================
