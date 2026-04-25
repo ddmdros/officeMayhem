@@ -5,7 +5,7 @@ import LegalModal from "./LegalModal";
 import SettingsModal from "./SettingsModal";
 import HeroBanner from "./HeroBanner";
 
-import hamburgerMenuIcon from "../assets/icons/hamburguer_menu.png";
+import hamburgerMenuIcon from "../assets/icons/hamburguer_menu_yellow.png";
 
 const StartScreen: React.FC = () => {
   const { uiText } = useLanguage();

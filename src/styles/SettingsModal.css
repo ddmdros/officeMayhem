@@ -1,7 +1,7 @@
 .settings-trigger-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    left: 30px;
     width: 90px;
     height: 90px;
     background: none;
@@ -196,4 +196,12 @@
 @keyframes popIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+    .settings-trigger-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
 }
