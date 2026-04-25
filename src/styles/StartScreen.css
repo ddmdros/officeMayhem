@@ -89,18 +89,3 @@
     .banner .project-tagline { margin-top: 0.5rem; font-size: 0.9rem; }
 }
 
-.settings-trigger-btn .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-
-.settings-trigger-btn .icon img {
-    width: 190%;  
-    height: auto;
-    object-fit: contain;
-    filter: none; 
-}

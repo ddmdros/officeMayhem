@@ -1,4 +1,3 @@
-// src/hooks/useLanguageSwitcher.ts
 import { useLanguage } from "./useLanguage";
 
 export const useLanguageSwitcher = () => {

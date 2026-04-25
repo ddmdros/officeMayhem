@@ -29,8 +29,8 @@ export const UI_TEXT = {
         },
         intro_page: {
             location: "São Paulo, Brasil",
-            narrative: "Mina queria mostrar a filial brasileira para a equipe, mas a burocracia da Starr Corp é um verdadeiro campo de batalha. Os elevadores estão possuídos, o café é radioativo, e o RH é... Bem, não falamos sobre o RH.",
-            cto: "Escolha sua equipe com sabedoria. O desafio começa agora.",
+            narrative: "Mina queria mostrar a filial brasileira para a equipe, mas a burocracia da Starr Corp é um verdadeiro campo de batalha. Os elevadores estão possuídos, o café é radioativo, e o RH é... bem, não falamos do RH.",
+            cto: "Escolha a sua equipe com sabedoria. O desafio começa agora.",
             startBtn: "ENTRAR NO ESCRITÓRIO"
         },
         dialogueScreen: {

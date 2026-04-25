@@ -37,22 +37,22 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ onClose, onOpenLegal }) =
                         <label>{language === 'en' ? 'PROJECT' : 'PROJETO'}</label>
                         <div className="nav-column">
                             <a href="https://github.com/ddmdros/officeMayhem" target="_blank" rel="noreferrer" className="menu-action-btn">
-                                <span className="icon">📂</span> {language === 'en' ? 'Documentation' : 'Documentação'}
+                                 {language === 'en' ? 'Documentation' : 'Documentação'}
                             </a>
                             <button
                                 className="menu-action-btn"
                                 onClick={() => {
                                     onClose();
-                                    onOpenLegal();  
+                                    onOpenLegal();
                                 }}
                             >
-                                <span className="icon">⚖️</span> Legal
+                                Legal
                             </button>
                         </div>
                     </div>
 
                     <button className="menu-action-btn back-btn" onClick={onClose} style={{ marginTop: '10px' }}>
-<span className="icon">⬅️</span> {language === 'en' ? 'BACK' : 'VOLTAR'}                    </button>
+                         {language === 'en' ? 'BACK' : 'VOLTAR'}                    </button>
 
                 </div>
             </div>
