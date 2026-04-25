@@ -2,7 +2,8 @@ export const UI_TEXT = {
     en: {
         banner_intro: {
             title: "STARR CORP: OFFICE MAYHEM",
-            tagline: "A non-commercial fan-made academic project. Built with <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span>, and the <span class='banner-highlight'>Brawlify API</span>."
+            tagline: 
+            "Your career starts (and maybe ends) here! A fan-made academic tribute to the Brawl Stars universe built with <span class='banner-highlight'>React</span> and <span class='banner-highlight'>TypeScript</span>."
         },
         intro_page: {
             location: "São Paulo, Brazil",
@@ -24,7 +25,7 @@ export const UI_TEXT = {
     pt: {
         banner_intro: {
             title: "STARR CORP: CAOS NO ESCRITÓRIO",
-            tagline: "Um projeto de estudos não comercial feito por fã. Construído em <span class='banner-highlight'>React</span> e <span class='banner-highlight'>TypeScript</span> e alimentado pela <span class='banner-highlight'>API do Brawlify</span>."
+            tagline: "Sua carreira começa (e talvez termine) aqui! Um tributo acadêmico feito por fã ao universo Brawl Stars, desenvolvido com <span class='banner-highlight'>React</span> e <span class='banner-highlight'>TypeScript</span>."
         },
         intro_page: {
             location: "São Paulo, Brasil",

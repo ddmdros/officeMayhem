@@ -17,49 +17,49 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
           <button className="close-btn" onClick={onClose}>×</button>
         </div>
 
-<div className="settings-content legal-content-scroll">
-  <div className="legal-text-container">
-    <p 
-      className="legal-modal-text"
-      dangerouslySetInnerHTML={{ __html: legal_modal.disclaimer }} 
-    />
-  </div>
-  
-  <div className="legal-links-grid">
-    <a 
-      href={`https://supercell.com/en/terms-of-service/${lang === 'pt' ? 'pt' : ''}`} 
-      target="_blank" 
-      rel="noreferrer" 
-      className="legal-link-btn"
-    >
-      {legal_modal.tos_btn}
-    </a>
-    <a 
-      href={`https://supercell.com/en/fan-content-policy/${lang === 'pt' ? 'pt/' : ''}`} 
-      target="_blank" 
-      rel="noreferrer" 
-      className="legal-link-btn"
-    >
-      {legal_modal.policy_btn}
-    </a>
-  </div>
+        <div className="settings-content legal-content-scroll">
+          {/* BLOCO LEGAL: Texto + Links Oficiais */}
+          <div className="legal-text-container">
+            <p
+              className="legal-modal-text"
+              dangerouslySetInnerHTML={{ __html: legal_modal.disclaimer }}
+            />
 
-  {/* Botões de ação total que você curtiu */}
-  <div className="legal-actions-stack">
-    <a 
-      href="LINK_DO_SEU_GITHUB" 
-      target="_blank" 
-      rel="noreferrer" 
-      className="menu-action-btn doc-btn"
-    >
-      {lang === 'en' ? '📂 PROJECT DOCUMENTATION' : '📂 DOCUMENTAÇÃO DO PROJETO'}
-    </a>
+            <div className="inline-legal-links">
+              <a
+                href={`https://supercell.com/en/terms-of-service/${lang === 'pt' ? 'pt' : ''}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mini-link-btn"
+              >
+                {legal_modal.tos_btn}
+              </a>
+              <a
+                href={`https://supercell.com/en/fan-content-policy/${lang === 'pt' ? 'pt/' : ''}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mini-link-btn"
+              >
+                {legal_modal.policy_btn}
+              </a>
+            </div>
+          </div>
 
-    <button className="menu-action-btn back-btn" onClick={onClose}>
-      {legal_modal.back_btn}
-    </button>
-  </div>
-</div>
+          <div className="legal-actions-stack">
+            <a
+              href="https://github.com/ddmdros/officeMayhem"
+              target="_blank"
+              rel="noreferrer"
+              className="menu-action-btn doc-btn"
+            >
+              {lang === 'en' ? '📂 PROJECT DOCUMENTATION' : '📂 DOCUMENTAÇÃO DO PROJETO'}
+            </a>
+
+            <button className="menu-action-btn back-btn" onClick={onClose}>
+              {legal_modal.back_btn}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

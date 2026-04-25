@@ -1,14 +1,18 @@
+/* #region 1. container and header */
 .legal-modal-box {
     max-width: 480px;
     background: radial-gradient(circle at center, #4a2b85 0%, var(--purple-dark) 100%);
 }
 
 .legal-text-container {
-    background-color: rgba(0, 0, 0, 0.3); /* Um pouco mais escuro para contraste */
-    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.35); 
+    border-radius: 20px;
     padding: 18px;
     margin-bottom: 20px;
     border: 2px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .legal-modal-text {
@@ -17,63 +21,80 @@
     line-height: 1.6;
     color: #ffffff; 
     margin: 0;
-    text-align: left;
 }
+/* #endregion */
 
-.legal-links-grid {
+/* #region 2. supercell btns */
+.inline-legal-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 8px;
 }
 
-.legal-link-btn {
+.mini-link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3d3452; 
+    text-align: center; 
+    line-height: 1.1; 
+    background-color: rgba(255, 255, 255, 0.05);
     color: #ffffff !important;
-    border: 3px solid #000;
-    border-bottom: 5px solid #000;
-    border-radius: 12px;
-    padding: 10px 5px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 6px; 
     font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.1);
-    transition: all 0.1s;
+    transition: all 0.2s;
+    min-height: 45px; 
 }
 
-.doc-btn {
-    width: 100%;
-    margin-bottom: 12px;
-    background-color: #2196F3;
-    padding: 15px;
-    font-size: 0.8rem;
-    color: #ffffff !important;
-    text-shadow: 2px 2px 0px #000;
+.mini-link-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+/* #endregion */
+
+/* #region 3. main actions (doc and back) */
+.legal-actions-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.back-btn {
+.menu-action-btn {
     width: 100%;
-    background-color: var(--purple-main);
     padding: 15px;
+    border: 3px solid #000;
+    border-bottom: 6px solid #000; 
+    border-radius: 14px;
+    font-family: 'BrawlStars-Main', sans-serif;
     font-size: 0.9rem;
     color: #ffffff !important;
     text-shadow: 2px 2px 0px #000;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.1s;
 }
 
-.legal-link-btn:active, .doc-btn:active, .back-btn:active {
+.doc-btn { background-color: #2196F3; }
+.back-btn { background-color: var(--purple-main); }
+
+.menu-action-btn:active {
     transform: scale(0.98) translateY(2px);
     border-bottom-width: 3px;
     filter: brightness(0.9);
 }
 
-.legal-link-btn:hover, .doc-btn:hover, .back-btn:hover {
+.menu-action-btn:hover {
     filter: brightness(1.1);
 }
+/* #endregion */
 
+/* #region 4. scrollbar */
 .legal-content-scroll::-webkit-scrollbar { width: 8px; }
 .legal-content-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 10px; }
 .legal-content-scroll::-webkit-scrollbar-thumb { 
@@ -81,5 +102,4 @@
     border: 2px solid #000; 
     border-radius: 10px; 
 }
-
 /* #endregion */

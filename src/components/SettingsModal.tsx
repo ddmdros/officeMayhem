@@ -36,7 +36,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ onClose, onOpenLegal }) =
                     <div className="settings-group">
                         <label>{language === 'en' ? 'PROJECT' : 'PROJETO'}</label>
                         <div className="nav-column">
-                            <a href="LINK_DO_SEU_GITHUB" target="_blank" rel="noreferrer" className="menu-action-btn">
+                            <a href="https://github.com/ddmdros/officeMayhem" target="_blank" rel="noreferrer" className="menu-action-btn">
                                 <span className="icon">📂</span> {language === 'en' ? 'Documentation' : 'Documentação'}
                             </a>
                             <button
@@ -50,6 +50,10 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ onClose, onOpenLegal }) =
                             </button>
                         </div>
                     </div>
+
+                    <button className="menu-action-btn back-btn" onClick={onClose} style={{ marginTop: '10px' }}>
+<span className="icon">⬅️</span> {language === 'en' ? 'BACK' : 'VOLTAR'}                    </button>
+
                 </div>
             </div>
         </div>

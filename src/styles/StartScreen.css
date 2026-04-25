@@ -28,19 +28,20 @@
     text-align: center;
     color: white;
     z-index: 10; 
-    width: 90%; 
+    width: 85%; 
     max-width: 800px; 
 
 }
 
 .banner .brand-title {
     font-family: 'BrawlStars-Main', sans-serif;
-    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-size: clamp(2rem, 10vw, 5rem); 
     margin: 0;
-    line-height: 1;
+    line-height: 0.9;
     text-transform: uppercase;
-    text-shadow: 4px 4px 0px var(--purple-dark), 0px 0px 20px rgba(0,0,0,0.5);
+    text-shadow: 0.05em 0.05em 0px var(--purple-dark), 0px 0px 15px rgba(0,0,0,0.5);
     color: var(--white-main);
+    letter-spacing: -1px;
 }
 
 .banner .title-banner img{
@@ -53,13 +54,14 @@
 
 .banner .project-tagline {
     font-family: var(--font-body);
-    font-size: clamp(1.5rem, 3vw, 1.2rem);
-    margin-top: 1rem;
-    opacity: 0.9;
+    font-size: clamp(0.95rem, 3vw, 1.22rem);
+    margin-top: 1.2rem;
+    opacity: 0.95;
     color: #f9e8ce;
-    max-width: 600px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.4;
     
 }
 
@@ -78,5 +80,27 @@
 .banner-highlight{
     color: #f9c908;
     font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(249, 201, 8, 0.3);
     
+}
+
+@media (max-height: 500px) {
+    .banner .brand-title { font-size: 2.5rem; }
+    .banner .project-tagline { margin-top: 0.5rem; font-size: 0.9rem; }
+}
+
+.settings-trigger-btn .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.settings-trigger-btn .icon img {
+    width: 190%;  
+    height: auto;
+    object-fit: contain;
+    filter: none; 
 }

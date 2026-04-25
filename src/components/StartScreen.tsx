@@ -5,6 +5,8 @@ import LegalModal from "./LegalModal";
 import SettingsModal from "./SettingsModal";
 import HeroBanner from "./HeroBanner";
 
+import hamburgerMenuIcon from "../assets/icons/hamburguer_menu.png";
+
 const StartScreen: React.FC = () => {
   const { uiText } = useLanguage();
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -14,9 +16,8 @@ const StartScreen: React.FC = () => {
 
   return (
     <section className="banner snap-section">
-      {/* 1. Camada de UI/Sistema */}
       <button className="settings-trigger-btn" onClick={() => setIsSettingsOpen(true)}>
-        <span className="icon">⚙️</span>
+        <span className="icon"><img src={hamburgerMenuIcon} alt="Settings" /></span>
       </button>
       
       {isSettingsOpen && (
