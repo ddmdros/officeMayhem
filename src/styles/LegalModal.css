@@ -1,0 +1,85 @@
+.legal-modal-box {
+    max-width: 480px;
+    background: radial-gradient(circle at center, #4a2b85 0%, var(--purple-dark) 100%);
+}
+
+.legal-text-container {
+    background-color: rgba(0, 0, 0, 0.3); /* Um pouco mais escuro para contraste */
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.legal-modal-text {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #ffffff; 
+    margin: 0;
+    text-align: left;
+}
+
+.legal-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.legal-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3d3452; 
+    color: #ffffff !important;
+    border: 3px solid #000;
+    border-bottom: 5px solid #000;
+    border-radius: 12px;
+    padding: 10px 5px;
+    font-family: 'BrawlStars-Main', sans-serif;
+    font-size: 0.65rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.1s;
+}
+
+.doc-btn {
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: #2196F3;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.back-btn {
+    width: 100%;
+    background-color: var(--purple-main);
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.legal-link-btn:active, .doc-btn:active, .back-btn:active {
+    transform: scale(0.98) translateY(2px);
+    border-bottom-width: 3px;
+    filter: brightness(0.9);
+}
+
+.legal-link-btn:hover, .doc-btn:hover, .back-btn:hover {
+    filter: brightness(1.1);
+}
+
+.legal-content-scroll::-webkit-scrollbar { width: 8px; }
+.legal-content-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 10px; }
+.legal-content-scroll::-webkit-scrollbar-thumb { 
+    background: var(--purple-main); 
+    border: 2px solid #000; 
+    border-radius: 10px; 
+}
+
+/* #endregion */

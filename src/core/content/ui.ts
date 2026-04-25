@@ -13,15 +13,18 @@ export const UI_TEXT = {
         dialogueScreen: {
             clickToContinueBtn: "CLICK TO CONTINUE ▼"
         },
-        legal_footer: {
-            disclaimer: "This content is not affiliated with, endorsed, sponsored, or approved by Supercell. Refer to Supercell's <a href='https://supercell.com/en/terms-of-service/' target='_blank'>Terms of Service</a> and <a href='https://supercell.com/en/fan-content-policy/' target='_blank'>Fan Content Policy</a>. For detailed information, check out the <a href='LINK_DO_SEU_GITHUB' target='_blank'>project documentation</a>."
+        legal_modal: {
+            disclaimer: "This is a non-commercial academic project created for educational purposes. This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. This project follows Supercell’s Fan Content Policy and Terms of Service. Detailed information can be found in the documentation below.",
+            tos_btn: "Terms of Service",
+            policy_btn: "Fan Content Policy",
+            back_btn: "BACK"
         }
     },
 
     pt: {
         banner_intro: {
             title: "STARR CORP: CAOS NO ESCRITÓRIO",
-            tagline: "Um projeto de estudos não comercial feito por fã. Construído em <span class='banner-highlight'>React</span>, <span class='banner-highlight'>TypeScript</span> e alimentada pela <span class='banner-highlight'>API do Brawlify</span>."
+            tagline: "Um projeto de estudos não comercial feito por fã. Construído em <span class='banner-highlight'>React</span> e <span class='banner-highlight'>TypeScript</span> e alimentado pela <span class='banner-highlight'>API do Brawlify</span>."
         },
         intro_page: {
             location: "São Paulo, Brasil",
@@ -32,8 +35,11 @@ export const UI_TEXT = {
         dialogueScreen: {
             clickToContinueBtn: "CLIQUE PARA CONTINUAR ▼"
         },
-        legal_footer: {
-            disclaimer: "Este conteúdo não é afiliado, endossado ou aprovado pela Supercell. Consulte os <a href='https://supercell.com/en/terms-of-service/pt' target='_blank'>Termos de Serviço</a> e a <a href='https://supercell.com/en/fan-content-policy/pt/' target='_blank'>Política de Conteúdo para Fãs</a> da Supercell. Para informações detalhadas, confira a <a href='LINK_DO_SEU_GITHUB' target='_blank'>documentação do projeto</a>."
+        legal_modal: {
+            disclaimer: "Este é um projeto acadêmico sem fins lucrativos criado para fins educacionais. Este conteúdo não é afiliado, endossado, patrocinado ou aprovado especificamente pela Supercell e a Supercell não é responsável por ele. Este projeto segue a Política de Conteúdo para Fãs e os Termos de Serviço da Supercell. Informações detalhadas podem ser encontradas na documentação abaixo.",
+            tos_btn: "Termos de Serviço",
+            policy_btn: "Política de conteúdo para fãs",
+            back_btn: "VOLTAR"
         }
     }
 };
