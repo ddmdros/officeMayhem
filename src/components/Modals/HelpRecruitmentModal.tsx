@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/HelpRecruitment.css"
+import "../../styles/HelpRecruitmentModal.css"
 
 
 interface HelpRecruitmentProps {
@@ -7,7 +7,7 @@ interface HelpRecruitmentProps {
   onClose: () => void;
 }
 
-export const HelpRecruitment: React.FC<HelpRecruitmentProps> = ({ isOpen, onClose }) => {
+export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
@@ -48,4 +48,4 @@ export const HelpRecruitment: React.FC<HelpRecruitmentProps> = ({ isOpen, onClos
   );
 };
 
-export default HelpRecruitment;
+export default HelpRecruitmentModal;

@@ -1,6 +1,6 @@
 import React from "react";
-import { useLanguageSwitcher } from "../hooks/useLanguageSwitcher";
-import "../styles/SettingsModal.css";
+import { useLanguageSwitcher } from "../../hooks/useLanguageSwitcher";
+import "../../styles/SettingsModal.css";
 
 interface SettingsModalProps {
     onClose: () => void;

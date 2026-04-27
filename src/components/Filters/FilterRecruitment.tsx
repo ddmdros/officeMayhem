@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/FilterRecruitment.css"
+import "../../styles/FilterRecruitment.css"
 
 
 interface FilterRecruitmentProps {

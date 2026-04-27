@@ -1,11 +1,13 @@
 import React from "react";
-import { useLanguage } from "../hooks/useLanguage";
-import "../styles/LegalModal.css";
+import { useLanguage } from "../../hooks/useLanguage";
+import "../../styles/LegalModal.css";
+
 interface LegalModalProps {
   onClose: () => void;
+  onBack: () => void;
 }
 
-const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
+const LegalModal: React.FC<LegalModalProps> = ({ onClose, onBack }) => {
   const { uiText, lang } = useLanguage();
   const { legal_modal } = uiText;
 
@@ -18,7 +20,6 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
         </div>
 
         <div className="settings-content legal-content-scroll">
-          {/* BLOCO LEGAL: Texto + Links Oficiais */}
           <div className="legal-text-container">
             <p
               className="legal-modal-text"
@@ -55,7 +56,7 @@ const LegalModal: React.FC<LegalModalProps> = ({ onClose }) => {
               {lang === 'en' ? '📂 PROJECT DOCUMENTATION' : '📂 DOCUMENTAÇÃO DO PROJETO'}
             </a>
 
-            <button className="menu-action-btn back-btn" onClick={onClose}>
+            <button className="menu-action-btn back-btn" onClick={onBack}>
               {legal_modal.back_btn}
             </button>
           </div>

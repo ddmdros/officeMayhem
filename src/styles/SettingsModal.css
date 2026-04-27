@@ -1,3 +1,4 @@
+/* #region main region */
 .settings-trigger-btn {
     position: absolute;
     top: 30px;
@@ -172,13 +173,11 @@
 
 .doc-btn {
     background-color: #2196F3;
-    border-bottom-color: #0d47a1;
 }
 
 .back-btn {
     grid-column: span 2;
     background-color: #d32f2f;
-    border-bottom-color: #8b0000;
     margin-top: 5px;
 }
 

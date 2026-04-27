@@ -3,7 +3,7 @@ import './App.css'
 import { useBrawlers } from './hooks/useBrawlers'
 import { useGameEngine } from './hooks/useGameEngine'
 import { SceneManager } from './hooks/SceneManager'
-import BrawlerModal from './components/BrawlerModal'
+import BrawlerModal from './components/Modals/BrawlerModal'
 import { useState } from 'react'
 import { LanguageProvider } from './context/LanguageContext'
 
@@ -16,7 +16,6 @@ function App() {
 
 
     return (
-        <LanguageProvider>
 
             <main className='snap-container'>
                 <SceneManager
@@ -40,7 +39,6 @@ function App() {
 
 
             </main>
-        </LanguageProvider>
 
     )
 }

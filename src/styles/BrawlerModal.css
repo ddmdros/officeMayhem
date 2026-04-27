@@ -16,11 +16,14 @@
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #1a0b2e 0%, #0f051a 100%);
+    background: linear-gradient(0deg, var(--brawler-color, var(--yellow-brawler)) 10%, #0f051a 95%);
+    color: white;
     width: 90%;
     max-width: 450px;
     border-radius: 20px;
-    border: 4px solid var(--yellow-brawler);
+    border: 4px solid var(--brawler-color, var(--yellow-brawler));
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 
+                0 0 15px var(--brawler-color, var(--yellow-brawler));
     padding: 20px;
     position: relative;
     animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -36,8 +39,6 @@
     align-self: center;
 
 }
-
-
 
 .modal-headline{
     display: flex;
@@ -75,7 +76,7 @@
     font-size: 0.95rem;
     line-height: 1.6;
     font-size: 1.3rem;;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     padding: 15px;
     border-radius: 10px;
 }
@@ -94,18 +95,6 @@
     backdrop-filter: blur(5px);
 }
 
-.modal-content {
-    background: #1a0b2e;
-    width: 90%;
-    max-width: 450px;
-    max-height: 90vh; 
-    overflow-y: auto;
-    padding: 30px;
-    border-radius: 20px;
-    border: 4px solid var(--yellow-brawler);
-    position: relative;
-    color: white;
-}
 
 .close-modal {
     position: absolute;
@@ -141,9 +130,9 @@
 
 @media screen and (max-width: 768px) {
     .modal-content {
-        padding: 15px; /* Reduzi de 30px */
-        max-height: 95vh; /* Quase a tela toda se precisar, mas sem folgas */
-        overflow: hidden; /* Se o conteúdo é pouco, desativamos o scroll */
+        padding: 15px; 
+        max-height: 95vh; 
+        overflow: hidden; 
     }
 
     .modal-header {

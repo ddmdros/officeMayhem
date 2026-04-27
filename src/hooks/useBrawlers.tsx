@@ -1,42 +1,42 @@
 import { useState, useEffect } from 'react';
-import { BRAWLER_DATA_PATCH } from '../core/constants/brawlerPatch';
-import { CLASS_ICONS } from '../assets/images/imagesLinks';
-import { cleanBrawlText } from '../utils/textUtils';
+import brawlerLocalData from '../core/constants/brawlerLocalData.json';
+import { useLanguage } from '../hooks/useLanguage';
 
 export const useBrawlers = () => {
     const [brawlers, setBrawlers] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
+    const { isPt, lang } = useLanguage();
 
     useEffect(() => {
-        const fetchBrawlers = async () => {
+        const loadBrawlers = () => {
             try {
-                const response = await fetch("https://api.brawlify.com/v1/brawlers");
-                const data = await response.json();
-                
-                const cleanedList = data.list.map((brawler: any) => {
-                    const patchData = BRAWLER_DATA_PATCH[brawler.name.toUpperCase()];
-                    let currentBrawler = { ...brawler };
+                const dataList = brawlerLocalData.list || [];
 
-                    if (patchData) {
-                        currentBrawler.class = { ...currentBrawler.class, name: patchData.className };
-                    }
-
-                    currentBrawler.description = cleanBrawlText(currentBrawler.description);
+                const processedList = dataList.map((brawler: any) => {
 
                     return {
-                        ...currentBrawler,
-                        classIcon: CLASS_ICONS[currentBrawler.class.name] || "URL_PADRAO",
+                        ...brawler,
+                        description: (isPt && brawler.description_ptbr) 
+                            ? brawler.description_ptbr 
+                            : brawler.description,
+                        className: (isPt && brawler.class.name_ptbr)
+                            ? brawler.class.name_ptbr
+                            : brawler.class.name,
+                        classColor: brawler.class.color,
+                        iconUrl: brawler.class.iconUrl,
                     };
                 });
-                setBrawlers(cleanedList);
+
+                setBrawlers(processedList);
             } catch (error) {
-                console.error("Starr Corp API Error:", error);
+                console.error("Error processing JSON:", error);
             } finally {
                 setLoading(false);
             }
         };
-        fetchBrawlers();
-    }, []);
+
+        loadBrawlers();
+    }, [lang, isPt]);
 
     return { brawlers, loading };
 };

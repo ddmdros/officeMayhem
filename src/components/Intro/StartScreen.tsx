@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "../styles/StartScreen.css";
-import { useLanguage } from "../hooks/useLanguage";
-import LegalModal from "./LegalModal";
-import SettingsModal from "./SettingsModal";
+import "../../styles/StartScreen.css";
+import { useLanguage } from "../../hooks/useLanguage";
+import LegalModal from "../Modals/LegalModal";
+import SettingsModal from "../Modals/SettingsModal";
 import HeroBanner from "./HeroBanner";
 
-import hamburgerMenuIcon from "../assets/icons/hamburguer_menu_yellow.png";
+import hamburgerMenuIcon from "../../assets/icons/hamburguer_menu_yellow.png";
 
 const StartScreen: React.FC = () => {
   const { uiText } = useLanguage();
@@ -28,7 +28,12 @@ const StartScreen: React.FC = () => {
       )}
 
       {isLegalOpen && (
-        <LegalModal onClose={() => setIsLegalOpen(false)} />
+        <LegalModal 
+        onClose={() => setIsLegalOpen(false)}
+        onBack={() => {
+          setIsLegalOpen(false);
+          setIsSettingsOpen(true);
+        }} />
       )}
 
       <HeroBanner 

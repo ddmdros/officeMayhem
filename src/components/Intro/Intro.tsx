@@ -1,5 +1,5 @@
-import { useLanguage } from "../hooks/useLanguage";
-import "../styles/Intro.css"
+import { useLanguage } from "../../hooks/useLanguage";
+import "../../styles/Intro.css"
 
 const Intro = ({ onStart }: { onStart: () => void }) => {
   const { uiText } = useLanguage();

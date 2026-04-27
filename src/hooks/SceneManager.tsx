@@ -1,11 +1,11 @@
 import React from "react";
-import Intro from "../components/Intro";
-import Recruitment from "../components/Recruitment";
-import IntroDialogue from "../components/IntroDialogue";
-import { EncounterRoom } from "../components/EncounterRoom";
-import { BossBattle } from "../components/BossBattle";
+import Intro from "../components/Intro/Intro";
+import Recruitment from "../components/RecruitmentPage/Recruitment";
+import IntroDialogue from "../components/Intro/IntroDialogue";
+import { EncounterRoom } from "../components/Encounters/EncounterRoom";
+import { BossBattle } from "../components/Encounters/BossBattle";
 import type { GameScene } from "../types/game";
-import StartScreen from "../components/StartScreen";
+import StartScreen from "../components/Intro/StartScreen";
 import { useLanguage } from "./useLanguage";
 
 interface SceneManagerProps {

@@ -1,4 +1,4 @@
-import "../styles/EncounterRoom.css"
+import "../../styles/EncounterRoom.css"
 
 
 export const EncounterRoom = ({ brawler, encounter, onChoice, position, isActive }: {

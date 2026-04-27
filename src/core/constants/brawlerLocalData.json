@@ -1,0 +1,217 @@
+
+{
+  "list": [
+    {
+      "id": 16000104,
+      "avatarId": 28001225,
+      "name": "Damian",
+      "released": true,
+      "link": "https://brawlify.com/brawlers/16000104",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000104.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000104.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000104.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "color": "#ff7b00",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Damian LOVES to make noise. He fronts a band with his brother, Draco, but music puts him into an uncontrollable rage, where he destroys anything in sight! His shows usually end with him smashing everything near the stage… including other Brawlers.",
+      "description_ptbr": "Damian ADORA fazer barulho. Ele é o vocalista da banda que formou com o seu irmão, Draco, mas a música faz com que ele fique descontrolado e quebre tudo o que vê pela frente! Seus shows costumam terminar com muita destruição... do palco e de outros Brawlers."
+    },
+    {
+      "id": 16000103,
+      "avatarId": 28001195,
+      "name": "Najia",
+      "released": true,
+      "link": "https://brawlify.com/brawlers/16000103",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000103.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000103.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000103.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#3498DB",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+        },
+      "description": "Hired by Finx to make Pyramid Quest's puzzles harder, her good nature actually led her to help those trapped by his time-warping mischief instead.",
+      "description_ptbr": "Finx a contrtatou para tornar os enigmas das pirâmides ainda mais difíceis, mas Najia escolheu ajudar as pessoas atingidas pelos truques do seu contratante."
+    },
+    {
+      "id": 16000102,
+      "avatarId": 28001078,
+      "name": "Sirius",
+      "released": true,
+      "link": "https://brawlify.com/brawlers/16000102",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000102.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000102.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000102.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#3498DB",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+        },
+      "description": "His identity is as mysterious as his powers. He had the very first attraction at Starr Park, but rumor has it he was kicked out unfairly, and banned from ever returning. Now... he's back for REVENGE.",
+      "description_ptbr": "Sua identidade é tão misteriosa quanto os seus poderes. Dizem à boca pequena que ele foi uma das grandes atrações do Starr Park, mas acabou sendo banido injustamente. Agora ele está de volta em busca de vingança!"      
+    },
+    {
+      "id": 16000101,
+      "avatarId": 28001074,
+      "name": "Glowy",
+      "released": true,
+      "link": "https://brawlify.com/brawlers/16000101",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000101.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000101.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000101.png",
+        "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2ECC71",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+        },
+      "description": "A marine biologist working at the Starr Park aquarium, Glowy is obsessed with sea life, wanting to introduce it to as many visitors as he can. Although he might seem a bit creepy, he's actually a nice guy! Maybe.",
+      "description_ptbr": "Glowy, o biólogo do aquário do Starr Park, é obcecado pela vida marinha e quer apresentá-la a todos os visitantes. Ele tem uma vibe meio estranha, mas é legal! Eu acho..."
+    },
+    {
+      "id": 16000100,
+      "avatarId": 28001006,
+      "name": "Gigi",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000100",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000100.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000100.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000100.png",
+        "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2ECC71",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+        },
+      "description": "A cursed puppet who brings an unsettling vibe, Gigi and her bonded magician's glove are never found apart. You can find her in the Oddities Shop, dancing between the bookshelves.",
+      "description_ptbr": "Gigi, uma marionete enfeitiçada que causa arrepios por onde passa e nunca se separa da sua luva mágica. Você pode encontrá-la no Bazar das Bizarrices, dançando entre as estantes."
+      
+    },
+    {
+      "id": 16000099,
+      "avatarId": 28001073,
+      "name": "Pierce",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000099",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000099.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000099.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000099.png",
+        "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2ECC71",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+        },
+      "description": "You know pool lifeguards? Pierce is one of those. Except he shoots people instead of saving them. OK maybe he isn't like a lifeguard at all. When Buzz decides there has been too much pee in the pool, he calls in Pierce to 'clean up'.",
+      "description_ptbr": "O Pierce é como se fosse um salva-vidas, só que ele atira na galera em vez de salvar. Ei, ninguém falou que ele era um BOM salva-vidas! Quando o Buzz acha que tem muito xixi na piscina, ele chama o Pierce para... dar uma geral."
+    },
+    {
+      "id": 16000098,
+      "avatarId": 28000935,
+      "name": "Ziggy",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000098",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000098.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000098.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000098.png",
+        "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2ECC71",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+        },
+
+      "description": "Ziggy is an uber theatrical magician who excels at using electricity in his act. He's a bit full of himself, but hey, he can literally control lightning. Just remember... they're not tricks, they're illusions.",
+      "description_ptbr": "Ziggy é um ilusionista extremamente teatral e especializado em usar eletricidade ao se apresentar. Ele é meio convencido, mas quem não seria, podendo controlar raios? Lembre-se não são truques, são ilusões."
+    },
+    {
+      "id": 16000097,
+      "avatarId": 28000934,
+      "name": "Mina",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000097",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000097.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000097.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000097.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "color": "#ff7b00",
+
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+
+      "description": "Mina is a b-girl who mixes capoeira into her breakdance battles like it's second nature. She hangs out at SK8 Beats with Ollie and uses his mixtapes to practice new moves!",
+      "description_ptbr": "A Mina é uma b-girl que usa movimentos de capoeira nas batalhas de breakdance. Ela está sempre na pista de skate com o Ollie, treinando enquanto ele dá o som!"
+    
+    },
+    {
+      "id": 16000096,
+      "avatarId": 28000899,
+      "name": "Trunk",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000096",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000096.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000096.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000096.png",
+        "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2ECC71",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+        },
+
+      "description": "Trunk is a suspiciously uncanny-looking tree. It couldn't be because Trunk is actually a colony of hyper-intelligent ants controlling a fake mechanical tree? No, that would be ridiculous.",
+      "description_ptbr": "Trunk é uma árvore de aparência um tanto peculiar. Será que é porque, na verdade, estamos falando de uma colônia de formigas superintelignetes controlando uma árvore mecânica? Não, não pode ser. Que absurdo!"
+    },
+    {
+      "id": 16000095,
+      "avatarId": 28000923,
+      "name": "Alli",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000095",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000095.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000095.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000095.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#3498DB",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+        },
+      "description": "Alli is the shy mechanic of the Love Swamp. She loves to get her hands dirty, by either fixing broken machines or... mercilessly stalking other Brawlers. If you're walking home late at night and hear an odd noise, it's probably Alli trying to say hello.",
+      "description_ptbr": "Alli é a acanhada mecânica do Pântano dos Pombinhos. Ela adora colocar a mão na massa, seja consertando máquinas quebradas ou perseguindo obstinadamente outros Brawlers. Se estiver voltando para casa tarde da noite e ouvir um barulho estranho, é bem provável que seja a Alli tentando dar um oizinho."
+    },
+    {
+      "id": 16000094,
+      "avatarId": 28000831,
+      "name": "Kaze",
+      "released": true,
+      "version": 1,
+      "link": "https://brawlify.com/brawlers/16000094",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000094.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000094.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000094.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#3498DB",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+        },
+      "description": "Kaze was raised to be a living weapon by her parents, but this was not the life she wanted. After escaping to Starr Park with Kenji, she can now live how she wants. However, she is still torn between the two aspects of her life, being a humble geisha and a deadly ninja.",
+      "description_ptbr": "Kaze foi criada por seus pais para ser uma arma implacável, mas não por vontade própria. Ela fugiu para o Starr Park com Kenji e agora pode fazer suas próprias escolhas. Mesmo assim, vive dividida entre ser uma gueixa ou uma ninja mortal."
+    }
+
+]
+}

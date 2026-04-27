@@ -19,7 +19,21 @@ export const UI_TEXT = {
             tos_btn: "Terms of Service",
             policy_btn: "Fan Content Policy",
             back_btn: "BACK"
+        },
+        recruitment_page:{
+            brand_title: "Recruit your team",
+            help_btn: "?",
+            btn_disabled: "RECRUIT 3 SPECIALISTS",
+            btn_abled: "START MISSION"
+        },
+        selected_team:{
+            task_force_label: "STARR CORP TASK FORCE",
+            empty_slot: "EMPTY SLOT"
+        },
+        brawler_card:{
+            btn_details: "DETAILS",
         }
+
     },
 
     pt: {
@@ -41,6 +55,20 @@ export const UI_TEXT = {
             tos_btn: "Termos de Serviço",
             policy_btn: "Política de conteúdo para fãs",
             back_btn: "VOLTAR"
+        },
+        recruitment_page:{
+            brand_title: "Recrute sua equipe",
+            help_btn: "?",
+            btn_disabled: "RECRUTE 3 ESPECIALISTAS",
+            btn_abled: "INICIAR MISSÃO"
+        },
+        selected_team:{
+            task_force_label: "FORÇA-TAREFA DA STARR CORP",
+            empty_slot: "VAZIO"
+        },
+        brawler_card:{
+            btn_details: "DETALHES",
         }
+
     }
 };

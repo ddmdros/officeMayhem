@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "../styles/BossBattle.css"
+import "../../styles/BossBattle.css"
 
 export const BossBattle = ({ team, chaos, onReset }: any) => {
     const [bossHp, setBossHp] = useState(100);

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import "../styles/IntroDialogue.css"
-import { useLanguage } from '../hooks/useLanguage';
+import "../../styles/IntroDialogue.css"
+import { useLanguage } from '../../hooks/useLanguage';
 
 interface IntroDialogueProps {
     scriptType: 'intro' | 'elevator_crisis' | 'performance_review';
@@ -71,7 +71,7 @@ const IntroDialogue = ({ scriptType, onFinish }: IntroDialogueProps) => {
                 
             <div className="dialogue-box">
                 <span className="character-name">
-                    {currentLine.name} | Starr Corp HR
+                    {currentLine.name} | {currentLine.role}
                 </span>
                 <p className="dialogue-text">{displayedText}</p>
 

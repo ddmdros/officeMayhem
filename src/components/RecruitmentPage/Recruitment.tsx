@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import "../styles/Recruitment.css"
+import "../../styles/Recruitment.css"
 import SelectedTeam from './SelectedTeam';
 import BrawlerCard from './BrawlerCard';
-import HelpRecruitment from './HelpRecruitment';
-import FilterRecruitment from "./FilterRecruitment"
+import HelpRecruitmentModal from '../Modals/HelpRecruitmentModal';
+import FilterRecruitment from "../Filters/FilterRecruitment"
+import { useLanguage } from '../../hooks/useLanguage';
 
 interface RecruitmentProps {
   brawlers: any[];
@@ -23,6 +24,10 @@ export const Recruitment: React.FC<RecruitmentProps> = ({
 }) => {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [selectedClass, setSelectedClass] = useState('All');
+  const {uiText} = useLanguage();
+
+  if (!uiText || !uiText.recruitment_page) return null;
+
 
 const filteredBrawlers = brawlers.filter(b => {
   if (selectedClass === "All") return true;
@@ -33,7 +38,7 @@ const filteredBrawlers = brawlers.filter(b => {
   return (
     <section className="recruitment-section snap-section">
       <div className='title-wrapper'>
-      <h2 className="brand-title text-shadow">Recruit your Team</h2>
+      <h2 className="brand-title text-shadow">{uiText.recruitment_page.brand_title}</h2>
       <button className='info-help-btn' onClick={() => setIsHelpOpen(true)}>?</button>
       </div>
     
@@ -54,11 +59,14 @@ const filteredBrawlers = brawlers.filter(b => {
             isSelected={selectedTeam.some(st => st.id === b.id)}
             onSelect={() => toggleSelection(b)}
             onOpenDetails={() => onOpenDetails(b)}
+            classTypeName={b.className}
+            iconUrl={b.iconUrl}
+            classColor={b.classColor}
           />
         ))}
       </div>
 
-      <HelpRecruitment 
+      <HelpRecruitmentModal 
         isOpen={isHelpOpen} 
         onClose={() => setIsHelpOpen(false)} 
       />
@@ -69,7 +77,7 @@ const filteredBrawlers = brawlers.filter(b => {
           disabled={selectedTeam.length !== 3}
           onClick={onStartMission}
         >
-          {selectedTeam.length === 3 ? "START MISSION" : "RECRUIT 3 SPECIALISTS"}
+          {selectedTeam.length === 3 ? uiText.recruitment_page.btn_abled : uiText.recruitment_page.btn_disabled}
         </button>
       </div>
     </section>
