@@ -16,7 +16,7 @@
 }
 
 .modal-content {
-    background: linear-gradient(0deg, var(--brawler-color, var(--yellow-brawler)) 10%, #0f051a 95%);
+    background: linear-gradient(0deg, var(--brawler-color, var(--yellow-brawler)) 5%, #0f051a 98%);
     color: white;
     width: 90%;
     max-width: 450px;

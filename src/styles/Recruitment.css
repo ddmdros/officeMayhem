@@ -127,7 +127,7 @@
     background: linear-gradient(
         to top, 
        var(--brawler-color, var(--purple-main)) 0%,
-        var(--brawler-color, var(--purple-main)) 80%,
+        var(--brawler-color, var(--purple-main)) 88%,
        rgba(0, 0, 0, 0) 100%
     );
     padding: 5px 2px;
@@ -222,7 +222,7 @@
     background: linear-gradient(
         to top, 
        var(--red-brawler) 0%,
-        var(--red-brawler) 80%,
+        var(--red-brawler) 88%,
        rgba(0, 0, 0, 0) 100%
     );
     transition: background 0.3s ease; 
@@ -238,8 +238,8 @@
 /* floating class icon */
 .class-badge-floating {
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: -10px;
+    left: -10px;
     z-index: 10;
     
     background-color: rgba(0, 0, 0, 0.6);
@@ -254,8 +254,8 @@
 }
 
 .class-badge-floating img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     filter: drop-shadow(1px 1px 1px #000);
 }
@@ -308,6 +308,8 @@
     align-items: center;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    max-height: 250px;
+
 }
 
 
@@ -535,6 +537,7 @@
     .brawler-card {
         border-width: 2px;
         border-radius: 8px;
+        max-height: 180px;
     }
 
 

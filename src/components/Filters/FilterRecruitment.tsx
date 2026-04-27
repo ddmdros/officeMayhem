@@ -2,21 +2,22 @@ import React from 'react';
 import "../../styles/FilterRecruitment.css"
 
 
+
 interface FilterRecruitmentProps {
   selectedClass: string;
   onClassChange: (value: string) => void;
+  classes: string[];
 }
-
-const CLASSES = ['All', 'Tank', 'Damage Dealer', 'Support', 'Assassin', 'Marksman', 'Artillery', 'Controller'];
 
 export const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   selectedClass,
-  onClassChange
+  onClassChange,
+  classes
 }) => {
   return (
     <div className="filter-wrapper">
       <div className="class-toggle-container">
-        {CLASSES.map((cls) => (
+        {classes.map((cls) => (
           <button
             key={cls}
             className={`class-btn ${selectedClass === cls ? 'active' : ''}`}

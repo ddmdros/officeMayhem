@@ -28,13 +28,13 @@
   white-space: nowrap;
 }
 
-/* Estado Ativo - Estilo Brawl Stars */
+/* active */
 .class-btn.active {
   background: var(--yellow-brawler);
   color: #000;
   border-color: #000;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 4px 0 #000;
+  transform: translateY(1px) scale(1.05);
+  box-shadow: 0 -3px 0 #000;
 }
 
 .class-btn:hover:not(.active) {
@@ -51,15 +51,15 @@
   }
 
 
-/* Ajuste Mobile */
+/* Mobile */
 @media screen and (max-width: 768px) {
   .class-toggle-container {
     gap: 6px;
   }
   
   .class-btn {
-    padding: 6px 12px;
-    font-size: 0.75rem;
+    padding: 6px 5px;
+    font-size: 0.65rem;
     border-radius: 8px;
   }
   
