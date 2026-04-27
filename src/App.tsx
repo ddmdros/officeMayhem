@@ -5,7 +5,6 @@ import { useGameEngine } from './hooks/useGameEngine'
 import { SceneManager } from './hooks/SceneManager'
 import BrawlerModal from './components/Modals/BrawlerModal'
 import { useState } from 'react'
-import { LanguageProvider } from './context/LanguageContext'
 
 
 function App() {
