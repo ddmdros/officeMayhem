@@ -28,8 +28,10 @@ export const Recruitment: React.FC<RecruitmentProps> = ({
   const { uiText } = useLanguage();
 
   const dynamicClasses = useMemo(() => {
-    // Pegamos o className de cada brawler, removemos nulos e duplicatas
-    const unique = Array.from(new Set(brawlers.map(b => b.className?.trim()).filter(Boolean)));
+    const unique = Array.from(new Set(brawlers.map(b => {
+      return b.class?.name || b.className;
+    }).filter(Boolean)));
+
     return ['All', ...unique];
   }, [brawlers]);
 
@@ -37,14 +39,9 @@ export const Recruitment: React.FC<RecruitmentProps> = ({
 
   const filteredBrawlers = brawlers.filter(b => {
     if (selectedClass === "All") return true;
-    return b.className?.trim() === selectedClass;
+    const brawlerClassName = b.class?.name || b.className;
+    return brawlerClassName?.trim() === selectedClass;
   });
-
-  // const filteredBrawlers = brawlers.filter(b => {
-  //   if (selectedClass === "All") return true;
-  //   const brawlerClassName = typeof b.class === 'string' ? b.class : b.class?.name;
-  //   return brawlerClassName?.trim() === selectedClass;
-  // });
 
   return (
     <section className="recruitment-section snap-section">
@@ -75,9 +72,9 @@ export const Recruitment: React.FC<RecruitmentProps> = ({
             isSelected={selectedTeam.some(st => st.id === b.id)}
             onSelect={() => toggleSelection(b)}
             onOpenDetails={() => onOpenDetails(b)}
-            classTypeName={b.className}
-            iconUrl={b.iconUrl}
-            classColor={b.classColor}
+            classTypeName={b.class?.name_ptbr || b.className}
+            iconUrl={b.class?.iconUrl || b.iconUrl}
+            classColor={b.class?.color || b.classColor}
           />
         ))}
       </div>

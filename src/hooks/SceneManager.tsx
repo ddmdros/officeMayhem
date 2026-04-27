@@ -32,7 +32,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
     setViewingBrawler, overtime, chaos, encounterIndex, setEncounterIndex,
     activeIndex, prevCard, nextCard, handleChoice, handleRestartGame
 }) => {
-    const { encounter } = useLanguage();
+    const { encounter, isPt } = useLanguage();
 
 
     switch (currentScene) {
@@ -81,11 +81,18 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                 </div>
             );
         case "ENCOUNTER":
+         const currentEncounterData = encounter?.list?.[encounterIndex];
+            
+            if (!currentEncounterData) return null;
+
+            const displayTitle = isPt ? currentEncounterData.title_ptbr : currentEncounterData.title;
+            const displayDesc = isPt ? currentEncounterData.description_ptbr : currentEncounterData.description;
+
             return (
-                <section className='encounter-section'>
+              <section className='encounter-section'>
                     <div className='encounter-container'>
-                        <h2 className='encounter-title'>{encounter[encounterIndex].title}</h2>
-                        <p className='encounter-desc'>{encounter[encounterIndex].description}</p>
+                        <h2 className='encounter-title'>{displayTitle}</h2>
+                        <p className='encounter-desc'>{displayDesc}</p>
 
                         <div className="deck-selector-container">
                             <button className="nav-btn prev" onClick={prevCard}>◀</button>
@@ -100,7 +107,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                                         <EncounterRoom
                                             key={brawler.id}
                                             brawler={brawler}
-                                            encounter={encounter[encounterIndex]}
+                                            encounterIndex={encounterIndex}
                                             onChoice={handleChoice}
                                             position={position}
                                             isActive={index === activeIndex}
@@ -116,32 +123,22 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                     <div className='status-bar-minimal'>
                         <div className='stat-item'>
                             <div className='stat-header'>
-                                <span>OFFICE CHAOS</span>
+                                <span>{isPt ? 'CAOS NO ESCRITÓRIO' : 'OFFICE CHAOS'}</span>
                                 <span className={chaos > 70 ? 'danger-text' : ''}>{chaos}%</span>
                             </div>
                             <div className='stat-bar-bg'>
                                 <div className='stat-bar-fill chaos' style={{ width: `${chaos}%` }}></div>
                             </div>
                         </div>
-
-                        <div className='stat-item'>
-                            <div className='stat-header'>
-                                <span>OVERTIME</span>
-                                <span className={overtime > 70 ? 'danger-text' : ''}>{overtime}%</span>
-                            </div>
-                            <div className='stat-bar-bg'>
-                                <div className='stat-bar-fill overtime' style={{ width: `${overtime}%` }}></div>
-                            </div>
-                        </div>
                     </div>
                 </section>
             );
-        
+
         case "POST_ENCOUNTER_DIALOGUE":
-            return(
+            return (
                 <div className="game-container">
                     <div className='blur-background'>
-                        <div className='status-bar-minimal' style={{position: 'absolute', bottom: '20px'}}>
+                        <div className='status-bar-minimal' style={{ position: 'absolute', bottom: '20px' }}>
                         </div>
                     </div>
                     <IntroDialogue
@@ -156,19 +153,19 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
                         }}
                     />
                 </div>
-            )    
-        
-        case "BOSS":
-            return(
-                    <BossBattle 
-        team={selectedTeam} 
-        chaos={chaos} 
-        overtime={overtime} 
-        onReset={handleRestartGame}
-    />
             )
 
-            default: 
+        case "BOSS":
+            return (
+                <BossBattle
+                    team={selectedTeam}
+                    chaos={chaos}
+                    overtime={overtime}
+                    onReset={handleRestartGame}
+                />
+            )
+
+        default:
             return null;
     }
 

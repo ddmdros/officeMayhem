@@ -1,20 +1,40 @@
 import "../../styles/EncounterRoom.css"
+import { useLanguage } from "../../hooks/useLanguage";
 
+export const EncounterRoom = ({ brawler, encounterIndex, onChoice, position, isActive }: any) => {
 
-export const EncounterRoom = ({ brawler, encounter, onChoice, position, isActive }: {
-  brawler: any,
-  encounter: any,
-  onChoice: (result: any) => void,
-  position: string,
-  isActive: boolean
-}) => {
+  const { isPt } = useLanguage();
+  
+  const currentAction = brawler?.encounters?.[encounterIndex];
 
-  const action = encounter.options[brawler.class.name] || encounter.options.Default;
+  if (!currentAction) {
+    return (
+      <div className={`choice-card ${position} error`}>
+        <p>{isPt ? "Dados não encontrados" : "Data not found"}</p>
+      </div>
+    );
+  }
+  const label = isPt ? currentAction.label_ptbr : currentAction.label;
+  const effect = isPt ? currentAction.effect_ptbr : currentAction.effect;
+  const consequence = isPt ? currentAction.consequence_ptbr : currentAction.consequence;
+  
+  const className = isPt ? brawler.class.name_ptbr : brawler.class.name;
+  const classColor = brawler.class?.color || "#6200ea";
+
+  const handleSelect = () => {
+    if (!isActive) return;
+    onChoice({
+      chaos: currentAction.chaos,
+      consequence: consequence, 
+      brawlerName: brawler.name
+    });
+  };
 
   return (
     <div 
-      className={`choice-card ${position}`} 
-      onClick={() => isActive && onChoice(action.result)}
+      className={`choice-card ${position} ${isActive ? 'active' : ''}`}
+      onClick={handleSelect}
+      style={{ '--class-color': classColor } as React.CSSProperties}
     >
       <div className="brawler-header">
         <div className="portrait-wrapper">
@@ -22,25 +42,17 @@ export const EncounterRoom = ({ brawler, encounter, onChoice, position, isActive
         </div>
         <div className="brawler-info">
           <h3 className="brawler-name">{brawler.name}</h3>
-          <span className="class-badge">{brawler.class.name}</span>
+          <span className="class-badge" style={{ backgroundColor: classColor }}>
+            {className}
+          </span>
         </div>
       </div>
 
-      <div className="action-content" style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-    <h4 className="action-label">{action.label}</h4>
-    <p className="action-effect">
-        {action.effect}
-    </p>
-    
-    <div className="result-preview">
-        {action.result.chaos !== 0 && (
-            <div className="res-pill bad">▲ {action.result.chaos}% Chaos</div>
-        )}
-        {action.result.overtime !== 0 && (
-            <div className="res-pill bad">▲ {action.result.overtime}% Time</div>
-        )}
-    </div>
-</div>
+      <div className="action-content">
+        <h4 className="action-label">{label}</h4>
+        <p className="action-effect">{effect}</p>
+       
+      </div>
     </div>
   );
 };
