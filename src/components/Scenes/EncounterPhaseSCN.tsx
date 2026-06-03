@@ -2,6 +2,7 @@ import type { Brawler, ChoiceResult } from "../../types/game";
 import { EncounterRoom } from "../EncounterRoom";
 import { useLanguage } from "../../hooks/useLanguage";
 import encounterTexts from "../../core/constants/encounterTexts.json";
+import { ChaosBar } from "../UI/ChaosBar";
 
 interface EncounterPhaseSCNProps {
   encounterIndex: number;
@@ -73,20 +74,7 @@ export const EncounterPhaseSCN: React.FC<EncounterPhaseSCNProps> = ({
         </div>
       </div>
 
-      <div className="status-bar-minimal">
-        <div className="stat-item">
-          <div className="stat-header">
-            <span>{isPt ? "CAOS NO ESCRITÓRIO" : "OFFICE CHAOS"}</span>
-            <span className={chaos > 40 ? "danger-text" : ""}>{chaos}/60</span>
-          </div>
-          <div className="stat-bar-bg">
-            <div
-              className="stat-bar-fill chaos"
-              style={{ width: `${Math.min((chaos / 60) * 100, 100)}%` }}
-            ></div>
-          </div>
-        </div>
-      </div>
+      <ChaosBar chaos={chaos} />
     </section>
   );
 };

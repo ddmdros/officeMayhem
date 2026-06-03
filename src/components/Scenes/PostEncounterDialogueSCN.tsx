@@ -1,9 +1,11 @@
 import { useLanguage } from "../../hooks/useLanguage";
 import type { GameScene } from "../../types/game";
+import type { ChaosLevel } from "../../types/game";
 
 interface PostEncounterDialogueProps {
   chaos: number;
   currentConsequence: string | null;
+  lastActionLevel: ChaosLevel | null;
   encounterIndex: number;
   setCurrentScene: (scene: GameScene) => void;
   setEncounterIndex: React.Dispatch<React.SetStateAction<number>>;
@@ -12,11 +14,18 @@ interface PostEncounterDialogueProps {
 export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
   chaos,
   currentConsequence,
+  lastActionLevel,
   encounterIndex,
   setCurrentScene,
   setEncounterIndex,
 }) => {
   const { isPt } = useLanguage();
+
+  const stampText = {
+    good: isPt ? "PERFEITO!" : "PERFECT!",
+    neutral: isPt ? "ACEITÁVEL..." : "ACCEPTABLE...",
+    bad: isPt ? "DESASTRE!" : "DISASTER!",
+  };
 
   return (
     <div className="game-container">
@@ -56,6 +65,12 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
         <h2 style={{ color: "#ffcc00", marginBottom: "1rem" }}>
           {isPt ? "Relatório do incidente" : "Incident Report"}
         </h2>
+
+        {lastActionLevel && (
+          <div className={`evaluation-stamp ${lastActionLevel}`}>
+            {stampText[lastActionLevel]}
+          </div>
+        )}
 
         <p
           style={{

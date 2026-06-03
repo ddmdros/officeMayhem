@@ -74,6 +74,7 @@ export interface Brawler {
 
 export interface ChoiceResult {
   chaos: number;
+  chaosLevel: ChaosLevel;
   consequence: string;
   brawlerName: string;
 }

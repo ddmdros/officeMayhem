@@ -1,5 +1,10 @@
 import { useState } from "react";
-import type { Brawler, ChoiceResult, GameScene } from "../types/game";
+import type {
+  Brawler,
+  ChoiceResult,
+  GameScene,
+  ChaosLevel,
+} from "../types/game";
 
 export const useGameEngine = () => {
   const [currentScene, setCurrentScene] = useState<GameScene>("START");
@@ -8,6 +13,9 @@ export const useGameEngine = () => {
   const [encounterIndex, setEncounterIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentConsequence, setCurrentConsequence] = useState<string | null>(
+    null,
+  );
+  const [lastActionLevel, setLastActionLevel] = useState<ChaosLevel | null>(
     null,
   );
 
@@ -33,6 +41,7 @@ export const useGameEngine = () => {
   const handleChoice = (result: ChoiceResult) => {
     if (result.chaos) setChaos((prev) => prev + result.chaos);
     setCurrentConsequence(result.consequence);
+    setLastActionLevel(result.chaosLevel);
 
     setSelectedTeam((prev) =>
       prev.map((b) =>
@@ -50,6 +59,7 @@ export const useGameEngine = () => {
     setEncounterIndex(0);
     setActiveIndex(0);
     setCurrentConsequence(null);
+    setLastActionLevel(null);
   };
 
   return {
@@ -67,5 +77,6 @@ export const useGameEngine = () => {
     handleChoice,
     handleRestartGame,
     currentConsequence,
+    lastActionLevel,
   };
 };

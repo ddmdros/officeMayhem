@@ -8,7 +8,12 @@ import {
   PreEncounterSCN,
   FinalSCN,
 } from "../components/Scenes";
-import type { GameScene, Brawler, ChoiceResult } from "../types/game";
+import type {
+  GameScene,
+  Brawler,
+  ChoiceResult,
+  ChaosLevel,
+} from "../types/game";
 
 interface SceneManagerProps {
   currentScene: GameScene;
@@ -26,6 +31,7 @@ interface SceneManagerProps {
   handleChoice: (result: ChoiceResult) => void;
   handleRestartGame: () => void;
   currentConsequence: string | null;
+  lastActionLevel: ChaosLevel | null;
 }
 
 export const SceneManager: React.FC<SceneManagerProps> = ({
@@ -44,6 +50,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
   handleChoice,
   handleRestartGame,
   currentConsequence,
+  lastActionLevel,
 }) => {
   switch (currentScene) {
     case "START":
@@ -90,6 +97,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
           encounterIndex={encounterIndex}
           setCurrentScene={setCurrentScene}
           setEncounterIndex={setEncounterIndex}
+          lastActionLevel={lastActionLevel}
         />
       );
 

@@ -41,7 +41,8 @@ export const EncounterRoom = ({
   const handleSelect = () => {
     if (!isActive || brawler.isUsed) return;
     onChoice({
-      chaos: currentAction.chaos,
+      chaos: currentAction.chaosValue,
+      chaosLevel: currentAction.chaosLevel,
       consequence: consequence,
       brawlerName: brawler.name,
     });
