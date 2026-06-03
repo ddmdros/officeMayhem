@@ -1,4 +1,4 @@
-import "../styles/FinalResult.css";
+import "../styles/FinalSCN.css";
 import "../styles/EncounterRoom.css";
 import { useLanguage } from "../hooks/useLanguage";
 import type { Brawler, ChoiceResult } from "../types/game";

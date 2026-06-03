@@ -1,4 +1,4 @@
-import Recruitment from "../RecruitmentPage/Recruitment";
+import RecruitmentSCN from "./RecruitmentSCN";
 import IntroDialogue from "../Intro/IntroDialogue";
 import type { GameScene, Brawler } from "../../types/game";
 import React from "react";
@@ -15,7 +15,7 @@ export const IntroDialogueSCN: React.FC<IntroDialogueSCNProps> = ({
   return (
     <div className="game-container">
       <div className="blur-background">
-        <Recruitment
+        <RecruitmentSCN
           brawlers={brawlers}
           selectedTeam={[]}
           toggleSelection={() => {}}

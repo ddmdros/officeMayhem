@@ -1,9 +1,9 @@
-import type { Brawler, ChoiceResult } from "../types/game";
-import { EncounterRoom } from "./EncounterRoom";
-import { useLanguage } from "../hooks/useLanguage";
-import encounterTexts from "../core/constants/encounterTexts.json";
+import type { Brawler, ChoiceResult } from "../../types/game";
+import { EncounterRoom } from "../EncounterRoom";
+import { useLanguage } from "../../hooks/useLanguage";
+import encounterTexts from "../../core/constants/encounterTexts.json";
 
-interface EncounterPhaseProps {
+interface EncounterPhaseSCNProps {
   encounterIndex: number;
   selectedTeam: Brawler[];
   activeIndex: number;
@@ -13,7 +13,7 @@ interface EncounterPhaseProps {
   handleChoice: (result: ChoiceResult) => void;
 }
 
-export const EncounterPhase: React.FC<EncounterPhaseProps> = ({
+export const EncounterPhaseSCN: React.FC<EncounterPhaseSCNProps> = ({
   encounterIndex,
   selectedTeam,
   activeIndex,
