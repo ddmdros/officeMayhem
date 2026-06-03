@@ -9,7 +9,7 @@ interface PostEncounterDialogueProps {
   setEncounterIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const PostEncounterDialogue: React.FC<PostEncounterDialogueProps> = ({
+export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
   chaos,
   currentConsequence,
   encounterIndex,
@@ -100,4 +100,4 @@ export const PostEncounterDialogue: React.FC<PostEncounterDialogueProps> = ({
   );
 };
 
-export default PostEncounterDialogue;
+export default PostEncounterDialogueSCN;
