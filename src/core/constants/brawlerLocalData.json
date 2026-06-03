@@ -22,7 +22,7 @@
           "effect_ptbr": "Tocar uma balada para o elevador.",
           "consequence": "The demon hates acoustic sets and zaps you!",
           "consequence_ptbr": "O demônio odeia acústico e te dá um choque!",
-          "chaos": 20
+          "chaos": "bad"
         },
         {
           "floor": 2,
@@ -32,7 +32,7 @@
           "effect_ptbr": "Acalmar o estagiário com música.",
           "consequence": "He relaxes and releases the intact report!",
           "consequence_ptbr": "Ele relaxa e solta o relatório intacto!",
-          "chaos": 0
+          "chaos": "neutral"
         },
         {
           "floor": 3,
@@ -42,7 +42,7 @@
           "effect_ptbr": "Convencer que caneca derretida é arte.",
           "consequence": "Mina doesn't buy it, and the chaos escalates.",
           "consequence_ptbr": "Mina não acredita e o caos aumenta.",
-          "chaos": 20
+          "chaos": "good"
         }
       ]
     },
@@ -72,7 +72,7 @@
           "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
           "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
           "consequence_ptbr": "O sistema fica tão confuso com tamanha performance que as portas se abrem por puro choque.",
-          "chaos": 10
+          "chaos": "neutral"
         },
         {
           "floor": 2,
@@ -82,7 +82,7 @@
           "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo' e que ele está fabuloso de qualquer jeito.",
           "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved and sparkling!",
           "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. O relatório está salvo e brilhante!",
-          "chaos": 0
+          "chaos": "good"
         },
         {
           "floor": 3,
@@ -92,7 +92,7 @@
           "effect_ptbr": "Usar seu ego (e seu clone) para fingir que a caneca nunca caiu de verdade.",
           "consequence": "Mina sees through the trick in seconds. Chaos rises and the mug is still missing.",
           "consequence_ptbr": "Mina percebe o truque em segundos. O caos aumenta e a caneca continua sumida.",
-          "chaos": 20
+          "chaos": "bad"
         }
       ]
     },
@@ -122,7 +122,7 @@
           "effect_ptbr": "Arrombar as portas do elevador usando apenas a força bruta.",
           "consequence": "The doors are open, but the elevator now sounds like a broken blender. Good job?",
           "consequence_ptbr": "As portas abrem, mas o elevador agora faz barulho de um liquidificador quebrado. Bom trabalho?",
-          "chaos": 10
+          "chaos": "neutral"
         },
         {
           "floor": 2,
@@ -132,7 +132,7 @@
           "effect_ptbr": "Segurar as engrenagens do triturador com as mãos nuas antes que cheguem na gravata.",
           "consequence": "The machine explodes! The intern is safe, but the report has massive thumbprints on it.",
           "consequence_ptbr": "A máquina explode! O estagiário está salvo, mas o relatório tem marcas enormes de polegar nele.",
-          "chaos": 20
+          "chaos": "bad"
         },
         {
           "floor": 3,
@@ -142,7 +142,7 @@
           "effect_ptbr": "Pular no poço do elevador para pegar a caneca no ar.",
           "consequence": "CAUGHT! He lands like a champion with the mug perfectly intact. EL PRIMOOOO!",
           "consequence_ptbr": "PEGO! Ele aterrissa como um campeão com a caneca perfeitamente intacta. EL PRIMOOOO!",
-          "chaos": 0
+          "chaos": "good"
         }
       ]
     }

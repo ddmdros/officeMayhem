@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import brawlerLocalData from "../core/constants/brawlerLocalData.json";
 import { useLanguage } from "../hooks/useLanguage";
-import type { Brawler } from "../types/game";
+import type { Brawler, RawBrawler } from "../types/game";
+import { getChaosValue } from "../utils/gameBalanceUtils";
+import type { RawEncounterAction } from "../types/game";
 
 export const useBrawlers = () => {
   const [brawlers, setBrawlers] = useState<Brawler[]>([]);
@@ -11,9 +13,9 @@ export const useBrawlers = () => {
   useEffect(() => {
     const loadBrawlers = () => {
       try {
-        const dataList = brawlerLocalData.list || [];
+        const dataList = (brawlerLocalData.list as RawBrawler[]) || [];
 
-        const processedList = dataList.map((brawler: Brawler) => {
+        const processedList = dataList.map((brawler: RawBrawler) => {
           return {
             ...brawler,
             description:
@@ -26,6 +28,13 @@ export const useBrawlers = () => {
                 : brawler.class.name,
             classColor: brawler.class.color,
             iconUrl: brawler.class.iconUrl,
+
+            encounters: brawler.encounters.map((enc: RawEncounterAction) => ({
+              ...enc,
+              chaosValue: getChaosValue(enc.chaos),
+              chaosLevel: enc.chaos,
+              chaos: enc.chaos,
+            })),
           };
         });
 
