@@ -1,75 +1,51 @@
-# React + TypeScript + Vite
+# 🌵 Brawl Stars Encounter Simulator & i18n Engine 🌵
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the ultimate, web-based arena where code meets chaos! This project is a high-octane **Encounter Simulator and Advanced Localization Engine** built from the ground up using React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+No clunky game engines here. We built our own custom state loop to orchestrate battles, manage active dynamic scenes, and serve flawless localized text faster than Max with her Super active! ⚡
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🕹️ What’s Inside the Starr Park of Code?
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **`useGameEngine.tsx` (The Brawler Mind):** The core loop driving player states, ammo cooldowns, active multipliers, and encounter lifecycle triggers.
+- **`SceneManager.tsx` (The Map Maker):** A zero-latency visual router that seamlessly mounts and unmounts screens (Menu ➡️ Encounter Room ➡️ Boss Battle ➡️ Final Result) without dropping a single frame or leaking memory.
+- **`useLanguage.ts` (The Global Voice):** An advanced internationalization (i18n) layer built for real-world gaming constraints, packing dynamic token interpolation and robust gender-neutral / inclusive syntax adaptations.
+- **`evaluation.Utils.ts` (The Match MVP):** Pure, battle-tested functional utilities that crunch player performance data to calculate final scores and tiers.
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🚀 Technical Showdown
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧹 Refactoring Log
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To keep the codebase lean and mean, we recently did a major balancing patch:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Flattened Directory Tree:** Melted down deep legacy paths like `src/components/Encounters/` directly into a sleek, component-driven layout (`src/components/`). Say goodbye to dependency hell and deep relative imports!
+- **Zero Code Zombies:** Integrated **Fallow** (a lightning-fast Rust static analyzer) to hunt down dead code, wipe out circular dependencies, and keep our bundles as sharp as Leon’s blades.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📜 Advanced i18n Magic
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Unlike standard business apps, gaming text needs to breathe and feel natural. Our custom localization engine ensures that strings like:
+`"O brawler {playerName} derrotou o chefe em {timeElapsed}s!"`
+are resolved in real-time, matching complex grammatical targets (like Brazilian Portuguese) and utilizing strict inclusive language structures without duplicating asset dictionaries.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ The Gadgets & Star Powers (Tech Stack)
+
+- **Core Framework:** React 18 (Hooks-heavy architecture)
+- **Type Safety:** TypeScript 5 (Strict definitions via `src/types/game.ts`)
+- **Build Tool:** Vite (For hyper-fast Hot Module Replacement)
+- **Quality Assurance:** Fallow & npm tree-cli
+
+---
+
+## 🎮 How to Enter the Match
+
+### 1. Clone the Map
+
+```bash
+git clone [https://github.com/YourUsername/BrawlStarsAPI.git](https://github.com/YourUsername/BrawlStarsAPI.git)
+cd BrawlStarsAPI
 ```

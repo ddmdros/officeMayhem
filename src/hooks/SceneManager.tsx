@@ -7,6 +7,7 @@ import { FinalResult } from "../components/FinalResult";
 import type { GameScene, Brawler, ChoiceResult } from "../types/game";
 import StartScreen from "../components/Intro/StartScreen";
 import { useLanguage } from "./useLanguage";
+import encounterTexts from "../core/constants/encounterTexts.json";
 
 interface SceneManagerProps {
   currentScene: GameScene;
@@ -43,7 +44,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
   handleRestartGame,
   currentConsequence,
 }) => {
-  const { encounter, isPt } = useLanguage();
+  const { isPt } = useLanguage();
 
   switch (currentScene) {
     case "START":
@@ -97,7 +98,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
         </div>
       );
     case "ENCOUNTER": {
-      const currentEncounterData = encounter?.list?.[encounterIndex];
+      const currentEncounterData = encounterTexts.list[encounterIndex];
 
       if (!currentEncounterData) return null;
 
