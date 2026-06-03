@@ -1,0 +1,119 @@
+/* Container que cobre a tela toda */
+.result-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* O Card de Resultado */
+.result-card {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border: 4px solid #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rank-display {
+    font-size: 10rem; 
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 0 0 30px currentColor;
+    animation: rank-pulse 2s infinite ease-in-out;
+}
+
+.result-title {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+
+.result-desc {
+    color: #cbd5e0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.final-stats {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.final-stats strong {
+    font-size: 1.5rem;
+    color: #f56565;
+}
+
+.reboot-btn {
+    background: #fff;
+    color: #1a1a2e;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.reboot-btn:hover {
+    background: #4facfe;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(79, 172, 254, 0.6);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes rank-pulse {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.15); filter: brightness(1.4); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+.rank-display[style*="#ff4b4b"] {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-3px, 0px) rotate(-1deg); }
+    40% { transform: translate(3px, 2px) rotate(1deg); }
+    60% { transform: translate(-3px, 1px) rotate(-1deg); }
+    80% { transform: translate(3px, 1px) rotate(1deg); }
+    100% { transform: translate(1px, -2px) rotate(0deg); }
+}

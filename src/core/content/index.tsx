@@ -6,12 +6,12 @@ export const APP_CONTENT = {
   en: {
     ui: UI_TEXT.en,
     dialogues: DIALOGUES.en,
-    encounter: ENCOUNTER.en,
+    encounter: ENCOUNTER,
   },
   pt: {
     ui: UI_TEXT.pt,
     dialogues: DIALOGUES.pt,
-    encounter: ENCOUNTER.pt,
+    encounter: ENCOUNTER,
   }
 };
 

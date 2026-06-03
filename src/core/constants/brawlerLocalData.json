@@ -14,206 +14,137 @@
         "iconUrl": "/assets/icons/SweetTalk_icon.png"
       },
       "encounters": [
-    {
-      "floor": 1,
-      "label": "Persuade the Demon",
-      "label_ptbr": "Persuadir o Demônio",
-      "effect": "Play a ballad for the elevator.",
-      "effect_ptbr": "Tocar uma balada para o elevador.",
-      "consequence": "The demon hates acoustic sets and zaps you!",
-      "consequence_ptbr": "O demônio odeia acústico e te dá um choque!",
-      "chaos": 2
+        {
+          "floor": 1,
+          "label": "Persuade the Demon",
+          "label_ptbr": "Persuadir o Demônio",
+          "effect": "Play a ballad for the elevator.",
+          "effect_ptbr": "Tocar uma balada para o elevador.",
+          "consequence": "The demon hates acoustic sets and zaps you!",
+          "consequence_ptbr": "O demônio odeia acústico e te dá um choque!",
+          "chaos": 20
+        },
+        {
+          "floor": 2,
+          "label": "Calming Serenade",
+          "label_ptbr": "Serenata de Calmaria",
+          "effect": "Calm the intern down with music.",
+          "effect_ptbr": "Acalmar o estagiário com música.",
+          "consequence": "He relaxes and releases the intact report!",
+          "consequence_ptbr": "Ele relaxa e solta o relatório intacto!",
+          "chaos": 0
+        },
+        {
+          "floor": 3,
+          "label": "Lyrical Distraction",
+          "label_ptbr": "Distração Lírica",
+          "effect": "Convince them that a melted mug is modern art.",
+          "effect_ptbr": "Convencer que caneca derretida é arte.",
+          "consequence": "Mina doesn't buy it, and the chaos escalates.",
+          "consequence_ptbr": "Mina não acredita e o caos aumenta.",
+          "chaos": 20
+        }
+      ]
     },
     {
-      "floor": 2,
-      "label": "Calming Serenade",
-      "label_ptbr": "Serenata de Calmaria",
-      "effect": "Calm the intern down with music.",
-      "effect_ptbr": "Acalmar o estagiário com música.",
-      "consequence": "He relaxes and releases the intact report!",
-      "consequence_ptbr": "Ele relaxa e solta o relatório intacto!",
-      "chaos": 0
+      "id": 2,
+      "name": "Lola",
+      "link": "https://brawlify.com/brawlers/16000053",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000053.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000053.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#E91E63",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+      },
+      "description": "She's the star of Brawlywood and the office. Lola doesn't solve problems; she makes them feel inadequate with her presence.",
+      "description_ptbr": "Ela é a estrela de Brawlywood e do escritório. Lola não resolve problemas; ela faz os problemas se sentirem inadequados perante sua presença.",
+      "skill_name": "Stage Presence",
+      "skill_name_ptbr": "Presença de Palco",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Dramatic Monologue",
+          "label_ptbr": "Monólogo Dramático",
+          "effect": "Perform an Oscar-worthy scene to confuse the elevator's sensors.",
+          "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
+          "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
+          "consequence_ptbr": "O sistema fica tão confuso com tamanha performance que as portas se abrem por puro choque.",
+          "chaos": 10
+        },
+        {
+          "floor": 2,
+          "label": "Style Lesson",
+          "label_ptbr": "Aula de Estilo",
+          "effect": "Tell the intern that 'tragedies are part of the resume' and he looks fabulous anyway.",
+          "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo' e que ele está fabuloso de qualquer jeito.",
+          "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved and sparkling!",
+          "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. O relatório está salvo e brilhante!",
+          "chaos": 0
+        },
+        {
+          "floor": 3,
+          "label": "Diva Distraction",
+          "label_ptbr": "Diva Distratora",
+          "effect": "Use her ego (and her clone) to pretend the mug never actually fell.",
+          "effect_ptbr": "Usar seu ego (e seu clone) para fingir que a caneca nunca caiu de verdade.",
+          "consequence": "Mina sees through the trick in seconds. Chaos rises and the mug is still missing.",
+          "consequence_ptbr": "Mina percebe o truque em segundos. O caos aumenta e a caneca continua sumida.",
+          "chaos": 20
+        }
+      ]
     },
     {
-      "floor": 3,
-      "label": "Lyrical Distraction",
-      "label_ptbr": "Distração Lírica",
-      "effect": "Convince them that a melted mug is modern art.",
-      "effect_ptbr": "Convencer que caneca derretida é arte.",
-      "consequence": "Mina doesn't buy it, and the chaos escalates.",
-      "consequence_ptbr": "Mina não acredita e o caos aumenta.",
-      "chaos": 2
-    }
-  ]
-    },
-{
-  "id": 2,
-  "name": "Lola",
-  "link": "https://brawlify.com/brawlers/16000053",
-  "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
-  "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000053.png",
-  "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000053.png",
-  "class": {
-    "name": "Sweet Talk",
-    "name_ptbr": "Lábia",
-    "color": "#E91E63",
-    "iconUrl": "/assets/icons/SweetTalk_icon.png"
-  },
-  "description": "She's the star of Brawlywood and the office. Lola doesn't solve problems; she makes them feel inadequate with her presence.",
-  "description_ptbr": "Ela é a estrela de Brawlywood e do escritório. Lola não resolve problemas; ela faz os problemas se sentirem inadequados perante sua presença.",
-  "skill_name": "Stage Presence",
-  "skill_name_ptbr": "Presença de Palco",
-  "encounters": [
-    {
-      "floor": 1,
-      "label": "Dramatic Monologue",
-      "label_ptbr": "Monólogo Dramático",
-      "effect": "Perform an Oscar-worthy scene to confuse the elevator's sensors.",
-      "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
-      "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
-      "consequence_ptbr": "O sistema fica tão confuso com tamanha performance que as portas se abrem por puro choque.",
-      "chaos": 1
-    },
-    {
-      "floor": 2,
-      "label": "Style Lesson",
-      "label_ptbr": "Aula de Estilo",
-      "effect": "Tell the intern that 'tragedies are part of the resume' and he looks fabulous anyway.",
-      "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo' e que ele está fabuloso de qualquer jeito.",
-      "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved and sparkling!",
-      "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. O relatório está salvo e brilhante!",
-      "chaos": 0
-    },
-    {
-      "floor": 3,
-      "label": "Diva Distraction",
-      "label_ptbr": "Diva Distratora",
-      "effect": "Use her ego (and her clone) to pretend the mug never actually fell.",
-      "effect_ptbr": "Usar seu ego (e seu clone) para fingir que a caneca nunca caiu de verdade.",
-      "consequence": "Mina sees through the trick in seconds. Chaos rises and the mug is still missing.",
-      "consequence_ptbr": "Mina percebe o truque em segundos. O caos aumenta e a caneca continua sumida.",
-      "chaos": 2
-    }
-  ]
-},
-    {
-  "id": 3,
-  "name": "El Primo",
+      "id": 3,
+      "name": "El Primo",
       "link": "https://brawlify.com/brawlers/16000010",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000010.png",
       "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000010.png",
       "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000010.png",
-  "class": {
-    "name": "Brute Force",
-    "name_ptbr": "Brutalidade",
-    "color": "#FF4B4B",
-    "iconUrl": "/assets/icons/BruteForce_icon.png"
-  },
-  "description": "Muscles that think for him. El Primo is the perfect solution for when bureaucracy needs to be thrown out the window.",
-  "description_ptbr": "Músculos que pensam por ele. El Primo é a solução perfeita para quando a burocracia precisa ser arremessada pela janela.",
-  "skill_name": "Impactful Impact",
-  "skill_name_ptbr": "Impacto Imediato",
-  "encounters": [
-    {
-      "floor": 1,
-      "label": "Manual Override",
-      "label_ptbr": "Sobreposição Manual",
-      "effect": "Rip the elevator doors apart using pure muscle power.",
-      "effect_ptbr": "Arrombar as portas do elevador usando apenas a força bruta.",
-      "consequence": "The doors are open, but the elevator now sounds like a broken blender. Good job?",
-      "consequence_ptbr": "As portas abrem, mas o elevador agora faz barulho de um liquidificador quebrado. Bom trabalho?",
-      "chaos": 1
-    },
-    {
-      "floor": 2,
-      "label": "Muscle vs Machine",
-      "label_ptbr": "Músculo vs Máquina",
-      "effect": "Stop the shredder gears with your bare hands before they reach the tie.",
-      "effect_ptbr": "Segurar as engrenagens do triturador com as mãos nuas antes que cheguem na gravata.",
-      "consequence": "The machine explodes! The intern is safe, but the report has massive thumbprints on it.",
-      "consequence_ptbr": "A máquina explode! O estagiário está salvo, mas o relatório tem marcas enormes de polegar nele.",
-      "chaos": 2
-    },
-    {
-      "floor": 3,
-      "label": "Heroic Leap",
-      "label_ptbr": "Salto Heroico",
-      "effect": "Dive into the elevator shaft to catch the mug mid-air.",
-      "effect_ptbr": "Pular no poço do elevador para pegar a caneca no ar.",
-      "consequence": "CAUGHT! He lands like a champion with the mug perfectly intact. EL PRIMOOOO!",
-      "consequence_ptbr": "PEGO! Ele aterrissa como um campeão com a caneca perfeitamente intacta. EL PRIMOOOO!",
-      "chaos": 0
-    }
-  ]
-},
-    {
-      "id": 4,
-      "name": "Bull",
-      "link": "https://brawlify.com/brawlers/16000002",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000002.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000002.png",
       "class": {
         "name": "Brute Force",
         "name_ptbr": "Brutalidade",
-        "color": "#E67E22",
+        "color": "#FF4B4B",
         "iconUrl": "/assets/icons/BruteForce_icon.png"
       },
-      "skill_name_ptbr": "Demolição Rápida",
-      "encounter_1_label_ptbr": "Investida Brutal",
-      "encounter_1_effect_ptbr": "Dar uma ombrada na porta possuída.",
-      "encounter_1_consequence_ptbr": "A porta voa longe. É rápido, mas Mina vai ter que explicar o buraco na parede.",
-      "encounter_1_chaos": 2,
-      "encounter_2_label_ptbr": "Intervenção Física",
-      "encounter_2_effect_ptbr": "Dar um soco no triturador para ele parar.",
-      "encounter_2_consequence_ptbr": "A máquina para de funcionar para sempre. O relatório está livre, mas em 4 pedaços.",
-      "encounter_2_chaos": 2
-    },
-    {
-      "id": 5,
-      "name": "Pam",
-      "link": "https://brawlify.com/brawlers/16000016",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000016.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000016.png",
-      "class": {
-        "name": "Logistics",
-        "name_ptbr": "Logística",
-        "color": "#1ABC9C",
-        "iconUrl": "/assets/icons/Logistics_icon.png"
-      },
-      "skill_name_ptbr": "Manutenção Preventiva",
-      "encounter_2_label_ptbr": "Reverter Engrenagens",
-      "encounter_2_effect_ptbr": "Abrir o painel do triturador e inverter a polaridade do motor.",
-      "encounter_2_consequence_ptbr": "O papel sai para trás suavemente. Pam até aproveita para lubrificar as peças.",
-      "encounter_2_chaos": 0,
-      "encounter_3_label_ptbr": "Ímã Industrial",
-      "encounter_3_effect_ptbr": "Usar sua estação de cura para gerar um campo magnético.",
-      "encounter_3_consequence_ptbr": "A caneca voa direto para a mão dela. Eficiente e profissional.",
-      "encounter_3_chaos": 1
-    },
-    {
-      "id": 6,
-      "name": "Jessie",
-      "link": "https://brawlify.com/brawlers/16000007",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000007.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000007.png",
-      "class": {
-        "name": "Logistics",
-        "name_ptbr": "Logística",
-        "color": "#1ABC9C",
-        "iconUrl": "/assets/icons/Logistics_icon.png"
-      },
-      "skill_name_ptbr": "Engenharia de Gambiarra",
-      "encounter_1_label_ptbr": "Hackear o Painel",
-      "encounter_1_effect_ptbr": "Usar a Scrappy para dar um curto-circuito controlado no painel.",
-      "encounter_1_consequence_ptbr": "O elevador volta à vida instantaneamente. Trabalho limpo!",
-      "encounter_1_chaos": 0,
-      "encounter_3_label_ptbr": "Guindaste Improvisado",
-      "encounter_3_effect_ptbr": "Montar uma roldana de sucata para içar a caneca.",
-      "encounter_3_consequence_ptbr": "Demora um pouco, mas a caneca volta sem um único arranhão.",
-      "encounter_3_chaos": 1
+      "description": "Muscles that think for him. El Primo is the perfect solution for when bureaucracy needs to be thrown out the window.",
+      "description_ptbr": "Músculos que pensam por ele. El Primo é a solução perfeita para quando a burocracia precisa ser arremessada pela janela.",
+      "skill_name": "Impactful Impact",
+      "skill_name_ptbr": "Impacto Imediato",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Manual Override",
+          "label_ptbr": "Sobreposição Manual",
+          "effect": "Rip the elevator doors apart using pure muscle power.",
+          "effect_ptbr": "Arrombar as portas do elevador usando apenas a força bruta.",
+          "consequence": "The doors are open, but the elevator now sounds like a broken blender. Good job?",
+          "consequence_ptbr": "As portas abrem, mas o elevador agora faz barulho de um liquidificador quebrado. Bom trabalho?",
+          "chaos": 10
+        },
+        {
+          "floor": 2,
+          "label": "Muscle vs Machine",
+          "label_ptbr": "Músculo vs Máquina",
+          "effect": "Stop the shredder gears with your bare hands before they reach the tie.",
+          "effect_ptbr": "Segurar as engrenagens do triturador com as mãos nuas antes que cheguem na gravata.",
+          "consequence": "The machine explodes! The intern is safe, but the report has massive thumbprints on it.",
+          "consequence_ptbr": "A máquina explode! O estagiário está salvo, mas o relatório tem marcas enormes de polegar nele.",
+          "chaos": 20
+        },
+        {
+          "floor": 3,
+          "label": "Heroic Leap",
+          "label_ptbr": "Salto Heroico",
+          "effect": "Dive into the elevator shaft to catch the mug mid-air.",
+          "effect_ptbr": "Pular no poço do elevador para pegar a caneca no ar.",
+          "consequence": "CAUGHT! He lands like a champion with the mug perfectly intact. EL PRIMOOOO!",
+          "consequence_ptbr": "PEGO! Ele aterrissa como um campeão com a caneca perfeitamente intacta. EL PRIMOOOO!",
+          "chaos": 0
+        }
+      ]
     }
   ]
 }

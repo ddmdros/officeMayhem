@@ -8,7 +8,6 @@ export const useLanguage = () => {
         throw new Error('useLanguage deve ser usado dentro de um LanguageProvider');
     }
 
-    // Agora o TS sabe que 'language', 'setLanguage' e 'content' existem
     const { language, setLanguage, content } = context;
 
     return {

@@ -3,433 +3,506 @@
    ============================================================ */
 
 .encounter-section {
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    background: radial-gradient(circle, #2a0a4d 0%, #10051a 100%);
-    
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #2a0a4d 0%, #10051a 100%);
+
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 }
 
 .encounter-container {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 30px;
-    flex-shrink: 0;
-    z-index: 5;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+  z-index: 5;
 }
 
 .encounter-title {
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 1.8rem;
-    color: var(--yellow-brawler);
-    text-shadow: 3px 3px 0px #000;
-    margin: 10px 0;
-    text-transform: uppercase;
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 1.8rem;
+  color: var(--yellow-brawler);
+  text-shadow: 3px 3px 0px #000;
+  margin: 10px 0;
+  text-transform: uppercase;
 }
 
 .encounter-desc {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: #ddd;
-    padding: 10px 15px;
-    margin: 20px 0px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+  padding: 10px 15px;
+  margin: 20px 0px;
 }
 
 .deck-selector-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex: 0 1 auto; 
-    perspective: 1000px;
-    margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 0 1 auto;
+  perspective: 1000px;
+  margin: 0;
 }
 
 .deck-wrapper {
-    position: relative;
-    width: 280px;
-    height: 200px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 280px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .choice-card {
-    position: absolute;
-    height: auto;
-    padding: 0px 60px;
-    background: linear-gradient(145deg, #2a0a4d, #1a052d);
-    
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    pointer-events: none;
-    box-sizing: border-box;
-    
+  position: absolute;
+  height: auto;
+  padding: 0px 60px;
+  background: linear-gradient(145deg, #2a0a4d, #1a052d);
+
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+  box-sizing: border-box;
 }
 
 .choice-card.active {
-    z-index: 10;
-    opacity: 1;
-    transform: translateX(0) scale(1) translateZ(0);
-    pointer-events: all;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    border-color: var(--yellow-brawler);
-    padding: 10px 30px;
-    
+  z-index: 10;
+  opacity: 1;
+  transform: translateX(0) scale(1) translateZ(0);
+  pointer-events: all;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: var(--yellow-brawler);
+  padding: 10px 30px;
 }
 
 .choice-card.prev {
-    z-index: 5;
-    opacity: 0.5;
-    transform: translateX(-50%) scale(0.8) rotateY(25deg);
-    filter: blur(2px) grayscale(0.5);
-    
+  z-index: 5;
+  opacity: 0.5;
+  transform: translateX(-50%) scale(0.8) rotateY(25deg);
+  filter: blur(2px) grayscale(0.5);
 }
 
 .choice-card.next {
-    z-index: 5;
-    opacity: 0.5;
-    transform: translateX(50%) scale(0.8) rotateY(-25deg);
-    filter: blur(2px) grayscale(0.5);
+  z-index: 5;
+  opacity: 0.5;
+  transform: translateX(50%) scale(0.8) rotateY(-25deg);
+  filter: blur(2px) grayscale(0.5);
 }
 
 .choice-card:active {
-    transform: scale(0.95);
-    filter: brightness(1.2);
-    
+  transform: scale(0.95);
+  filter: brightness(1.2);
 }
 
 /* ============================================================
    3. CONTEÚDO DOS CARDS
    ============================================================ */
 .brawler-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .brawler-header img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 2px solid var(--yellow-brawler);
-    background: #000;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--yellow-brawler);
+  background: #000;
 }
 
 .brawler-name {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'BrawlStars-Main', sans-serif;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "BrawlStars-Main", sans-serif;
 }
 
 .class-badge {
-    font-size: 0.65rem;
-    background: var(--yellow-brawler);
-    color: #000;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-weight: bold;
+  font-size: 0.65rem;
+  background: var(--yellow-brawler);
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 .action-content {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
 }
 
 .action-label {
-    color: var(--yellow-brawler);
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 1rem;
-    margin: 5px 0;
-    text-transform: uppercase;
+  color: var(--yellow-brawler);
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 1rem;
+  margin: 5px 0;
+  text-transform: uppercase;
 }
 
 .action-effect {
-    font-size: 0.85rem;
-    color: #ccc;
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.3;
+  display: -webkit-box;
+  -line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .result-preview {
-    display: flex;
-    gap: 8px;
-    margin-top: auto;
-    padding-top: 10px;
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
 .res-pill {
-    padding: 4px 10px;
-    border-radius: 10px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid rgba(0,0,0,0.3);
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.res-pill.bad { background: #ff4444; color: white; }
-.res-pill.good { background: #44ff44; color: #000; }
+.res-pill.bad {
+  background: #ff4444;
+  color: white;
+}
+.res-pill.good {
+  background: #44ff44;
+  color: #000;
+}
 
 /* ============================================================
    4. HUD (STATUS BARS)
    ============================================================ */
 .status-bar-minimal {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 360px;
-    background: linear-gradient(180deg, rgba(30, 10, 50, 0.95) 0%, rgba(15, 5, 26, 0.98) 100%);
-    padding: 12px 18px;
-    border-radius: 16px;
-    border: 3px solid #000;
-    box-shadow: 0 8px 0 rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 2000;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 360px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 10, 50, 0.95) 0%,
+    rgba(15, 5, 26, 0.98) 100%
+  );
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 3px solid #000;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2000;
 }
 
 .stat-header {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 0.75rem;
-    color: #fff;
-    text-shadow: 2px 2px 0px #000;
+  display: flex;
+  justify-content: space-between;
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
 }
 
 .stat-bar-bg {
-    height: 16px;
-    background: #1a052d;
-    border-radius: 8px;
-    border: 2px solid #000;
-    overflow: hidden;
-    position: relative;
+  height: 16px;
+  background: #1a052d;
+  border-radius: 8px;
+  border: 2px solid #000;
+  overflow: hidden;
+  position: relative;
 }
 
 .stat-bar-fill {
-    height: 100%;
-    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.stat-bar-fill.chaos { background: linear-gradient(to bottom, #ffdb33, #ff9900); }
-.stat-bar-fill.overtime { background: linear-gradient(to bottom, #ff6666, #cc0000); }
+.stat-bar-fill.chaos {
+  background: linear-gradient(to bottom, #ffdb33, #ff9900);
+}
+.stat-bar-fill.overtime {
+  background: linear-gradient(to bottom, #ff6666, #cc0000);
+}
 
 /* ============================================================
    5. NAVEGAÇÃO E RESPONSIVIDADE
    ============================================================ */
 .nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #FFD700;
-    border: 3px solid #000;
-    color: #000;
-    font-size: 1.5rem;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 20;
-    box-shadow: 0 4px 0 #b39700;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffd700;
+  border: 3px solid #000;
+  color: #000;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 0 #b39700;
 }
 
-.nav-btn.prev { left: 5%; }
-.nav-btn.next { right: 5%; }
+.nav-btn.prev {
+  left: 5%;
+}
+.nav-btn.next {
+  right: 5%;
+}
 
 @media screen and (min-width: 1024px) {
-    /* Aumentamos o título e descrição para preencher a tela */
-    .encounter-title { 
-        font-size: 3rem; 
-        margin-bottom: 15px;
-    }
+  /* Aumentamos o título e descrição para preencher a tela */
+  .encounter-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
 
-    .encounter-section {
-        /* Garante centralização total no PC */
-        justify-content: center; 
-    }
-    .encounter-desc { 
-        font-size: 1.3rem; 
-        max-width: 700px;
-    }
+  .encounter-section {
+    /* Garante centralização total no PC */
+    justify-content: center;
+  }
+  .encounter-desc {
+    font-size: 1.3rem;
+    max-width: 700px;
+  }
 
-    /* Aproxima os botões de navegação do card centralizado */
-    .nav-btn.prev { left: 30%; }
-    .nav-btn.next { right: 30%; }
+  /* Aproxima os botões de navegação do card centralizado */
+  .nav-btn.prev {
+    left: 30%;
+  }
+  .nav-btn.next {
+    right: 30%;
+  }
 
-    .encounter-container {
-        margin-bottom: 50px; /* Mais espaço no monitor grande */
-    }
+  .encounter-container {
+    margin-bottom: 50px; /* Mais espaço no monitor grande */
+  }
 
-    /* AUMENTO DO CARD: De 320px para 450px de largura */
-    .deck-wrapper {
-        width: 450px;
-        max-height: 580px; /* Aumentamos a altura máxima */
-    }
+  /* AUMENTO DO CARD: De 320px para 450px de largura */
+  .deck-wrapper {
+    width: 450px;
+    max-height: 580px; /* Aumentamos a altura máxima */
+  }
 
-    .result-preview {
-        display: flex;
-        gap: 12px;
-        margin-top: auto; /* Empurra para o fim do card */
-        /* ADICIONE ISSO: Um pequeno recuo para não bater na borda */
-        padding-bottom: 5px; 
-        width: 100%;
-    }
-    
- .choice-card {
-        /* ... suas outras propriedades ... */
-        padding: 30px; 
-        /* Garante que o conteúdo não encoste na borda amarela */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        box-sizing: border-box;
-    }
+  .result-preview {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* Empurra para o fim do card */
+    /* ADICIONE ISSO: Um pequeno recuo para não bater na borda */
+    padding-bottom: 5px;
+    width: 100%;
+  }
 
-    /* ESCALANDO O CONTEÚDO INTERNO */
-    .brawler-header img {
-        width: 85px;  /* Foto maior */
-        height: 85px;
-    }
+  .choice-card {
+    /* ... suas outras propriedades ... */
+    padding: 30px;
+    /* Garante que o conteúdo não encoste na borda amarela */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
 
-    .brawler-name {
-        font-size: 1.6rem;
-    }
+  /* ESCALANDO O CONTEÚDO INTERNO */
+  .brawler-header img {
+    width: 85px; /* Foto maior */
+    height: 85px;
+  }
 
-    .class-badge {
-        font-size: 0.9rem;
-        padding: 4px 12px;
-    }
+  .brawler-name {
+    font-size: 1.6rem;
+  }
 
-    .action-label {
-        font-size: 1.4rem;
-        margin: 10px 0;
-    }
+  .class-badge {
+    font-size: 0.9rem;
+    padding: 4px 12px;
+  }
 
-    .action-effect {
-        font-size: 1.1rem; /* Texto mais legível */
-        -webkit-line-clamp: 4; /* Permite uma linha a mais de descrição no PC */
-    }
+  .action-label {
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
 
-    .res-pill {
-        font-size: 1rem;
-        padding: 8px 16px;
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
+  .action-effect {
+    font-size: 1.1rem; /* Texto mais legível */
+    -line-clamp: 4; /* Permite uma linha a mais de descrição no PC */
+  }
 
-    /* REPOSICIONANDO AS SETAS: Para não ficarem em cima do card maior */
-    .nav-btn {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-    }
-    .nav-btn.prev { left: 15%; }
-    .nav-btn.next { right: 15%; }
+  .res-pill {
+    font-size: 1rem;
+    padding: 8px 16px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
 
-    /* Garante que o container aguente a nova altura */
-    .deck-selector-container {
-        min-height: 600px;
-    }
+  /* REPOSICIONANDO AS SETAS: Para não ficarem em cima do card maior */
+  .nav-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  .nav-btn.prev {
+    left: 15%;
+  }
+  .nav-btn.next {
+    right: 15%;
+  }
+
+  /* Garante que o container aguente a nova altura */
+  .deck-selector-container {
+    min-height: 600px;
+  }
 }
 
 @keyframes criticalPulse {
-    from { transform: scale(1); opacity: 1; }
-    to { transform: scale(1.1); opacity: 0.8; }
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
-.danger-text { 
-    color: #ff3333; 
-    animation: criticalPulse 0.8s infinite alternate;
+.danger-text {
+  color: #ff3333;
+  animation: criticalPulse 0.8s infinite alternate;
+}
+
+.choice-card.exhausted {
+  opacity: 0.65;
+  filter: grayscale(100%);
+  transform: scale(0.95);
+  cursor: not-allowed;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.choice-card.exhausted:hover {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.exhausted-overlay {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  background-color: rgba(220, 38, 38, 0.95);
+  color: #ffffff;
+  text-align: center;
+  font-family: var(--font-main, sans-serif);
+  padding: 12px 0;
+  transform: translateY(-50%) rotate(-15deg);
+  z-index: 20;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  border-top: 3px solid #7f1d1d;
+  border-bottom: 3px solid #7f1d1d;
+}
+
+.choice-card.exhausted .brawler-thumb {
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+}
+
+.choice-card.exhausted .action-effect {
+  color: #a3a3a3;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
+  .brawler-header img {
+    width: 50px;
+    height: 50px;
+  }
 
-    .brawler-header img {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .action-label {
-        font-size: 0.9rem;
-    }
+  .action-label {
+    font-size: 0.9rem;
+  }
 
-    .action-effect {
-        font-size: 0.75rem;
-        -webkit-line-clamp: 3; /* Garante que o texto não empurre o card para baixo */
-    }
+  .action-effect {
+    font-size: 0.75rem;
+    -line-clamp: 3;
+  }
 
-    .res-pill {
-        font-size: 0.7rem;
-padding: 4px 8px;    }
-    .nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        /* Garante que fiquem por cima de tudo e bem centralizadas */
-        top: 55%; 
-    }
+  .res-pill {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    top: 55%;
+  }
 
-    /* Trazendo as setas para mais perto do card central */
-    .nav-btn.prev { 
-        left: 8%; 
-    }
-    .nav-btn.next { 
-        right: 8%; 
-    }
-    .encounter-section {
-        /* Aumentamos o padding inferior para empurrar o card para cima do HUD */
-        padding-bottom: 180px; 
-        justify-content: center;
-        gap: 30px; /* Cria um respiro automático entre título, card e HUD */
-    }
+  /* Trazendo as setas para mais perto do card central */
+  .nav-btn.prev {
+    left: 8%;
+  }
+  .nav-btn.next {
+    right: 8%;
+  }
+  .encounter-section {
+    /* Aumentamos o padding inferior para empurrar o card para cima do HUD */
+    padding-bottom: 180px;
+    justify-content: center;
+    gap: 30px; /* Cria um respiro automático entre título, card e HUD */
+  }
 
-    .encounter-container {
-        margin-bottom: 0; /* O gap da section já resolve o espaço */
-    }
+  .encounter-container {
+    margin-bottom: 0; /* O gap da section já resolve o espaço */
+  }
 
-    .encounter-title {
-        font-size: 1.6rem;
-    }
+  .encounter-title {
+    font-size: 1.6rem;
+  }
 
-    .encounter-desc {
-        font-size: 0.85rem;
-        padding: 0 20px;
-    }
+  .encounter-desc {
+    font-size: 0.85rem;
+    padding: 0 20px;
+  }
 
-    /* Reduzimos um pouco a altura do deck no mobile para sobrar ar */
-    .deck-wrapper {
-        height: 340px; 
-        width: 260px;
-    }
-    
-    .choice-card {
-        width: 260px;
-        padding: 15px;
-    }
+  /* Reduzimos um pouco a altura do deck no mobile para sobrar ar */
+  .deck-wrapper {
+    height: 340px;
+    width: 260px;
+  }
+
+  .choice-card {
+    width: 260px;
+    padding: 15px;
+  }
 }
