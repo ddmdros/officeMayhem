@@ -9,6 +9,7 @@ interface PostEncounterDialogueProps {
   encounterIndex: number;
   setCurrentScene: (scene: GameScene) => void;
   setEncounterIndex: React.Dispatch<React.SetStateAction<number>>;
+  lastAddedChaos: number | null;
 }
 
 export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
@@ -18,6 +19,7 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
   encounterIndex,
   setCurrentScene,
   setEncounterIndex,
+  lastAddedChaos,
 }) => {
   const { isPt } = useLanguage();
 
@@ -69,6 +71,14 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
         {lastActionLevel && (
           <div className={`evaluation-stamp ${lastActionLevel}`}>
             {stampText[lastActionLevel]}
+          </div>
+        )}
+
+        {lastAddedChaos !== null && (
+          <div
+            className={`added-chaos-indicator ${lastAddedChaos > 0 ? "danger" : "safe"}`}
+          >
+            +{lastAddedChaos} CAOS
           </div>
         )}
 

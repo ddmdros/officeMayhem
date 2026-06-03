@@ -32,6 +32,7 @@ interface SceneManagerProps {
   handleRestartGame: () => void;
   currentConsequence: string | null;
   lastActionLevel: ChaosLevel | null;
+  lastAddedChaos: number | null;
 }
 
 export const SceneManager: React.FC<SceneManagerProps> = ({
@@ -51,6 +52,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
   handleRestartGame,
   currentConsequence,
   lastActionLevel,
+  lastAddedChaos,
 }) => {
   switch (currentScene) {
     case "START":
@@ -98,6 +100,7 @@ export const SceneManager: React.FC<SceneManagerProps> = ({
           setCurrentScene={setCurrentScene}
           setEncounterIndex={setEncounterIndex}
           lastActionLevel={lastActionLevel}
+          lastAddedChaos={lastAddedChaos}
         />
       );
 

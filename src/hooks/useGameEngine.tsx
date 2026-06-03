@@ -18,6 +18,7 @@ export const useGameEngine = () => {
   const [lastActionLevel, setLastActionLevel] = useState<ChaosLevel | null>(
     null,
   );
+  const [lastAddedChaos, setLastAddedChaos] = useState<number | null>(null);
 
   const toggleSelection = (brawler: Brawler) => {
     const alreadySelected = selectedTeam.find((b) => b.id === brawler.id);
@@ -48,6 +49,7 @@ export const useGameEngine = () => {
         b.name === result.brawlerName ? { ...b, isUsed: true } : b,
       ),
     );
+    setLastAddedChaos(result.chaos);
 
     setCurrentScene("POST_ENCOUNTER_DIALOGUE");
   };
@@ -60,6 +62,7 @@ export const useGameEngine = () => {
     setActiveIndex(0);
     setCurrentConsequence(null);
     setLastActionLevel(null);
+    setLastAddedChaos(null);
   };
 
   return {
@@ -78,5 +81,6 @@ export const useGameEngine = () => {
     handleRestartGame,
     currentConsequence,
     lastActionLevel,
+    lastAddedChaos,
   };
 };
