@@ -307,6 +307,26 @@
           "consequence": "The wall is gone too, but the elevator is open!",
           "consequence_ptbr": "A parede também caiu, mas o elevador abriu!",
           "chaos": "neutral"
+        },
+        {
+          "floor": 2,
+          "label": "Stand Guard",
+          "label_ptbr": "Ficar de Guarda",
+          "effect": "Intimidate the shredder into submission.",
+          "effect_ptbr": "Intimidar o triturador até ele parar.",
+          "consequence": "It stops out of pure fear. Intern saved!",
+          "consequence_ptbr": "Ele para por puro medo. Estagiário salvo!",
+          "chaos": "good"
+        },
+        {
+          "floor": 3,
+          "label": "Brute Charge",
+          "label_ptbr": "Investida Brutal",
+          "effect": "Charge directly at the mutant plant.",
+          "effect_ptbr": "Investir diretamente contra a planta mutante.",
+          "consequence": "A powerful impact! The CEO is rescued, but the wall is destroyed.",
+          "consequence_ptbr": "Impacto poderoso! O CEO foi resgatado, mas a parede foi destruída.",
+          "chaos": "bad"
         }
       ]
     },
@@ -326,6 +346,16 @@
       "description_ptbr": "Frank é um gigante bondoso que ajuda no necrotério. Sua solução para qualquer problema é sua marreta maciça.",
       "encounters": [
         {
+          "floor": 1,
+          "label": "Heavy Door",
+          "label_ptbr": "Porta Pesada",
+          "effect": "Smash the elevator panel with your hammer.",
+          "effect_ptbr": "Esmagar o painel do elevador com a marreta.",
+          "consequence": "The doors burst open. Subtlety is not your forte.",
+          "consequence_ptbr": "As portas explodem. Sutileza não é seu forte.",
+          "chaos": "neutral"
+        },
+        {
           "floor": 2,
           "label": "Smash it",
           "label_ptbr": "Esmagar",
@@ -334,6 +364,16 @@
           "consequence": "Machine destroyed, but the report is now dust.",
           "consequence_ptbr": "Máquina destruída, mas o relatório virou pó.",
           "chaos": "bad"
+        },
+        {
+          "floor": 3,
+          "label": "Hammer Drop",
+          "label_ptbr": "Martelada",
+          "effect": "Stun the plant with a massive shockwave.",
+          "effect_ptbr": "Atordoar a planta com uma onda de choque massiva.",
+          "consequence": "The plant releases the CEO instantly. Efficient!",
+          "consequence_ptbr": "A planta solta o CEO instantaneamente. Eficiente!",
+          "chaos": "good"
         }
       ]
     },
@@ -352,6 +392,26 @@
       "description": "Carl is a mining robot fascinated by rocks and gems. He uses his pickaxe to analyze and fix structural problems.",
       "description_ptbr": "Carl é um robô mineiro fascinado por rochas e gemas. Ele usa sua picareta para analisar e consertar problemas estruturais.",
       "encounters": [
+        {
+          "floor": 1,
+          "label": "Geological Survey",
+          "label_ptbr": "Estudo Geológico",
+          "effect": "Scan the elevator for structural weak points.",
+          "effect_ptbr": "Escanear o elevador em busca de pontos fracos.",
+          "consequence": "The elevator opens carefully. Precision work!",
+          "consequence_ptbr": "O elevador abre com cuidado. Trabalho de precisão!",
+          "chaos": "good"
+        },
+        {
+          "floor": 2,
+          "label": "Precision Mining",
+          "label_ptbr": "Mineração de Precisão",
+          "effect": "Extract the tie piece by piece from the machine.",
+          "effect_ptbr": "Extrair a gravata peça por peça da máquina.",
+          "consequence": "Success! The report remains perfectly intact.",
+          "consequence_ptbr": "Sucesso! O relatório permanece intacto.",
+          "chaos": "neutral"
+        },
         {
           "floor": 3,
           "label": "Mining Analysis",
@@ -380,6 +440,16 @@
       "description_ptbr": "Pam lida com uma carga de trabalho enorme no ferro-velho. Ela é especialista em reparos e em manter as operações funcionando.",
       "encounters": [
         {
+          "floor": 1,
+          "label": "System Tune-up",
+          "label_ptbr": "Ajuste de Sistema",
+          "effect": "Recalibrate the elevator's wiring.",
+          "effect_ptbr": "Recalibrar a fiação do elevador.",
+          "consequence": "The doors slide open smoothly. Professional!",
+          "consequence_ptbr": "As portas deslizam suavemente. Profissional!",
+          "chaos": "good"
+        },
+        {
           "floor": 2,
           "label": "Scrap Repair",
           "label_ptbr": "Reparo de Sucata",
@@ -388,6 +458,16 @@
           "consequence": "Machine fixed, intern safe, report preserved.",
           "consequence_ptbr": "Máquina consertada, estagiário salvo, relatório preservado.",
           "chaos": "good"
+        },
+        {
+          "floor": 3,
+          "label": "Garden Care",
+          "label_ptbr": "Cuidado de Jardim",
+          "effect": "Prune the mutant plant with your welder.",
+          "effect_ptbr": "Podar a planta mutante com seu soldador.",
+          "consequence": "The plant feels refreshed and lets go. The office is safe.",
+          "consequence_ptbr": "A planta se sente revigorada e solta o CEO. Escritório salvo.",
+          "chaos": "neutral"
         }
       ]
     },

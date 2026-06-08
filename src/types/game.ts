@@ -61,11 +61,8 @@ export interface Brawler {
   class: BrawlerClass;
   encounters: EncounterAction[];
   isUsed?: boolean;
-
-  // temporary properties for game state management, not part of original data
   description?: string;
   description_ptbr?: string;
-
   className?: string;
   classColor?: string;
   iconUrl?: string;
@@ -76,13 +73,4 @@ export interface ChoiceResult {
   chaosLevel: ChaosLevel;
   consequence: string;
   brawlerName: string;
-}
-
-export interface BrawlerCardContent_EncounterRoom_Props {
-  brawler: Brawler;
-  label: string;
-  effect: string;
-  className: string;
-  isPt: boolean;
-  isUsed?: boolean;
 }
