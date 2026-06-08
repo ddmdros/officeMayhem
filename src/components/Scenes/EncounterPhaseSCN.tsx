@@ -74,7 +74,7 @@ export const EncounterPhaseSCN: React.FC<EncounterPhaseSCNProps> = ({
         </div>
       </div>
 
-      <ChaosBar chaos={chaos} />
+      <ChaosBar chaos={chaos} maxChaos={100} />
     </section>
   );
 };

@@ -70,7 +70,10 @@ export const RecruitmentSCN: React.FC<RecruitmentProps> = ({
             isSelected={selectedTeam.some((st) => st.id === b.id)}
             onSelect={() => toggleSelection(b)}
             onOpenDetails={() => onOpenDetails(b)}
-            classTypeName={b.class?.name_ptbr || b.class?.name || "Unknown"}
+            classData={{
+              name: b.class?.name || "Unkown",
+              name_ptbr: b.class?.name_ptbr || "Desconhecido",
+            }}
             iconUrl={b.class?.iconUrl || " "}
             classColor={b.class?.color || "#CCCCCC"}
           />

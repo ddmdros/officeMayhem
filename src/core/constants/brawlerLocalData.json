@@ -61,37 +61,35 @@
       },
       "description": "She's the star of Brawlywood and the office. Lola doesn't solve problems; she makes them feel inadequate with her presence.",
       "description_ptbr": "Ela é a estrela de Brawlywood e do escritório. Lola não resolve problemas; ela faz os problemas se sentirem inadequados perante sua presença.",
-      "skill_name": "Stage Presence",
-      "skill_name_ptbr": "Presença de Palco",
       "encounters": [
         {
           "floor": 1,
           "label": "Dramatic Monologue",
           "label_ptbr": "Monólogo Dramático",
-          "effect": "Perform an Oscar-worthy scene to confuse the elevator's sensors.",
+          "effect": "Perform an Oscar-worthy scene to confuse the elevator.",
           "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
           "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
-          "consequence_ptbr": "O sistema fica tão confuso com tamanha performance que as portas se abrem por puro choque.",
+          "consequence_ptbr": "O sistema fica tão confuso com a performance que as portas se abrem por puro choque.",
           "chaos": "neutral"
         },
         {
           "floor": 2,
           "label": "Style Lesson",
           "label_ptbr": "Aula de Estilo",
-          "effect": "Tell the intern that 'tragedies are part of the resume' and he looks fabulous anyway.",
-          "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo' e que ele está fabuloso de qualquer jeito.",
-          "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved and sparkling!",
-          "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. O relatório está salvo e brilhante!",
+          "effect": "Tell the intern that tragedies are part of the resume.",
+          "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo'.",
+          "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved!",
+          "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. Relatório salvo!",
           "chaos": "good"
         },
         {
           "floor": 3,
           "label": "Diva Distraction",
           "label_ptbr": "Diva Distratora",
-          "effect": "Use her ego (and her clone) to pretend the mug never actually fell.",
-          "effect_ptbr": "Usar seu ego (e seu clone) para fingir que a caneca nunca caiu de verdade.",
-          "consequence": "Mina sees through the trick in seconds. Chaos rises and the mug is still missing.",
-          "consequence_ptbr": "Mina percebe o truque em segundos. O caos aumenta e a caneca continua sumida.",
+          "effect": "Complain that the plant's lighting is ruining her makeup.",
+          "effect_ptbr": "Reclamar que a iluminação da planta está arruinando sua maquiagem.",
+          "consequence": "The plant ignores her completely and continues chewing the CEO.",
+          "consequence_ptbr": "A planta ignora Lola completamente e continua mastigando o CEO.",
           "chaos": "bad"
         }
       ]
@@ -111,8 +109,6 @@
       },
       "description": "Muscles that think for him. El Primo is the perfect solution for when bureaucracy needs to be thrown out the window.",
       "description_ptbr": "Músculos que pensam por ele. El Primo é a solução perfeita para quando a burocracia precisa ser arremessada pela janela.",
-      "skill_name": "Impactful Impact",
-      "skill_name_ptbr": "Impacto Imediato",
       "encounters": [
         {
           "floor": 1,
@@ -120,29 +116,269 @@
           "label_ptbr": "Sobreposição Manual",
           "effect": "Rip the elevator doors apart using pure muscle power.",
           "effect_ptbr": "Arrombar as portas do elevador usando apenas a força bruta.",
-          "consequence": "The doors are open, but the elevator now sounds like a broken blender. Good job?",
-          "consequence_ptbr": "As portas abrem, mas o elevador agora faz barulho de um liquidificador quebrado. Bom trabalho?",
+          "consequence": "The doors open, but the elevator now sounds like a broken blender.",
+          "consequence_ptbr": "As portas abrem, mas o elevador agora faz barulho de liquidificador quebrado.",
           "chaos": "neutral"
         },
         {
           "floor": 2,
           "label": "Muscle vs Machine",
           "label_ptbr": "Músculo vs Máquina",
-          "effect": "Stop the shredder gears with your bare hands before they reach the tie.",
-          "effect_ptbr": "Segurar as engrenagens do triturador com as mãos nuas antes que cheguem na gravata.",
-          "consequence": "The machine explodes! The intern is safe, but the report has massive thumbprints on it.",
-          "consequence_ptbr": "A máquina explode! O estagiário está salvo, mas o relatório tem marcas enormes de polegar nele.",
+          "effect": "Stop the shredder gears with your bare hands.",
+          "effect_ptbr": "Segurar as engrenagens do triturador com as mãos nuas.",
+          "consequence": "The machine explodes! The intern is safe, but the report is scorched.",
+          "consequence_ptbr": "A máquina explode! O estagiário está salvo, mas o relatório ficou chamuscado.",
           "chaos": "bad"
         },
         {
           "floor": 3,
-          "label": "Heroic Leap",
-          "label_ptbr": "Salto Heroico",
-          "effect": "Dive into the elevator shaft to catch the mug mid-air.",
-          "effect_ptbr": "Pular no poço do elevador para pegar a caneca no ar.",
-          "consequence": "CAUGHT! He lands like a champion with the mug perfectly intact. EL PRIMOOOO!",
-          "consequence_ptbr": "PEGO! Ele aterrissa como um campeão com a caneca perfeitamente intacta. EL PRIMOOOO!",
+          "label": "Meteor Smash",
+          "label_ptbr": "Esmagamento Meteoro",
+          "effect": "Elbow drop the mutant plant from the ceiling.",
+          "effect_ptbr": "Dar uma cotovelada na planta caindo do teto.",
+          "consequence": "A direct hit! The plant spits out the CEO and runs away. EL PRIMOOO!",
+          "consequence_ptbr": "Acerto em cheio! A planta cospe o CEO e foge. EL PRIMOOO!",
           "chaos": "good"
+        }
+      ]
+    },
+    {
+      "id": 16000007,
+      "name": "Jessie",
+      "link": "https://brawlify.com/brawlers/16000007",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000007.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000007.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2196F3",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "Jessie is a prodigy who builds gadgets from junkyard parts. She thinks every corporate crisis is just a broken circuit waiting to be fixed.",
+      "description_ptbr": "Um prodígio que constrói geringonças com sucata. Para a Jessie, toda crise corporativa é apenas um circuito quebrado esperando conserto.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Scrappy's Ink",
+          "label_ptbr": "Tinta do Scrappy",
+          "effect": "Hook up Scrappy's oil reservoir to the elevator's printer.",
+          "effect_ptbr": "Conectar o reservatório de óleo do Scrappy na impressora do elevador.",
+          "consequence": "The demon accepts the 'premium black ink'. The elevator goes up smoothly!",
+          "consequence_ptbr": "O demônio aceita a 'tinta preta premium'. O elevador sobe suavemente!",
+          "chaos": "good"
+        },
+        {
+          "floor": 2,
+          "label": "Reverse Polarity",
+          "label_ptbr": "Polaridade Reversa",
+          "effect": "Hack the shredder to reverse its motor direction.",
+          "effect_ptbr": "Hackear o triturador para inverter a rotação do motor.",
+          "consequence": "It spits the tie out perfectly, but shreds the monthly financial data instead.",
+          "consequence_ptbr": "Ele cospe a gravata inteira, mas engole e tritura os dados financeiros do mês.",
+          "chaos": "neutral"
+        },
+        {
+          "floor": 3,
+          "label": "Shock Therapy",
+          "label_ptbr": "Terapia de Choque",
+          "effect": "Zap the plant with an energy orb to stun it.",
+          "effect_ptbr": "Dar um choque na planta com uma orbe de energia.",
+          "consequence": "The energy orb mutates the plant further! Now it has lasers! Run!",
+          "consequence_ptbr": "A energia causou mais mutação! Agora a planta solta lasers! Corram!",
+          "chaos": "bad"
+        }
+      ]
+    },
+    {
+      "id": 16000051,
+      "name": "Ash",
+      "link": "https://brawlify.com/brawlers/16000051",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000051.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000051.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "color": "#FF4B4B",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Ash has the thankless job of keeping the park clean. He's grumpy, he's tired, and his solution to every problem is to aggressively sweep it away.",
+      "description_ptbr": "Ash tem o trabalho ingrato de manter tudo limpo. Ele é rabugento, cansado, e sua solução para problemas é varrê-los agressivamente para longe.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Broom Bash",
+          "label_ptbr": "Pancada de Vassoura",
+          "effect": "Smash the elevator's button panel with the broom.",
+          "effect_ptbr": "Esmagar o painel de botões do elevador com a vassoura.",
+          "consequence": "The panel shatters. The elevator works, but now stops at every single floor.",
+          "consequence_ptbr": "O painel quebra. O elevador funciona, mas agora para em todos os andares.",
+          "chaos": "neutral"
+        },
+        {
+          "floor": 2,
+          "label": "Out the Window",
+          "label_ptbr": "Pela Janela",
+          "effect": "Sweep the entire shredder machine out the glass window.",
+          "effect_ptbr": "Varrer a máquina trituradora inteira pela janela de vidro.",
+          "consequence": "The intern is saved, but a $5,000 window was shattered. HR is furious.",
+          "consequence_ptbr": "O estagiário sobrevive, mas uma janela caríssima foi quebrada. O RH pirou.",
+          "chaos": "bad"
+        },
+        {
+          "floor": 3,
+          "label": "Trash Talk",
+          "label_ptbr": "Falar o Lixo",
+          "effect": "Treat the mutant plant like uncollected garbage.",
+          "effect_ptbr": "Tratar a planta mutante como lixo não recolhido e esfregar o chão nela.",
+          "consequence": "The plant is disgusted by the dirty broom, spits out the boss and withers away.",
+          "consequence_ptbr": "A planta sente nojo da vassoura suja, cospe o CEO e murcha de pavor.",
+          "chaos": "good"
+        }
+      ]
+    },
+    {
+      "id": 16000042,
+      "name": "Byron",
+      "link": "https://brawlify.com/brawlers/16000042",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000042.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000042.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#E91E63",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+      },
+      "description": "Byron sells concoctions that heal or harm... mostly harm. He can talk anyone into buying his shady products, even a printer demon.",
+      "description_ptbr": "Byron vende poções que curam ou causam dano... geralmente dano. Ele consegue convencer qualquer um a comprar seus produtos, até um demônio.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Snake Oil Pitch",
+          "label_ptbr": "Lábia de Vendedor",
+          "effect": "Sell the demon a 'Premium Vintage Ink' potion.",
+          "effect_ptbr": "Vender ao demônio uma poção de 'Tinta Vintage Premium'.",
+          "consequence": "The demon drinks it, gets a stomach ache, and lets you pass. Excellent sale!",
+          "consequence_ptbr": "O demônio bebe, tem dor de barriga e deixa vocês passarem. Ótima venda!",
+          "chaos": "good"
+        },
+        {
+          "floor": 2,
+          "label": "Upselling",
+          "label_ptbr": "Venda Casada",
+          "effect": "Pitch the intern a brand new, rip-proof tie for $99.99.",
+          "effect_ptbr": "Tentar vender ao estagiário uma gravata à prova de rasgos por 500 reais.",
+          "consequence": "The intern passes out from panic. At least he stopped struggling?",
+          "consequence_ptbr": "O estagiário desmaia de pânico. Pelo menos ele parou de se debater?",
+          "chaos": "bad"
+        },
+        {
+          "floor": 3,
+          "label": "Toxic Treatment",
+          "label_ptbr": "Tratamento Tóxico",
+          "effect": "Spray the plant with a toxic 'healing' tincture.",
+          "effect_ptbr": "Borrifar a planta com uma tintura 'curativa' altamente tóxica.",
+          "consequence": "The plant gets dizzy and drops the boss, but the office now smells like sulfur.",
+          "consequence_ptbr": "A planta fica tonta e solta o chefe, mas o escritório agora cheira a enxofre.",
+          "chaos": "neutral"
+        }
+      ]
+    },
+    {
+      "id": 16000066,
+      "name": "R-T",
+      "link": "https://brawlify.com/brawlers/16000066",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000066.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000066.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2196F3",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "R-T monitors all activity within Starr Park. For safety reasons, of course. He prefers algorithms over human interaction.",
+      "description_ptbr": "R-T monitora toda a atividade no Starr Park. Por questões de segurança, é claro. Ele prefere algoritmos frios do que interação humana.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Cyber Override",
+          "label_ptbr": "Substituição Cibernética",
+          "effect": "Hack the elevator's mainframe to bypass the demon's OS.",
+          "effect_ptbr": "Hackear a rede do elevador para ignorar o sistema do demônio.",
+          "consequence": "The demon suffers a Blue Screen of Death. The elevator is yours!",
+          "consequence_ptbr": "O demônio sofre uma 'Tela Azul da Morte'. O elevador está livre!",
+          "chaos": "good"
+        },
+        {
+          "floor": 2,
+          "label": "Acoustic Jamming",
+          "label_ptbr": "Interferência Acústica",
+          "effect": "Emit a high-frequency noise to jam the shredder's sensors.",
+          "effect_ptbr": "Emitir uma frequência aguda para travar os sensores do triturador.",
+          "consequence": "The machine stops. The intern is temporarily deafened, but safe.",
+          "consequence_ptbr": "A máquina trava. O estagiário fica temporariamente surdo, mas seguro.",
+          "chaos": "neutral"
+        },
+        {
+          "floor": 3,
+          "label": "Passive Observation",
+          "label_ptbr": "Observação Passiva",
+          "effect": "Record the incident for the 'Workplace Incidents' archive.",
+          "effect_ptbr": "Apenas gravar o incidente para os arquivos de 'Acidentes de Trabalho'.",
+          "consequence": "R-T does absolutely nothing to help. The CEO is furious!",
+          "consequence_ptbr": "R-T não faz absolutamente nada para ajudar. O CEO está furioso!",
+          "chaos": "bad"
+        }
+      ]
+    },
+    {
+      "id": 16000039,
+      "name": "Colette",
+      "link": "https://brawlify.com/brawlers/16000039",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000039.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000039.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000039.png",
+      "class": {
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "color": "#E91E63",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
+      },
+      "description": "Colette is obsessed with Brawlers and keeps a creepy scrapbook. She approaches terrifying monsters the same way she approaches celebrities.",
+      "description_ptbr": "Colette é obcecada por Brawlers e tem um diário assustador. Ela lida com monstros aterrorizantes do mesmo jeito que lida com celebridades.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Fan Girl",
+          "label_ptbr": "Ataque de Fã",
+          "effect": "Ask the printer demon to sign her scrapbook.",
+          "effect_ptbr": "Pedir educadamente para o demônio assinar seu diário de recortes.",
+          "consequence": "The demon is deeply disturbed by her obsession and leaves the elevator.",
+          "consequence_ptbr": "O demônio fica extremamente incomodado com a obsessão dela e vai embora.",
+          "chaos": "good"
+        },
+        {
+          "floor": 2,
+          "label": "Souvenir Grab",
+          "label_ptbr": "Garantindo a Lembrança",
+          "effect": "Rip the tie off the intern to keep it as a souvenir.",
+          "effect_ptbr": "Arrancar a gravata do pescoço do estagiário para guardar de lembrança.",
+          "consequence": "Intern is saved! But now he has to meet the CEO half-naked.",
+          "consequence_ptbr": "O rapaz está salvo! Mas agora ele vai ter que trabalhar com a camisa rasgada.",
+          "chaos": "neutral"
+        },
+        {
+          "floor": 3,
+          "label": "Free Hugs",
+          "label_ptbr": "Abraço Grátis",
+          "effect": "Run towards the terrifying plant yelling 'YOU ARE SO CUTE!'.",
+          "effect_ptbr": "Correr em direção à planta aterrorizante gritando 'VOCÊ É TÃO FOFA!'.",
+          "consequence": "The plant panics, spits out the boss, and smashes the entire office trying to escape.",
+          "consequence_ptbr": "A planta entra em pânico, cospe o chefe e destrói o escritório inteiro tentando fugir da Colette.",
+          "chaos": "bad"
         }
       ]
     }

@@ -84,7 +84,9 @@ export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({
         </div>
 
         <div className="info-footer">
-          <p>{content.footer}</p>
+          <button className="btn-back-to-game" onClick={onClose}>
+            {content.footer}
+          </button>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import React from 'react';
-import { useLanguage } from '../../hooks/useLanguage';
+import React from "react";
+import { useLanguage } from "../../hooks/useLanguage";
 
 interface BrawlerCardProps {
   name: string;
-  classTypeName: string; 
+  classData: { name: string; name_ptbr: string };
   iconUrl: string;
   imageUrl?: string;
   isSelected: boolean;
@@ -14,26 +14,27 @@ interface BrawlerCardProps {
 
 const BrawlerCard: React.FC<BrawlerCardProps> = ({
   name,
-  classTypeName,
+  classData,
   imageUrl,
   isSelected,
   onOpenDetails,
   onSelect,
   iconUrl,
-  classColor
+  classColor,
 }) => {
   const { uiText } = useLanguage();
+  const { isPt } = useLanguage();
+  const displayName = isPt ? classData.name_ptbr : classData.name;
 
   return (
     <div
-      className={`brawler-card ${isSelected ? 'card-selected' : ''}`}
+      className={`brawler-card ${isSelected ? "card-selected" : ""}`}
       onClick={onSelect}
-      style={{backgroundColor: classColor}}
+      style={{ backgroundColor: classColor }}
     >
-  <div className="class-badge-floating">
+      <div className="class-badge-floating">
         <img src={iconUrl} alt="class icon" />
       </div>
-
 
       <div className="card-image-container">
         <img src={imageUrl} alt={name} className="brawler-img" />
@@ -41,8 +42,7 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
 
       <div className="card-info">
         <h3 className="brawler-name">{name}</h3>
-        <span className='class-subtitle'>{classTypeName}</span>
-              
+        <span className="class-subtitle">{displayName}</span>
       </div>
 
       <div className="card-selection-footer">
@@ -56,9 +56,8 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
           {uiText?.brawler_card?.btn_details || "DETAILS"}
         </button>
       </div>
-
     </div>
   );
-}; 
+};
 
 export default BrawlerCard;

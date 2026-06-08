@@ -40,18 +40,24 @@ export const useGameEngine = () => {
   };
 
   const handleChoice = (result: ChoiceResult) => {
-    if (result.chaos) setChaos((prev) => prev + result.chaos);
+    const chaosChange = result.chaos || 0;
+    const newChaos = Math.min(Math.max(0, chaos + chaosChange), 100);
+    setChaos(newChaos);
     setCurrentConsequence(result.consequence);
     setLastActionLevel(result.chaosLevel);
+    setLastAddedChaos(chaosChange);
 
     setSelectedTeam((prev) =>
       prev.map((b) =>
         b.name === result.brawlerName ? { ...b, isUsed: true } : b,
       ),
     );
-    setLastAddedChaos(result.chaos);
 
-    setCurrentScene("POST_ENCOUNTER_DIALOGUE");
+    if (newChaos >= 100) {
+      setCurrentScene("RESULT");
+    } else {
+      setCurrentScene("POST_ENCOUNTER_DIALOGUE");
+    }
   };
 
   const handleRestartGame = () => {

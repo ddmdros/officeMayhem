@@ -22,6 +22,7 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
   lastAddedChaos,
 }) => {
   const { isPt } = useLanguage();
+  const maxChaos = 100;
 
   const stampText = {
     good: isPt ? "PERFEITO!" : "PERFECT!",
@@ -38,12 +39,14 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
         >
           <div className="stat-header">
             <span>{isPt ? "CAOS NO ESCRITÓTIO" : "OFFICE CHAOS"}</span>
-            <span className={chaos > 40 ? "danger-text" : ""}>{chaos}/60</span>
+            <span className={chaos > 75 ? "danger-text" : ""}>
+              {Math.min(chaos, maxChaos)}/{maxChaos}{" "}
+            </span>
           </div>
           <div className="stat-bar-bg">
             <div
               className="stat-bar-fill chaos"
-              style={{ width: `${Math.min((chaos / 60) * 100, 100)}%` }}
+              style={{ width: `${Math.min((chaos / maxChaos) * 100, 100)}%` }}
             ></div>
           </div>
         </div>
@@ -104,7 +107,7 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
             borderRadius: "8px",
           }}
           onClick={() => {
-            if (encounterIndex >= 2) {
+            if (chaos > 100 || encounterIndex >= 2) {
               setCurrentScene("RESULT");
             } else {
               setEncounterIndex((prev) => prev + 1);
@@ -112,13 +115,13 @@ export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
             }
           }}
         >
-          {encounterIndex >= 2
+          {chaos >= 100 || encounterIndex >= 2
             ? isPt
               ? "Ver avaliação final"
               : "See Final Review"
             : isPt
-              ? "Próxima crise"
-              : "Next Crisis"}
+              ? "Avançar"
+              : "Next"}
         </button>
       </div>
     </div>
