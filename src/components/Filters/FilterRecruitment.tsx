@@ -1,7 +1,5 @@
-import React from 'react';
-import "../../styles/FilterRecruitment.css"
-
-
+import React from "react";
+import "../../styles/FilterRecruitment.css";
 
 interface FilterRecruitmentProps {
   selectedClass: string;
@@ -9,10 +7,10 @@ interface FilterRecruitmentProps {
   classes: string[];
 }
 
-export const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
+const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
   selectedClass,
   onClassChange,
-  classes
+  classes,
 }) => {
   return (
     <div className="filter-wrapper">
@@ -20,7 +18,7 @@ export const FilterRecruitment: React.FC<FilterRecruitmentProps> = ({
         {classes.map((cls) => (
           <button
             key={cls}
-            className={`class-btn ${selectedClass === cls ? 'active' : ''}`}
+            className={`class-btn ${selectedClass === cls ? "active" : ""}`}
             onClick={() => onClassChange(cls)}
           >
             {cls}

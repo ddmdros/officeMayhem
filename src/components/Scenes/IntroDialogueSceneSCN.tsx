@@ -8,7 +8,7 @@ interface IntroDialogueSCNProps {
   setCurrentScene: (scene: GameScene) => void;
 }
 
-export const IntroDialogueSCN: React.FC<IntroDialogueSCNProps> = ({
+const IntroDialogueSCN: React.FC<IntroDialogueSCNProps> = ({
   setCurrentScene,
   brawlers,
 }) => {

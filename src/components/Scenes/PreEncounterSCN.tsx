@@ -5,7 +5,7 @@ interface PreEncounterSCNProps {
   setCurrentScene: (scene: GameScene) => void;
 }
 
-export const PreEncounterSCN: React.FC<PreEncounterSCNProps> = ({
+const PreEncounterSCN: React.FC<PreEncounterSCNProps> = ({
   setCurrentScene,
 }) => {
   return (

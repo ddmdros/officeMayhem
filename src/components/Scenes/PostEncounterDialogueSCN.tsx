@@ -12,7 +12,7 @@ interface PostEncounterDialogueProps {
   lastAddedChaos: number | null;
 }
 
-export const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
+const PostEncounterDialogueSCN: React.FC<PostEncounterDialogueProps> = ({
   chaos,
   currentConsequence,
   lastActionLevel,

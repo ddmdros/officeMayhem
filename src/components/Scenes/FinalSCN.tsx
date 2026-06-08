@@ -8,7 +8,7 @@ interface FinalSCN_Props {
   onReset: () => void;
 }
 
-export const FinalSCN: React.FC<FinalSCN_Props> = ({ chaos, onReset }) => {
+const FinalSCN: React.FC<FinalSCN_Props> = ({ chaos, onReset }) => {
   const { isPt } = useLanguage();
 
   const result = getFinalEvaluation(chaos, isPt);

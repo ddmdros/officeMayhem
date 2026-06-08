@@ -6,7 +6,7 @@ interface StartSCNProps {
   setCurrentScene: (scene: GameScene) => void;
 }
 
-export const StartSCN: React.FC<StartSCNProps> = ({ setCurrentScene }) => {
+const StartSCN: React.FC<StartSCNProps> = ({ setCurrentScene }) => {
   return (
     <>
       <StartScreen />

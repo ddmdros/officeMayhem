@@ -8,7 +8,7 @@ interface HelpRecruitmentProps {
   onClose: () => void;
 }
 
-export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({
+const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({
   isOpen,
   onClose,
 }) => {
