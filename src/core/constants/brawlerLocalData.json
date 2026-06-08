@@ -13,6 +13,8 @@
         "color": "#E91E63",
         "iconUrl": "/assets/icons/SweetTalk_icon.png"
       },
+      "description": "Poco believes music can change people's lives. He's so enthusiastic about it that he never stops playing.",
+      "description_ptbr": "Poco acredita que a música pode mudar vidas. Ele é tão entusiasmado que nunca para de tocar.",
       "encounters": [
         {
           "floor": 1,

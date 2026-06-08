@@ -1,9 +1,10 @@
-import React from 'react';
-import { useLanguage } from '../../hooks/useLanguage';
+import React from "react";
+import { useLanguage } from "../../hooks/useLanguage";
+import type { Brawler } from "../../types/game";
 
 interface SelectedTeamProps {
-  team: any[];
-  onRemove: (brawler: any) => void;
+  team: Brawler[];
+  onRemove: (brawler: Brawler) => void;
 }
 
 const SelectedTeam: React.FC<SelectedTeamProps> = ({ team, onRemove }) => {
@@ -14,9 +15,13 @@ const SelectedTeam: React.FC<SelectedTeamProps> = ({ team, onRemove }) => {
   return (
     <div className="selected-team-container">
       <div className="team-header">
-        <span className="task-force-label">{uiText.selected_team.task_force_label}</span>
+        <span className="task-force-label">
+          {uiText.selected_team.task_force_label}
+        </span>
         <div className="status-indicator">
-          <div className={`dot ${team.length === 3 ? 'ready' : 'recruiting'}`}></div>
+          <div
+            className={`dot ${team.length === 3 ? "ready" : "recruiting"}`}
+          ></div>
         </div>
       </div>
 
@@ -27,23 +32,38 @@ const SelectedTeam: React.FC<SelectedTeamProps> = ({ team, onRemove }) => {
           return (
             <div
               key={index}
-              className={`team-slot ${brawler ? 'filled' : 'empty'}`}
+              className={`team-slot ${brawler ? "filled" : "empty"}`}
               onClick={() => brawler && onRemove(brawler)}
-              style={brawler ? {
-                borderColor: brawler.classColor,
-                boxShadow: `inset 0 0 10px ${brawler.classColor}44`
-              } : {}}
+              style={
+                brawler
+                  ? {
+                      borderColor: brawler.classColor,
+                      boxShadow: `inset 0 0 10px ${brawler.classColor}44`,
+                    }
+                  : {}
+              }
             >
               {brawler ? (
                 <div className="slot-content">
-                  <img src={brawler.imageUrl2} alt={brawler.name} className="slot-avatar" />
-                  <div className="slot-info"
-                    style={{ '--brawler-color': brawler.classColor } as React.CSSProperties}>
+                  <img
+                    src={brawler.imageUrl2}
+                    alt={brawler.name}
+                    className="slot-avatar"
+                  />
+                  <div
+                    className="slot-info"
+                    style={
+                      {
+                        "--brawler-color": brawler.classColor,
+                      } as React.CSSProperties
+                    }
+                  >
                     <p className="slot-name">{brawler.name}</p>
-                    <p className='slot-class'>{brawler.className}</p>
+                    <p className="slot-class">{brawler.className}</p>
                   </div>
 
-                  <div className="remove-indicator"><img src='/assets/icons/remove.png' />
+                  <div className="remove-indicator">
+                    <img src="/assets/icons/remove.png" />
                   </div>
                 </div>
               ) : (
