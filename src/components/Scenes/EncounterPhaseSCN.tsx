@@ -1,5 +1,5 @@
 import type { Brawler, ChoiceResult } from "../../types/game";
-import { EncounterRoom } from "../EncounterRoom";
+import { EncounterRoom_Manager } from "../EncounterRoom/EncounterRoom_Manager";
 import { useLanguage } from "../../hooks/useLanguage";
 import { encounterData } from "../../core/constants/";
 import { ChaosBar } from "../UI/ChaosBar";
@@ -56,7 +56,7 @@ export const EncounterPhaseSCN: React.FC<EncounterPhaseSCNProps> = ({
                 position = "prev";
 
               return (
-                <EncounterRoom
+                <EncounterRoom_Manager
                   key={brawler.id}
                   brawler={brawler}
                   encounterIndex={encounterIndex}

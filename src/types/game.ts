@@ -77,3 +77,12 @@ export interface ChoiceResult {
   consequence: string;
   brawlerName: string;
 }
+
+export interface BrawlerCardContent_EncounterRoom_Props {
+  brawler: Brawler;
+  label: string;
+  effect: string;
+  className: string;
+  isPt: boolean;
+  isUsed?: boolean;
+}
