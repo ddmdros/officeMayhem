@@ -143,7 +143,7 @@
       ]
     },
     {
-      "id": 16000007,
+      "id": 4,
       "name": "Jessie",
       "link": "https://brawlify.com/brawlers/16000007",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000007.png",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "id": 16000051,
+      "id": 5,
       "name": "Ash",
       "link": "https://brawlify.com/brawlers/16000051",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
@@ -239,7 +239,7 @@
       ]
     },
     {
-      "id": 16000042,
+      "id": 6,
       "name": "Byron",
       "link": "https://brawlify.com/brawlers/16000042",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000042.png",
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "id": 16000066,
+      "id": 7,
       "name": "R-T",
       "link": "https://brawlify.com/brawlers/16000066",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000066.png",
@@ -335,7 +335,7 @@
       ]
     },
     {
-      "id": 16000039,
+      "id": 8,
       "name": "Colette",
       "link": "https://brawlify.com/brawlers/16000039",
       "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000039.png",
@@ -379,6 +379,118 @@
           "consequence": "The plant panics, spits out the boss, and smashes the entire office trying to escape.",
           "consequence_ptbr": "A planta entra em pânico, cospe o chefe e destrói o escritório inteiro tentando fugir da Colette.",
           "chaos": "bad"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bull",
+      "link": "https://brawlify.com/brawlers/16000002",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000002.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000002.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "color": "#FF4B4B",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Bull isn't as carefree as he was in his youth, but he won't hesitate to crush someone who's asking for it.",
+      "description_ptbr": "Bull não é tão despreocupado como em sua juventude, mas não hesitará em esmagar quem estiver pedindo por isso.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Bull-doze",
+          "label_ptbr": "Tratorar",
+          "effect": "Use the Super to ram the door.",
+          "effect_ptbr": "Usar a Super para arrombar a porta.",
+          "consequence": "The wall is gone too, but the elevator is open!",
+          "consequence_ptbr": "A parede também caiu, mas o elevador abriu!",
+          "chaos": "neutral"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Frank",
+      "link": "https://brawlify.com/brawlers/16000020",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000020.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000020.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000020.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "color": "#FF4B4B",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Frank is a good-natured giant who helps out at the mortuary. His solution to every problem is his massive hammer.",
+      "description_ptbr": "Frank é um gigante bondoso que ajuda no necrotério. Sua solução para qualquer problema é sua marreta maciça.",
+      "encounters": [
+        {
+          "floor": 2,
+          "label": "Smash it",
+          "label_ptbr": "Esmagar",
+          "effect": "Hammer the shredder into oblivion.",
+          "effect_ptbr": "Marretar o triturador até sumir.",
+          "consequence": "Machine destroyed, but the report is now dust.",
+          "consequence_ptbr": "Máquina destruída, mas o relatório virou pó.",
+          "chaos": "bad"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Carl",
+      "link": "https://brawlify.com/brawlers/16000025",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000025.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000025.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2196F3",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "Carl is a mining robot fascinated by rocks and gems. He uses his pickaxe to analyze and fix structural problems.",
+      "description_ptbr": "Carl é um robô mineiro fascinado por rochas e gemas. Ele usa sua picareta para analisar e consertar problemas estruturais.",
+      "encounters": [
+        {
+          "floor": 3,
+          "label": "Mining Analysis",
+          "label_ptbr": "Análise de Solo",
+          "effect": "Dig under the plant's roots.",
+          "effect_ptbr": "Cavar abaixo das raízes da planta.",
+          "consequence": "The plant loses its grip and the CEO is safely dropped.",
+          "consequence_ptbr": "A planta perde a aderência e o CEO cai em segurança.",
+          "chaos": "good"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Pam",
+      "link": "https://brawlify.com/brawlers/16000016",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000016.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000016.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "color": "#2196F3",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "Pam handles an enormous workload at the junkyard. She is an expert in repair and keeping operations running smoothly.",
+      "description_ptbr": "Pam lida com uma carga de trabalho enorme no ferro-velho. Ela é especialista em reparos e em manter as operações funcionando.",
+      "encounters": [
+        {
+          "floor": 2,
+          "label": "Scrap Repair",
+          "label_ptbr": "Reparo de Sucata",
+          "effect": "Use the turret to support the machine.",
+          "effect_ptbr": "Usar a torreta para dar suporte à máquina.",
+          "consequence": "Machine fixed, intern safe, report preserved.",
+          "consequence_ptbr": "Máquina consertada, estagiário salvo, relatório preservado.",
+          "chaos": "good"
         }
       ]
     }
