@@ -1,0 +1,38 @@
+{
+  "en": {
+    "S": {
+      "title": "Employee of the Month",
+      "desc": "Flawless! The CEO didn't even notice the mess."
+    },
+    "A": {
+      "title": "Promising Asset",
+      "desc": "A few stumbles, but the mission was a success."
+    },
+    "C": {
+      "title": "Corporate Survivor",
+      "desc": "Report delivered, but HR is furious."
+    },
+    "F": {
+      "title": "Terminated for Cause",
+      "desc": "The building is ashes and you're fired."
+    }
+  },
+  "pt": {
+    "S": {
+      "title": "Funcionário do Mês",
+      "desc": "Perfeito! O CEO nem percebeu a bagunça."
+    },
+    "A": {
+      "title": "Promissor",
+      "desc": "Alguns tropeços, mas a missão foi um sucesso."
+    },
+    "C": {
+      "title": "Sobrevivente Corporativo",
+      "desc": "O relatório foi entregue, mas o RH está furioso."
+    },
+    "F": {
+      "title": "Demitido por Justa Causa",
+      "desc": "O prédio é cinzas e você está no olho da rua."
+    }
+  }
+}

@@ -16,7 +16,10 @@ const IntroDialogue = ({ scriptType, onFinish }: IntroDialogueProps) => {
   const [isTyping, setIsTyping] = useState(true);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const currentScript = dialogues[scriptType];
+  console.log("Conteúdo do Contexto:", dialogues);
+  console.log("Chave buscada:", scriptType);
+
+  const currentScript = dialogues?.[scriptType] || [];
   const currentLine = currentScript[index];
 
   const stopTyping = () => {

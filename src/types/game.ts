@@ -10,7 +10,7 @@ export type GameScene =
 export interface BrawlerClass {
   name: string;
   name_ptbr?: string;
-  color: string;
+  // color: string;
   iconUrl: string;
 }
 

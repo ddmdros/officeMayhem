@@ -1,630 +1,615 @@
 :root {
-    --card-shadow: 0 4px 0px rgba(0,0,0,0.3);
-    --transition-standard: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --card-shadow: 0 4px 0px rgba(0, 0, 0, 0.3);
+  --transition-standard: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-
 /* #region global recruitment selection page */
-.recruitment-section{
-    display: flex;
-    flex-direction: column;
+.recruitment-section {
+  display: flex;
+  flex-direction: column;
 
-    height: 100vh;
-    height: 100dvh;
-    width: 100%;
-    padding: 20px 15px;
-    align-items: center;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  padding: 20px 15px;
+  align-items: center;
 
-    scroll-snap-align: start;
-    overflow: hidden; 
-    position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  position: relative;
 }
 /* #endregion */
 
 /* #region selected-team-container */
-.title-wrapper{
-    display: flex;
-    gap: 20px;
+.title-wrapper {
+  display: flex;
+  gap: 20px;
 }
 
 .selected-team-container {
-    background: #0f051a;
-    border: 3px solid var(--purple-dark);
-    border-radius: 15px;
-    padding: 15px;
-    width: 95%;
-    max-width: 700px;
-    margin: 10px auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: #0f051a;
+  border: 3px solid var(--purple-dark);
+  border-radius: 15px;
+  padding: 15px;
+  width: 95%;
+  max-width: 700px;
+  margin: 10px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.brand-title, .team-header {
-    margin-top: 0;
+.brand-title,
+.team-header {
+  margin-top: 0;
 }
 
-.recruitment-section h2{
-    text-align: center;
+.recruitment-section h2 {
+  text-align: center;
 }
 
 .team-header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 12px;
-    border-bottom: 1px dashed var(--purple-light);
-    padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--purple-light);
+  padding-bottom: 8px;
 }
 
 .slots-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
-
 .task-force-label {
-    font-family: 'BrawlStars-Main', sans-serif;
-    color: var(--yellow-brawler);
-    font-size: 1.2rem;
-    text-shadow: 2px 2px #000;
+  font-family: "BrawlStars-Main", sans-serif;
+  color: var(--yellow-brawler);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px #000;
 }
 
 .team-slot {
-    aspect-ratio: 1/1;
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.4);
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition-standard);
-    position: relative;
-    overflow: hidden;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-standard);
+  position: relative;
+  overflow: hidden;
 }
 
 .team-slot.filled {
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;  
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .team-slot.filled:hover {
-    border: 3px solid var(--brawler-red); 
-    transform: translateY(-2px);
+  border: 3px solid var(--brawler-red);
+  transform: translateY(-2px);
 }
-
-
 
 .team-slot.filled .slot-class {
-    color: white; 
+  color: white;
 }
-
 
 .team-slot.empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-    border: 2px dashed rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.3);
-    color: rgba(255, 255, 255, 0.2);
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.2);
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 0.8rem;
 }
 
-
 .slot-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; 
-    padding: 0; 
-    height: 100%;
-    width: 100%;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .slot-info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(
-        to top, 
-       var(--brawler-color, var(--purple-main)) 0%,
-        var(--brawler-color, var(--purple-main)) 88%,
-       rgba(0, 0, 0, 0) 100%
-    );
-    padding: 5px 2px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    var(--brawler-color, var(--purple-main)) 0%,
+    var(--brawler-color, var(--purple-main)) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 5px 2px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slot-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .slot-name {
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 0.95rem; 
-    color: #fff;
-    text-shadow: 2px 2px 0px #000;
-    margin-top: 4px;
-    text-align: center;
-    text-transform: uppercase;
-        text-shadow: 
-        2px  2px 0px #000,
-       -1px -1px 0px #000,  
-        1px -1px 0px #000,
-       -1px  1px 0px #000,
-        1px  1px 0px #000;
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
+  margin-top: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0px #000,
+    -1px -1px 0px #000,
+    1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px 1px 0px #000;
 }
 
 .slot-class {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px #000;
-
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .remove-indicator {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5); 
-    
-    width: 60px;
-    height: 60px;
-    
-    background: rgba(255, 0, 0, 0.4); 
-    backdrop-filter: blur(4px);
-    border: 3px solid #ff4747;
-    border-radius: 50%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none; 
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+
+  width: 60px;
+  height: 60px;
+
+  background: rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border: 3px solid #ff4747;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .remove-indicator img {
-    width: 35px; 
-    height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  width: 35px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-
 .team-slot.filled:hover .remove-indicator {
-    opacity: 1; 
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .team-slot.filled:hover .slot-avatar {
-    transform: scale(1.1);
-    filter: grayscale(1) brightness(0.7) drop-shadow(0 0 8px rgba(255, 0, 0, 0.8));
+  transform: scale(1.1);
+  filter: grayscale(1) brightness(0.7) drop-shadow(0 0 8px rgba(255, 0, 0, 0.8));
 }
-.team-slot.filled:hover{
-    border: 3px solid #ff4747 !important;
-    background: rgba(255, 71, 71, 0.1);
+.team-slot.filled:hover {
+  border: 3px solid #ff4747 !important;
+  background: rgba(255, 71, 71, 0.1);
 }
-
 
 .team-slot.filled:hover .slot-info {
-    background: linear-gradient(
-        to top, 
-       var(--red-brawler) 0%,
-        var(--red-brawler) 88%,
-       rgba(0, 0, 0, 0) 100%
-    );
-    transition: background 0.3s ease; 
+  background: linear-gradient(
+    to top,
+    var(--red-brawler) 0%,
+    var(--red-brawler) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: background 0.3s ease;
 }
 
 .team-slot.filled:hover .slot-class {
-    color: #fff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* #endregion */
 
 /* floating class icon */
 .class-badge-floating {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    z-index: 10;
-    
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 32px;  
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .class-badge-floating img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: drop-shadow(1px 1px 1px #000);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 1px #000);
 }
 
 /* --- class and name --- */
 
 .class-subtitle {
-    display: block;          
-    width: 85%;              
-    max-width: 130px;        
-    
-    text-align: center;      
-    margin-top: 4px;         
-    
-    font-size: 0.7rem;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    
-    background-color: rgba(0, 0, 0, 0.4); 
-    padding: 3px 0;          
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  width: 85%;
+  max-width: 130px;
+
+  text-align: center;
+  margin-top: 4px;
+
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3px 0;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* #region brawler-grid */
 .brawler-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    flex: 1;
-    max-width: 900px;
-    gap: 20px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    border: 1px solid var(--purple-light);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  flex: 1;
+  max-width: 900px;
+  gap: 20px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid var(--purple-light);
 
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .brawler-card {
-    position: relative;
-    background-color: var(--purple-main);
-    border: 3px solid transparent;
-    border-radius: 12px;
+  background-color: var(--card-bg-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  background-color: var(--purple-main);
+  border: 3px solid transparent;
+  border-radius: 12px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    max-height: 250px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  max-height: 250px;
 }
 
-
-.card-image-container{
-    display: flex;
-    justify-content: center;
+.card-image-container {
+  display: flex;
+  justify-content: center;
 }
 
-.card-image-container img{
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.card-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .card-info {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    width: 100%;            
-    margin-bottom: 30px;    
-    padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 .card-info .brawler-name {
-    margin: 5px 0 2px 0;    
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 0px #000;
-    color: #fff;
-    text-align: center;
+  margin: 5px 0 2px 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000;
+  color: #fff;
+  text-align: center;
 }
 
 .brawler-card.card-selected {
-    border-color: var(--yellow-brawler);
-    box-shadow: 0px 10px 20px rgba(254, 203, 0, 0.4);
-    background-color: var(--purple-light);
+  border-color: var(--yellow-brawler);
+  box-shadow: 0px 10px 20px rgba(254, 203, 0, 0.4);
+  background-color: var(--purple-light);
 }
 
 /* #region selected brawl card */
-.brawler-card.card-selected .card-image-container img{
-    filter: grayscale(1) brightness(0.7);
-    transition: filter 0.3s ease;
+.brawler-card.card-selected .card-image-container img {
+  filter: grayscale(1) brightness(0.7);
+  transition: filter 0.3s ease;
 }
 
 .brawler-card.card-selected .card-image-container {
-    position: relative;
-    overflow: hidden; 
+  position: relative;
+  overflow: hidden;
 }
 
 .brawler-card.card-selected .card-image-container::after {
-    content: "SELECTED"; 
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    font-family: 'BrawlStars-Main', sans-serif;
-    color: var(--yellow-brawler);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 3; 
-    white-space: nowrap; 
-    
-    text-shadow: 
-        2px  2px 0px #000,
-       -1px -1px 0px #000,  
-        1px -1px 0px #000,
-       -1px  1px 0px #000,
-        1px  1px 0px #000;
-        
-    pointer-events: none; 
+  content: "SELECTED";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "BrawlStars-Main", sans-serif;
+  color: var(--yellow-brawler);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 3;
+  white-space: nowrap;
+
+  text-shadow:
+    2px 2px 0px #000,
+    -1px -1px 0px #000,
+    1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px 1px 0px #000;
+
+  pointer-events: none;
 }
 
 .brawler-card.card-selected .card-image-container::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 2;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* #endregion */
 
-.card-selection-footer{
-    display: flex;
-    position: absolute;
-    bottom: -10px;
-    justify-content: center;
+.card-selection-footer {
+  display: flex;
+  position: absolute;
+  bottom: -10px;
+  justify-content: center;
 }
 
 .details-btn {
-    background-color: #ffffff;
-    margin-top: 10px;
-    color: #000;
-    border: 2px solid #000;
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 1rem;
-    padding: 2px 6px;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 2px 2px 0px #000;
-    transition: transform 0.1s active;
-    text-align: center;
+  background-color: #ffffff;
+  margin-top: 10px;
+  color: #000;
+  border: 2px solid #000;
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 1rem;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px #000;
+  transition: transform 0.1s active;
+  text-align: center;
 }
 
 .details-btn:hover {
-    background-color: var(--yellow-brawler);
+  background-color: var(--yellow-brawler);
 }
 
 .details-btn:active {
-    transform: translateY(2px);
-    box-shadow: 0px 0px 0px #000;
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px #000;
 }
 
 /* #endregion */
-
 
 /* #region deploy */
 
 .deploy-container {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
 }
 
 .deploy-button {
-    font-family: 'BrawlStars-Main', sans-serif;
-    font-size: 1.5rem;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+  font-family: "BrawlStars-Main", sans-serif;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 .deploy-button.active {
-    background: #00ff44;
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 255, 68, 0.4);
+  background: #00ff44;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 68, 0.4);
 }
 
 .deploy-button.disabled {
-    background: #333;
-    color: #666;
-    cursor: not-allowed;
-    opacity: 0.5;
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .deploy-button.active:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-} 
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
 
 /* #endregion */
 
-
 @media screen and (max-width: 768px) {
+  .recruitment-section {
+    padding: 30px 8px 10px 8px;
+  }
 
-    .recruitment-section {
-        padding: 30px 8px 10px 8px;        
-    }
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
 
-    .title-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 5px;
-        width: 100%;
-    }
+  .brand-title {
+    display: block !important;
+    color: var(--yellow-brawler);
+    text-shadow: 2px 2px 0px #000;
+    margin: 0;
+    font-size: clamp(1.1rem, 10vw, 1.8rem) !important;
+  }
 
-    .brand-title {
-        display: block !important; 
-        color: var(--yellow-brawler);
-        text-shadow: 2px 2px 0px #000;
-        margin: 0;    
-        font-size: clamp(1.1rem, 10vw, 1.8rem) !important;
-    }
-    
+  .selected-team-container {
+    padding: 5px;
+    margin: 0 auto 10px auto;
+  }
 
-    .selected-team-container {
-        padding: 5px;
-        margin: 0 auto 10px auto; 
-    }
+  .team-header {
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+  }
 
-    .team-header {
-        margin-bottom: 8px;
-        padding-bottom: 4px;
-    }
+  .task-force-label {
+    font-size: 0.8rem;
+  }
 
-    .task-force-label {
-        font-size: 0.8rem;
-    }
+  .slots-grid {
+    gap: 5px;
+  }
 
-    .slots-grid {
-        gap: 5px;
-    }
-    
-    .brawler-grid {
-        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); 
-        gap: 8px;
-        padding: 5px;
-        flex: 1;
-        max-width: 100vw;
-    }
+  .brawler-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+    padding: 5px;
+    flex: 1;
+    max-width: 100vw;
+  }
 
-    .slot-class {
-        font-size: 0.6rem;
-        letter-spacing: 0;
-    }
+  .slot-class {
+    font-size: 0.6rem;
+    letter-spacing: 0;
+  }
 
-    .slot-name {
-        font-size: 0.65rem; 
-        white-space: nowrap; 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        margin-top: 2px;
-    }
+  .slot-name {
+    font-size: 0.65rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-top: 2px;
+  }
 
-    .brawler-card {
-        border-width: 2px;
-        border-radius: 8px;
-        max-height: 180px;
-    }
+  .brawler-card {
+    border-width: 2px;
+    border-radius: 8px;
+    max-height: 180px;
+  }
 
+  .card-info .brawler-name {
+    font-size: 0.65rem;
+  }
 
-    .card-info .brawler-name {
-        font-size: 0.65rem; 
-    }
+  .card-info {
+    margin-bottom: 20px;
+  }
 
-    .card-info {
-        margin-bottom: 20px;
-    }
+  .card-stats-row {
+    min-height: 25px;
+    font-size: 0.6rem;
+  }
 
-    
-    .card-stats-row {
-        min-height: 25px; 
-        font-size: 0.6rem;
-    }
+  .class-icon-badge img {
+    width: 12px;
+  }
 
-    .class-icon-badge img {
-        width: 12px;
-    }
-    
-    .details-btn {
-        font-size: 0.6rem;
-        padding: 1px 4px;
-        bottom: -8px;
-    }
+  .details-btn {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    bottom: -8px;
+  }
 
-    .deploy-container {
-        padding: 15px 0;
-    }
+  .deploy-container {
+    padding: 15px 0;
+  }
 
-    .deploy-button {
-        font-size: 1rem;
-        padding: 10px 25px;
-    }
+  .deploy-button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
 
-    .class-badge-floating {
-        top: 4px;
-        left: 4px;
-        width: 24px;
-        height: 24px;
-    }
+  .class-badge-floating {
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+  }
 
-    .class-badge-floating img {
-        width: 16px;
-        height: 16px;
-    }
+  .class-badge-floating img {
+    width: 16px;
+    height: 16px;
+  }
 
-    .class-subtitle {
-        width: 90%;         
-        font-size: 0.55rem;
-        padding: 2px 0;
-    }
+  .class-subtitle {
+    width: 90%;
+    font-size: 0.55rem;
+    padding: 2px 0;
+  }
 
-  
-    
-    .card-info .brawler-name {
-        font-size: 0.8rem;
-    }
+  .card-info .brawler-name {
+    font-size: 0.8rem;
+  }
 
-    .class-tag-text {
-        font-size: 0.6rem;
-    }
-    
-    .class-icon-mini {
-        width: 12px;
-        height: 12px;
-    }
+  .class-tag-text {
+    font-size: 0.6rem;
+  }
 
-    .slot-info {
+  .class-icon-mini {
+    width: 12px;
+    height: 12px;
+  }
+
+  .slot-info {
     background: linear-gradient(
-        to top, 
-       var(--brawler-color, var(--purple-main)) 0%,
-        var(--brawler-color, var(--purple-main)) 35%,
-       rgba(0, 0, 0, 0) 100%
+      to top,
+      var(--brawler-color, var(--purple-main)) 0%,
+      var(--brawler-color, var(--purple-main)) 35%,
+      rgba(0, 0, 0, 0) 100%
     );
     padding: 5px 2px;
     z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .brawler-card.card-selected .card-image-container::after {
+    font-size: 0.8rem;
+    letter-spacing: 0px;
+  }
 }
-
-.brawler-card.card-selected .card-image-container::after {
-        font-size: 0.8rem;
-        letter-spacing: 0px;
-    }
-
-}
-

@@ -8,7 +8,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const value = {
     language,
     setLanguage,
-    content: APP_CONTENT[language],
+    content: APP_CONTENT[language] || APP_CONTENT["en"],
   };
 
   return (

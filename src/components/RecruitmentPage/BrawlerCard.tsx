@@ -20,7 +20,6 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
   onOpenDetails,
   onSelect,
   iconUrl,
-  classColor,
 }) => {
   const { uiText } = useLanguage();
   const { isPt } = useLanguage();
@@ -30,7 +29,7 @@ const BrawlerCard: React.FC<BrawlerCardProps> = ({
     <div
       className={`brawler-card ${isSelected ? "card-selected" : ""}`}
       onClick={onSelect}
-      style={{ backgroundColor: classColor }}
+      style={{ backgroundColor: "var(--card-bg-color)" }}
     >
       <div className="class-badge-floating">
         <img src={iconUrl} alt="class icon" />
