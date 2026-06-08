@@ -1,3 +1,7 @@
+# Live project: #
+
+https://office-mayhem-aqis.vercel.app/
+
 # 🌵 Brawl Stars Encounter Simulator & i18n Engine 🌵
 
 Welcome to the ultimate, web-based arena where code meets chaos! This project is a high-octane **Encounter Simulator and Advanced Localization Engine** built from the ground up using React, TypeScript, and Vite.
