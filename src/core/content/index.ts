@@ -1,13 +1,13 @@
-import { ui, dialogues } from "../constants";
+import { uiData, dialoguesData } from "../constants";
 
 export const APP_CONTENT = {
   en: {
-    ui: ui.en,
-    dialogues: dialogues.en,
+    ui: uiData.en,
+    dialogues: dialoguesData.en,
   },
   pt: {
-    ui: ui.pt,
-    dialogues: dialogues.pt,
+    ui: uiData.pt,
+    dialogues: dialoguesData.pt,
   },
 };
 

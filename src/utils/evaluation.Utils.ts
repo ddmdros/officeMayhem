@@ -1,4 +1,4 @@
-import evaluationTexts from "../core/constants/evaluationTexts.json";
+import { evaluationTextsData } from "../core/constants/";
 
 interface EvaluationResult {
   title: string;
@@ -12,7 +12,7 @@ export const getFinalEvaluation = (
   isPt: boolean,
 ): EvaluationResult => {
   const langKey = isPt ? "pt" : "en";
-  const texts = evaluationTexts[langKey];
+  const texts = evaluationTextsData[langKey];
 
   const getRankedData = () => {
     if (totalChaos <= 0) return { rank: "S", ...texts.S };

@@ -1,15 +1,15 @@
-import brawlers from "./brawlerLocalData.json";
-import dialogues from "./dialogues.json";
-import encounters from "./encounterTexts.json";
-import helpRecruitment from "./helpRecruitment.json";
-import evaluationTexts from "./evaluationTexts.json";
-import ui from "./ui.json";
+import brawlerData from "./brawlerLocalData.json";
+import dialoguesData from "./dialogues.json";
+import encounterData from "./encounterTexts.json";
+import helpRecruitmentData from "./helpRecruitment.json";
+import evaluationTextsData from "./evaluationTexts.json";
+import uiData from "./ui.json";
 
 export {
-  ui,
-  brawlers,
-  dialogues,
-  encounters,
-  helpRecruitment,
-  evaluationTexts,
+  uiData,
+  brawlerData,
+  dialoguesData,
+  encounterData,
+  helpRecruitmentData,
+  evaluationTextsData,
 };

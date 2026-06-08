@@ -1,7 +1,7 @@
 import type { Brawler, ChoiceResult } from "../../types/game";
 import { EncounterRoom } from "../EncounterRoom";
 import { useLanguage } from "../../hooks/useLanguage";
-import encounterTexts from "../../core/constants/encounterTexts.json";
+import { encounterData } from "../../core/constants/";
 import { ChaosBar } from "../UI/ChaosBar";
 
 interface EncounterPhaseSCNProps {
@@ -24,7 +24,7 @@ export const EncounterPhaseSCN: React.FC<EncounterPhaseSCNProps> = ({
   handleChoice,
 }) => {
   const { isPt } = useLanguage();
-  const currentEncounterData = encounterTexts.list[encounterIndex];
+  const currentEncounterData = encounterData.list[encounterIndex];
 
   if (!currentEncounterData) return null;
 

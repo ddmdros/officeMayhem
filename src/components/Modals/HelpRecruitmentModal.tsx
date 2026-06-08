@@ -1,6 +1,6 @@
 import React from "react";
 import { useLanguage } from "../../hooks/useLanguage";
-import helpTextData from "../../core/constants/helpRecruitment.json";
+import { helpRecruitmentData } from "../../core/constants";
 import "../../styles/HelpRecruitmentModal.css";
 
 interface HelpRecruitmentProps {
@@ -16,7 +16,7 @@ export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({
 
   if (!isOpen) return null;
 
-  const content = helpTextData[lang];
+  const content = helpRecruitmentData[lang];
 
   return (
     <div className="info-overlay" onClick={onClose}>
