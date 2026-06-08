@@ -36,7 +36,7 @@ export const EncounterRoom = ({
     : currentAction.consequence;
 
   const className = isPt ? brawler.class.name_ptbr : brawler.class.name;
-  const classColor = brawler.class?.color || "#6200ea";
+  // const classColor = brawler.class?.color || "#6200ea";
 
   const handleSelect = () => {
     if (!isActive || brawler.isUsed) return;
@@ -52,7 +52,7 @@ export const EncounterRoom = ({
     <div
       className={`choice-card ${position} ${isActive ? "active" : ""} ${brawler.isUsed ? "exhausted" : ""}`}
       onClick={handleSelect}
-      style={{ "--class-color": classColor } as React.CSSProperties}
+      // style={{ "--class-color": classColor } as React.CSSProperties}
     >
       {brawler.isUsed && (
         <div className="exhausted-overlay">
@@ -69,9 +69,7 @@ export const EncounterRoom = ({
         </div>
         <div className="brawler-info">
           <h3 className="brawler-name">{brawler.name}</h3>
-          <span className="class-badge" style={{ backgroundColor: classColor }}>
-            {className}
-          </span>
+          <span className="class-badge">{className}</span>
         </div>
       </div>
 

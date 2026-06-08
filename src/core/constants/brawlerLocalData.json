@@ -1,76 +1,96 @@
 {
   "list": [
     {
-      "id": 6,
-      "name": "Ash",
-      "link": "https://brawlify.com/brawlers/16000051",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000051.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000051.png",
+      "id": 1,
+      "name": "Poco",
+      "link": "https://brawlify.com/brawlers/16000013",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000013.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000013.png",
       "class": {
-        "name": "Brute Force",
-        "name_ptbr": "Brutalidade",
-        "iconUrl": "/assets/icons/BruteForce_icon.png"
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
       },
-      "description": "Ash has the thankless job of keeping the park clean. He's grumpy, he's tired, and his solution to every problem is to aggressively sweep it away.",
-      "description_ptbr": "Ash tem o trabalho ingrato de manter tudo limpo. Ele é rabugento, cansado, e sua solução para problemas é varrê-los agressivamente para longe.",
+      "description": "Poco believes music can change people's lives. He's so enthusiastic about it that he never stops playing.",
+      "description_ptbr": "Poco acredita que a música pode mudar vidas. Ele é tão entusiasmado que nunca para de tocar.",
       "encounters": [
         {
           "floor": 1,
-          "label": "Broom Bash",
-          "label_ptbr": "Pancada de Vassoura",
-          "effect": "Smash the elevator's button panel with the broom.",
-          "effect_ptbr": "Esmagar o painel de botões do elevador com a vassoura.",
-          "consequence": "The panel shatters. The elevator works, but now stops at every single floor.",
-          "consequence_ptbr": "O painel quebra. O elevador funciona, mas agora para em todos os andares.",
-          "chaos": "neutral"
-        },
-        {
-          "floor": 2,
-          "label": "Out the Window",
-          "label_ptbr": "Pela Janela",
-          "effect": "Sweep the entire shredder machine out the glass window.",
-          "effect_ptbr": "Varrer a máquina trituradora inteira pela janela de vidro.",
-          "consequence": "The intern is saved, but a $5,000 window was shattered. HR is furious.",
-          "consequence_ptbr": "O estagiário sobrevive, mas uma janela caríssima foi quebrada. O RH pirou.",
+          "label": "Persuade the Demon",
+          "label_ptbr": "Persuadir o Demônio",
+          "effect": "Play a ballad for the elevator.",
+          "effect_ptbr": "Tocar uma balada para o elevador.",
+          "consequence": "The demon hates acoustic sets and zaps you!",
+          "consequence_ptbr": "O demônio odeia acústico e te dá um choque!",
           "chaos": "bad"
         },
         {
+          "floor": 2,
+          "label": "Calming Serenade",
+          "label_ptbr": "Serenata de Calmaria",
+          "effect": "Calm the intern down with music.",
+          "effect_ptbr": "Acalmar o estagiário com música.",
+          "consequence": "He relaxes and releases the intact report!",
+          "consequence_ptbr": "Ele relaxa e solta o relatório intacto!",
+          "chaos": "neutral"
+        },
+        {
           "floor": 3,
-          "label": "Trash Talk",
-          "label_ptbr": "Falar o Lixo",
-          "effect": "Treat the mutant plant like uncollected garbage.",
-          "effect_ptbr": "Tratar a planta mutante como lixo não recolhido e esfregar o chão nela.",
-          "consequence": "The plant is disgusted by the dirty broom, spits out the boss and withers away.",
-          "consequence_ptbr": "A planta sente nojo da vassoura suja, cospe o CEO e murcha de pavor.",
+          "label": "Lyrical Distraction",
+          "label_ptbr": "Distração Lírica",
+          "effect": "Convince them that a melted mug is modern art.",
+          "effect_ptbr": "Convencer que caneca derretida é arte.",
+          "consequence": "Mina doesn't buy it, and the chaos escalates.",
+          "consequence_ptbr": "Mina não acredita e o caos aumenta.",
           "chaos": "good"
         }
       ]
     },
     {
-      "id": 7,
-      "name": "Bull",
-      "link": "https://brawlify.com/brawlers/16000002",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000002.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000002.png",
+      "id": 2,
+      "name": "Lola",
+      "link": "https://brawlify.com/brawlers/16000053",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000053.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000053.png",
       "class": {
-        "name": "Brute Force",
-        "name_ptbr": "Brutalidade",
-        "iconUrl": "/assets/icons/BruteForce_icon.png"
+        "name": "Sweet Talk",
+        "name_ptbr": "Lábia",
+        "iconUrl": "/assets/icons/SweetTalk_icon.png"
       },
-      "description": "Bull isn't as carefree as he was in his youth, but he won't hesitate to crush someone who's asking for it.",
-      "description_ptbr": "Bull não é tão despreocupado como em sua juventude, mas não hesitará em esmagar quem estiver pedindo por isso.",
+      "description": "She's the star of Brawlywood and the office. Lola doesn't solve problems; she makes them feel inadequate with her presence.",
+      "description_ptbr": "Ela é a estrela de Brawlywood e do escritório. Lola não resolve problemas; ela faz os problemas se sentirem inadequados perante sua presença.",
       "encounters": [
         {
           "floor": 1,
-          "label": "Bull-doze",
-          "label_ptbr": "Tratorar",
-          "effect": "Use the Super to ram the door.",
-          "effect_ptbr": "Usar a Super para arrombar a porta.",
-          "consequence": "The wall is gone too, but the elevator is open!",
-          "consequence_ptbr": "A parede também caiu, mas o elevador abriu!",
+          "label": "Dramatic Monologue",
+          "label_ptbr": "Monólogo Dramático",
+          "effect": "Perform an Oscar-worthy scene to confuse the elevator.",
+          "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
+          "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
+          "consequence_ptbr": "O sistema fica tão confuso com a performance que as portas se abrem por puro choque.",
           "chaos": "neutral"
+        },
+        {
+          "floor": 2,
+          "label": "Style Lesson",
+          "label_ptbr": "Aula de Estilo",
+          "effect": "Tell the intern that tragedies are part of the resume.",
+          "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo'.",
+          "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved!",
+          "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. Relatório salvo!",
+          "chaos": "good"
+        },
+        {
+          "floor": 3,
+          "label": "Diva Distraction",
+          "label_ptbr": "Diva Distratora",
+          "effect": "Complain that the plant's lighting is ruining her makeup.",
+          "effect_ptbr": "Reclamar que a iluminação da planta está arruinando sua maquiagem.",
+          "consequence": "The plant ignores her completely and continues chewing the CEO.",
+          "consequence_ptbr": "A planta ignora Lola completamente e continua mastigando o CEO.",
+          "chaos": "bad"
         }
       ]
     },
@@ -118,33 +138,6 @@
           "consequence": "The plant gets dizzy and drops the boss, but the office now smells like sulfur.",
           "consequence_ptbr": "A planta fica tonta e solta o chefe, mas o escritório agora cheira a enxofre.",
           "chaos": "neutral"
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Carl",
-      "link": "https://brawlify.com/brawlers/16000025",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000025.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000025.png",
-      "class": {
-        "name": "Logistics",
-        "name_ptbr": "Logística",
-        "iconUrl": "/assets/icons/Logistics_icon.png"
-      },
-      "description": "Carl is a mining robot fascinated by rocks and gems. He uses his pickaxe to analyze and fix structural problems.",
-      "description_ptbr": "Carl é um robô mineiro fascinado por rochas e gemas. Ele usa sua picareta para analisar e consertar problemas estruturais.",
-      "encounters": [
-        {
-          "floor": 3,
-          "label": "Mining Analysis",
-          "label_ptbr": "Análise de Solo",
-          "effect": "Dig under the plant's roots.",
-          "effect_ptbr": "Cavar abaixo das raízes da planta.",
-          "consequence": "The plant loses its grip and the CEO is safely dropped.",
-          "consequence_ptbr": "A planta perde a aderência e o CEO cai em segurança.",
-          "chaos": "good"
         }
       ]
     },
@@ -243,6 +236,81 @@
       ]
     },
     {
+      "id": 6,
+      "name": "Ash",
+      "link": "https://brawlify.com/brawlers/16000051",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000051.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000051.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000051.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Ash has the thankless job of keeping the park clean. He's grumpy, he's tired, and his solution to every problem is to aggressively sweep it away.",
+      "description_ptbr": "Ash tem o trabalho ingrato de manter tudo limpo. Ele é rabugento, cansado, e sua solução para problemas é varrê-los agressivamente para longe.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Broom Bash",
+          "label_ptbr": "Pancada de Vassoura",
+          "effect": "Smash the elevator's button panel with the broom.",
+          "effect_ptbr": "Esmagar o painel de botões do elevador com a vassoura.",
+          "consequence": "The panel shatters. The elevator works, but now stops at every single floor.",
+          "consequence_ptbr": "O painel quebra. O elevador funciona, mas agora para em todos os andares.",
+          "chaos": "neutral"
+        },
+        {
+          "floor": 2,
+          "label": "Out the Window",
+          "label_ptbr": "Pela Janela",
+          "effect": "Sweep the entire shredder machine out the glass window.",
+          "effect_ptbr": "Varrer a máquina trituradora inteira pela janela de vidro.",
+          "consequence": "The intern is saved, but a $5,000 window was shattered. HR is furious.",
+          "consequence_ptbr": "O estagiário sobrevive, mas uma janela caríssima foi quebrada. O RH pirou.",
+          "chaos": "bad"
+        },
+        {
+          "floor": 3,
+          "label": "Trash Talk",
+          "label_ptbr": "Falar o Lixo",
+          "effect": "Treat the mutant plant like uncollected garbage.",
+          "effect_ptbr": "Tratar a planta mutante como lixo não recolhido e esfregar o chão nela.",
+          "consequence": "The plant is disgusted by the dirty broom, spits out the boss and withers away.",
+          "consequence_ptbr": "A planta sente nojo da vassoura suja, cospe o CEO e murcha de pavor.",
+          "chaos": "good"
+        }
+      ]
+    },
+
+    {
+      "id": 7,
+      "name": "Bull",
+      "link": "https://brawlify.com/brawlers/16000002",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000002.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000002.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000002.png",
+      "class": {
+        "name": "Brute Force",
+        "name_ptbr": "Brutalidade",
+        "iconUrl": "/assets/icons/BruteForce_icon.png"
+      },
+      "description": "Bull isn't as carefree as he was in his youth, but he won't hesitate to crush someone who's asking for it.",
+      "description_ptbr": "Bull não é tão despreocupado como em sua juventude, mas não hesitará em esmagar quem estiver pedindo por isso.",
+      "encounters": [
+        {
+          "floor": 1,
+          "label": "Bull-doze",
+          "label_ptbr": "Tratorar",
+          "effect": "Use the Super to ram the door.",
+          "effect_ptbr": "Usar a Super para arrombar a porta.",
+          "consequence": "The wall is gone too, but the elevator is open!",
+          "consequence_ptbr": "A parede também caiu, mas o elevador abriu!",
+          "chaos": "neutral"
+        }
+      ]
+    },
+    {
       "id": 8,
       "name": "Frank",
       "link": "https://brawlify.com/brawlers/16000020",
@@ -266,6 +334,60 @@
           "consequence": "Machine destroyed, but the report is now dust.",
           "consequence_ptbr": "Máquina destruída, mas o relatório virou pó.",
           "chaos": "bad"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Carl",
+      "link": "https://brawlify.com/brawlers/16000025",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000025.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000025.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000025.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "Carl is a mining robot fascinated by rocks and gems. He uses his pickaxe to analyze and fix structural problems.",
+      "description_ptbr": "Carl é um robô mineiro fascinado por rochas e gemas. Ele usa sua picareta para analisar e consertar problemas estruturais.",
+      "encounters": [
+        {
+          "floor": 3,
+          "label": "Mining Analysis",
+          "label_ptbr": "Análise de Solo",
+          "effect": "Dig under the plant's roots.",
+          "effect_ptbr": "Cavar abaixo das raízes da planta.",
+          "consequence": "The plant loses its grip and the CEO is safely dropped.",
+          "consequence_ptbr": "A planta perde a aderência e o CEO cai em segurança.",
+          "chaos": "good"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Pam",
+      "link": "https://brawlify.com/brawlers/16000016",
+      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
+      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000016.png",
+      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000016.png",
+      "class": {
+        "name": "Logistics",
+        "name_ptbr": "Logística",
+        "iconUrl": "/assets/icons/Logistics_icon.png"
+      },
+      "description": "Pam handles an enormous workload at the junkyard. She is an expert in repair and keeping operations running smoothly.",
+      "description_ptbr": "Pam lida com uma carga de trabalho enorme no ferro-velho. Ela é especialista em reparos e em manter as operações funcionando.",
+      "encounters": [
+        {
+          "floor": 2,
+          "label": "Scrap Repair",
+          "label_ptbr": "Reparo de Sucata",
+          "effect": "Use the turret to support the machine.",
+          "effect_ptbr": "Usar a torreta para dar suporte à máquina.",
+          "consequence": "Machine fixed, intern safe, report preserved.",
+          "consequence_ptbr": "Máquina consertada, estagiário salvo, relatório preservado.",
+          "chaos": "good"
         }
       ]
     },
@@ -313,127 +435,6 @@
           "consequence": "The energy orb mutates the plant further! Now it has lasers! Run!",
           "consequence_ptbr": "A energia causou mais mutação! Agora a planta solta lasers! Corram!",
           "chaos": "bad"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Lola",
-      "link": "https://brawlify.com/brawlers/16000053",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000053.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000053.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000053.png",
-      "class": {
-        "name": "Sweet Talk",
-        "name_ptbr": "Lábia",
-        "iconUrl": "/assets/icons/SweetTalk_icon.png"
-      },
-      "description": "She's the star of Brawlywood and the office. Lola doesn't solve problems; she makes them feel inadequate with her presence.",
-      "description_ptbr": "Ela é a estrela de Brawlywood e do escritório. Lola não resolve problemas; ela faz os problemas se sentirem inadequados perante sua presença.",
-      "encounters": [
-        {
-          "floor": 1,
-          "label": "Dramatic Monologue",
-          "label_ptbr": "Monólogo Dramático",
-          "effect": "Perform an Oscar-worthy scene to confuse the elevator.",
-          "effect_ptbr": "Fazer uma performance digna de Oscar para confundir os sensores do elevador.",
-          "consequence": "The system is so confused by the drama that the doors open out of sheer shock.",
-          "consequence_ptbr": "O sistema fica tão confuso com a performance que as portas se abrem por puro choque.",
-          "chaos": "neutral"
-        },
-        {
-          "floor": 2,
-          "label": "Style Lesson",
-          "label_ptbr": "Aula de Estilo",
-          "effect": "Tell the intern that tragedies are part of the resume.",
-          "effect_ptbr": "Dizer ao estagiário que 'tragédias fazem parte do currículo'.",
-          "consequence": "He stops screaming to strike a pose, letting go of the tie. The report is saved!",
-          "consequence_ptbr": "Ele para de gritar para fazer uma pose, soltando a gravata. Relatório salvo!",
-          "chaos": "good"
-        },
-        {
-          "floor": 3,
-          "label": "Diva Distraction",
-          "label_ptbr": "Diva Distratora",
-          "effect": "Complain that the plant's lighting is ruining her makeup.",
-          "effect_ptbr": "Reclamar que a iluminação da planta está arruinando sua maquiagem.",
-          "consequence": "The plant ignores her completely and continues chewing the CEO.",
-          "consequence_ptbr": "A planta ignora Lola completamente e continua mastigando o CEO.",
-          "chaos": "bad"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "Pam",
-      "link": "https://brawlify.com/brawlers/16000016",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000016.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000016.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000016.png",
-      "class": {
-        "name": "Logistics",
-        "name_ptbr": "Logística",
-        "iconUrl": "/assets/icons/Logistics_icon.png"
-      },
-      "description": "Pam handles an enormous workload at the junkyard. She is an expert in repair and keeping operations running smoothly.",
-      "description_ptbr": "Pam lida com uma carga de trabalho enorme no ferro-velho. Ela é especialista em reparos e em manter as operações funcionando.",
-      "encounters": [
-        {
-          "floor": 2,
-          "label": "Scrap Repair",
-          "label_ptbr": "Reparo de Sucata",
-          "effect": "Use the turret to support the machine.",
-          "effect_ptbr": "Usar a torreta para dar suporte à máquina.",
-          "consequence": "Machine fixed, intern safe, report preserved.",
-          "consequence_ptbr": "Máquina consertada, estagiário salvo, relatório preservado.",
-          "chaos": "good"
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "name": "Poco",
-      "link": "https://brawlify.com/brawlers/16000013",
-      "imageUrl": "https://cdn.brawlify.com/brawlers/borders/16000013.png",
-      "imageUrl2": "https://cdn.brawlify.com/brawlers/borderless/16000013.png",
-      "imageUrl3": "https://cdn.brawlify.com/brawlers/emoji/16000013.png",
-      "class": {
-        "name": "Sweet Talk",
-        "name_ptbr": "Lábia",
-        "iconUrl": "/assets/icons/SweetTalk_icon.png"
-      },
-      "description": "Poco believes music can change people's lives. He's so enthusiastic about it that he never stops playing.",
-      "description_ptbr": "Poco acredita que a música pode mudar vidas. Ele é tão entusiasmado que nunca para de tocar.",
-      "encounters": [
-        {
-          "floor": 1,
-          "label": "Persuade the Demon",
-          "label_ptbr": "Persuadir o Demônio",
-          "effect": "Play a ballad for the elevator.",
-          "effect_ptbr": "Tocar uma balada para o elevador.",
-          "consequence": "The demon hates acoustic sets and zaps you!",
-          "consequence_ptbr": "O demônio odeia acústico e te dá um choque!",
-          "chaos": "bad"
-        },
-        {
-          "floor": 2,
-          "label": "Calming Serenade",
-          "label_ptbr": "Serenata de Calmaria",
-          "effect": "Calm the intern down with music.",
-          "effect_ptbr": "Acalmar o estagiário com música.",
-          "consequence": "He relaxes and releases the intact report!",
-          "consequence_ptbr": "Ele relaxa e solta o relatório intacto!",
-          "chaos": "neutral"
-        },
-        {
-          "floor": 3,
-          "label": "Lyrical Distraction",
-          "label_ptbr": "Distração Lírica",
-          "effect": "Convince them that a melted mug is modern art.",
-          "effect_ptbr": "Convencer que caneca derretida é arte.",
-          "consequence": "Mina doesn't buy it, and the chaos escalates.",
-          "consequence_ptbr": "Mina não acredita e o caos aumenta.",
-          "chaos": "good"
         }
       ]
     },

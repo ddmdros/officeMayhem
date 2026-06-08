@@ -26,7 +26,7 @@ export const useBrawlers = () => {
               isPt && brawler.class.name_ptbr
                 ? brawler.class.name_ptbr
                 : brawler.class.name,
-            classColor: brawler.class.color,
+            // classColor: brawler.class.color,
             iconUrl: brawler.class.iconUrl,
 
             encounters: brawler.encounters.map((enc: RawEncounterAction) => ({

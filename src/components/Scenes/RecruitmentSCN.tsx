@@ -75,7 +75,7 @@ export const RecruitmentSCN: React.FC<RecruitmentProps> = ({
               name_ptbr: b.class?.name_ptbr || "Desconhecido",
             }}
             iconUrl={b.class?.iconUrl || " "}
-            classColor={b.class?.color || "#CCCCCC"}
+            classColor={"var(--card-bg-color)"}
           />
         ))}
       </div>
