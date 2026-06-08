@@ -10,9 +10,14 @@ export const useLanguage = () => {
 
   const { language, setLanguage, content } = context;
 
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "pt" : "en");
+  };
+
   return {
     lang: language,
     setLang: setLanguage,
+    toggleLanguage,
     uiText: content.ui,
     dialogues: content.dialogues,
 

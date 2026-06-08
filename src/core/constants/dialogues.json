@@ -1,0 +1,122 @@
+{
+  "en": {
+    "intro": [
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "There you are! Listen up.",
+        "image": "happy"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "The entire Starr Park is in São Paulo for the opening of the Starr Corp Brazilian branch, and guess who's handling communications? Spike!",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "The problem is, no one understands a word he says. (Does Spike even speak?) Anyway, the office is a total madhouse.",
+        "image": "sad"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Can you take this to the CEO on the third floor? He needs this data to sort out the crisis.",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Take three Brawlers with you in case of any hiccups, and try not to cause more trouble along the way.",
+        "image": "gg"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Maybe bring one from each class? 'Don't put all your eggs in one basket,' and all that corporate blah blah blah.",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Anyway, it's up to you. Sorry for the rushed welcome, but I gotta run. Good luck!",
+        "image": "gg"
+      }
+    ],
+    "elevator_crisis": [
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Great team! Now... BAD NEWS. The only elevator leading to the CEO’s office is possessed by a 2000 printer demon.",
+        "image": "facePalm"
+      },
+      {
+        "name": "Mina",
+        "role": "Starr Corp HR",
+        "text": "Who’s going to handle that?",
+        "image": "facePalm"
+      }
+    ]
+  },
+  "pt": {
+    "intro": [
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Achei você! Saca só.",
+        "image": "happy"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "O Starr Park inteiro está em São Paulo para a inauguração da filial brasileira da Starr Corp, e adivinha quem está na comunicação? O Spike!",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "O problema é que ninguém entende o que ele fala. (Ele fala?) Enfim, o escritório está um caos.",
+        "image": "sad"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Você pode levar esse relatório para o CEO no terceiro andar? Ele precisa desses dados para resolver a crise.",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Leve três Brawlers com você para o caso de imprevistos e tente não causar mais confusão pelo caminho.",
+        "image": "gg"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Que tal levar um de cada classe? “Não coloque todos os ovos na mesma cesta”, e todo o blá blá blá corporativo.",
+        "image": "regular"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Enfim, é você quem manda. Foi mal pela recepção apressada, mas estou indo nessa. Obrigada e boa sorte!",
+        "image": "gg"
+      }
+    ],
+    "elevator_crisis": [
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Ótima equipe! Agora... MÁS NOTÍCIAS. O único elevador que leva à sala do CEO está possuído por um demônio de impressora dos anos 2000.",
+        "image": "facePalm"
+      },
+      {
+        "name": "Mina",
+        "role": "RH da Starr Corp",
+        "text": "Quem vai resolver a parada?",
+        "image": "facePalm"
+      }
+    ]
+  }
+}

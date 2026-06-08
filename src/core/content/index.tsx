@@ -1,5 +1,5 @@
 import { UI_TEXT } from "./ui";
-import { DIALOGUES } from "./dialogues";
+import DIALOGUES from "../constants/dialogues.json";
 
 export const APP_CONTENT = {
   en: {

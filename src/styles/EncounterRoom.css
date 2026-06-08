@@ -1,5 +1,5 @@
 /* ============================================================
-   1. ESTRUTURA GLOBAL (CONTAINER)
+   1. Global settings (CONTAINER)
    ============================================================ */
 
 .encounter-section {
@@ -32,7 +32,8 @@
   font-size: 1.8rem;
   color: var(--yellow-brawler);
   text-shadow: 3px 3px 0px #000;
-  margin: 10px 0;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -110,7 +111,7 @@
 }
 
 /* ============================================================
-   3. CONTEÚDO DOS CARDS
+   3. Card content
    ============================================================ */
 .brawler-header {
   display: flex;
@@ -251,7 +252,7 @@
 }
 
 /* ============================================================
-   5. NAVEGAÇÃO E RESPONSIVIDADE
+   5. Nav and media query
    ============================================================ */
 .nav-btn {
   position: absolute;
@@ -274,110 +275,6 @@
 }
 .nav-btn.next {
   right: 5%;
-}
-
-@media screen and (min-width: 1024px) {
-  /* Aumentamos o título e descrição para preencher a tela */
-  .encounter-title {
-    font-size: 3rem;
-    margin-bottom: 15px;
-  }
-
-  .encounter-section {
-    /* Garante centralização total no PC */
-    justify-content: center;
-  }
-  .encounter-desc {
-    font-size: 1.3rem;
-    max-width: 700px;
-  }
-
-  /* Aproxima os botões de navegação do card centralizado */
-  .nav-btn.prev {
-    left: 30%;
-  }
-  .nav-btn.next {
-    right: 30%;
-  }
-
-  .encounter-container {
-    margin-bottom: 50px; /* Mais espaço no monitor grande */
-  }
-
-  /* AUMENTO DO CARD: De 320px para 450px de largura */
-  .deck-wrapper {
-    width: 450px;
-    max-height: 580px; /* Aumentamos a altura máxima */
-  }
-
-  .result-preview {
-    display: flex;
-    gap: 12px;
-    margin-top: auto; /* Empurra para o fim do card */
-    /* ADICIONE ISSO: Um pequeno recuo para não bater na borda */
-    padding-bottom: 5px;
-    width: 100%;
-  }
-
-  .choice-card {
-    /* ... suas outras propriedades ... */
-    padding: 30px;
-    /* Garante que o conteúdo não encoste na borda amarela */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    box-sizing: border-box;
-  }
-
-  /* ESCALANDO O CONTEÚDO INTERNO */
-  .brawler-header img {
-    width: 85px; /* Foto maior */
-    height: 85px;
-  }
-
-  .brawler-name {
-    font-size: 1.6rem;
-  }
-
-  .class-badge {
-    font-size: 0.9rem;
-    padding: 4px 12px;
-  }
-
-  .action-label {
-    font-size: 1.4rem;
-    margin: 10px 0;
-  }
-
-  .action-effect {
-    font-size: 1.1rem; /* Texto mais legível */
-    -line-clamp: 4; /* Permite uma linha a mais de descrição no PC */
-  }
-
-  .res-pill {
-    font-size: 1rem;
-    padding: 8px 16px;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  /* REPOSICIONANDO AS SETAS: Para não ficarem em cima do card maior */
-  .nav-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
-  }
-  .nav-btn.prev {
-    left: 15%;
-  }
-  .nav-btn.next {
-    right: 15%;
-  }
-
-  /* Garante que o container aguente a nova altura */
-  .deck-selector-container {
-    min-height: 600px;
-  }
 }
 
 @keyframes criticalPulse {
@@ -442,71 +339,6 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-  .brawler-header img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .action-label {
-    font-size: 0.9rem;
-  }
-
-  .action-effect {
-    font-size: 0.75rem;
-    -line-clamp: 3;
-  }
-
-  .res-pill {
-    font-size: 0.7rem;
-    padding: 4px 8px;
-  }
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    top: 55%;
-  }
-
-  /* Trazendo as setas para mais perto do card central */
-  .nav-btn.prev {
-    left: 8%;
-  }
-  .nav-btn.next {
-    right: 8%;
-  }
-  .encounter-section {
-    /* Aumentamos o padding inferior para empurrar o card para cima do HUD */
-    padding-bottom: 180px;
-    justify-content: center;
-    gap: 30px; /* Cria um respiro automático entre título, card e HUD */
-  }
-
-  .encounter-container {
-    margin-bottom: 0; /* O gap da section já resolve o espaço */
-  }
-
-  .encounter-title {
-    font-size: 1.6rem;
-  }
-
-  .encounter-desc {
-    font-size: 0.85rem;
-    padding: 0 20px;
-  }
-
-  /* Reduzimos um pouco a altura do deck no mobile para sobrar ar */
-  .deck-wrapper {
-    height: 340px;
-    width: 260px;
-  }
-
-  .choice-card {
-    width: 260px;
-    padding: 15px;
-  }
-}
-
 .evaluation-stamp {
   font-family: "BrawlStars-Main", sans-serif;
   font-size: 2.5rem;
@@ -518,7 +350,6 @@
   margin-bottom: 25px;
   opacity: 0;
 
-  /* A animação de pancada */
   animation: stampIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
   animation-delay: 0.1s;
 }
@@ -563,14 +394,14 @@
 }
 
 .added-chaos-indicator.danger {
-  color: #ff4747; /* Vermelho Brawl Stars */
+  color: #ff4747;
   text-shadow:
     2px 2px 0px #000,
     0 0 15px rgba(255, 71, 71, 0.5);
 }
 
 .added-chaos-indicator.safe {
-  color: #a3a3a3; /* Cinza indicando que nada de mau aconteceu */
+  color: #a3a3a3;
   text-shadow: 2px 2px 0px #000;
 }
 
@@ -578,5 +409,74 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .encounter-section {
+    padding-top: 50px;
+    padding-bottom: 110px;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .encounter-container {
+    margin-bottom: 10px;
+  }
+
+  .encounter-title {
+    font-size: 1.5rem;
+    padding: 0 15px;
+    margin-bottom: 10px;
+  }
+
+  .encounter-desc {
+    font-size: 0.9rem;
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  /* --- Cards and nav --- */
+  .brawler-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .action-label {
+    font-size: 0.9rem;
+  }
+
+  .action-effect {
+    font-size: 0.75rem;
+    -line-clamp: 3;
+  }
+
+  .res-pill {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    top: 55%;
+  }
+
+  .nav-btn.prev {
+    left: 8%;
+  }
+  .nav-btn.next {
+    right: 8%;
+  }
+
+  .deck-wrapper {
+    height: 340px;
+    width: 260px;
+  }
+
+  .choice-card {
+    width: 260px;
+    padding: 15px 20px;
   }
 }

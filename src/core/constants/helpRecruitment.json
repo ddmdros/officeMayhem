@@ -1,0 +1,64 @@
+{
+  "en": {
+    "title": "RULES OF CONDUCT",
+    "recruitment": {
+      "title": "RECRUITMENT",
+      "description": "You need to deliver the monthly report to the CEO, but there are many problems along the way... Recruit three Brawlers for your mission and try not to ruin everything!"
+    },
+    "classes": {
+      "title": "CLASSES",
+      "sweetTalk": {
+        "name": "Sweet Talk:",
+        "desc": "Blah, blah, blah! These specialists will try to solve problems through chit-chat."
+      },
+      "brutality": {
+        "name": "Brutality:",
+        "desc": "Ain't nobody got time for that! Brutal ones solve everything with their fists."
+      },
+      "logistics": {
+        "name": "Logistics:",
+        "desc": "With great skills come great... ideas! Resolve conflicts with out-of-the-box thinking."
+      }
+    },
+    "choose": {
+      "title": "CHOOSE THE RIGHT BRAWLER",
+      "description": "Respond to problems with the right Brawler, and what was bad won't get worse, but beware: if you choose an inappropriate Brawler, the office chaos increases!"
+    },
+    "chaos": {
+      "title": "CHAOS",
+      "description": "If the office chaos reaches 100%, Mina has a meltdown, and the mission ends. (Remember that talk about not ruining everything?) Deliver the report to the CEO before the chaos meter hits 100% to win."
+    },
+    "footer": "All set?"
+  },
+  "pt": {
+    "title": "REGRAS DE CONDUTA",
+    "recruitment": {
+      "title": "RECRUTAMENTO",
+      "description": "Você precisa entregar o relatório do mês nas mãos do CEO, mas há muitos problemas pelo caminho... Recrute três Brawlers para a sua missão e tente não estragar tudo!"
+    },
+    "classes": {
+      "title": "CLASSES",
+      "sweetTalk": {
+        "name": "Lábia:",
+        "desc": "Blá, blá, blá! Esses especialistas vão tentar resolver os problemas no tête-à-tête."
+      },
+      "brutality": {
+        "name": "Brutalidade:",
+        "desc": "Sem tempo, irmão! Quem é brutal resolve tudo no socão."
+      },
+      "logistics": {
+        "name": "Logística:",
+        "desc": "Com grandes habilidades vêm grandes... ideias! Resolva conflitos com ideias fora da caixa."
+      }
+    },
+    "choose": {
+      "title": "ESCOLHA O BRAWLER CERTO",
+      "description": "Responda aos problemas com o Brawler certo, e o que era ruim não fica pior, mas atenção: se escolher um Brawler inapropriado, o caos no escritório aumenta!"
+    },
+    "chaos": {
+      "title": "CAOS",
+      "description": "Se o caos do escritório chegar a 100%, a Mina dá um piripaque, e a missão termina. (Lembra aquele papo de não estragar tudo?) Entregue o relatório ao CEO antes do medidor do caos chegar a 100% para vencer."
+    },
+    "footer": "Tudo pronto?"
+  }
+}

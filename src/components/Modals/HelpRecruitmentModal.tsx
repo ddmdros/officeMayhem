@@ -1,47 +1,90 @@
-import React from 'react';
-import "../../styles/HelpRecruitmentModal.css"
-
+import React from "react";
+import { useLanguage } from "../../hooks/useLanguage";
+import helpTextData from "../../core/constants/helpRecruitment.json";
+import "../../styles/HelpRecruitmentModal.css";
 
 interface HelpRecruitmentProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({ isOpen, onClose }) => {
+export const HelpRecruitmentModal: React.FC<HelpRecruitmentProps> = ({
+  isOpen,
+  onClose,
+}) => {
+  const { lang } = useLanguage();
+
   if (!isOpen) return null;
+
+  const content = helpTextData[lang];
 
   return (
     <div className="info-overlay" onClick={onClose}>
       <div className="info-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close-info" onClick={onClose}>×</button>
-        <h3 className="info-title">CORPORATE GUIDELINES</h3>
-        
+        <button className="close-info" onClick={onClose}>
+          ×
+        </button>
+        <h3 className="info-title">{content.title}</h3>
+
         <div className="info-item">
-          <span className="info-icon">🧨</span>
-          <div>
-            <h4>OFFICE CHAOS</h4>
-            <p>The measure of workplace sanity. If this hits 100%, HR (Mina) has a meltdown and the mission is aborted. Keep it low!</p>
+          <h4>{content.recruitment.title}</h4>
+          <p>{content.recruitment.description}</p>
+        </div>
+
+        <div className="info-item">
+          <h4>{content.classes.title}</h4>
+
+          <div className="classes-list">
+            <div className="class-row">
+              <img
+                src="/assets/icons/SweetTalk_icon.png"
+                alt="Lábia"
+                className="custom-class-icon"
+              />
+              <p>
+                <strong>{content.classes.sweetTalk.name}</strong>{" "}
+                {content.classes.sweetTalk.desc}
+              </p>
+            </div>
+
+            <div className="class-row">
+              <img
+                src="/assets/icons/BruteForce_icon.png"
+                alt="Brutalidade"
+                className="custom-class-icon"
+              />
+              <p>
+                <strong>{content.classes.brutality.name}</strong>{" "}
+                {content.classes.brutality.desc}
+              </p>
+            </div>
+
+            <div className="class-row">
+              <img
+                src="/assets/icons/Logistics_icon.png"
+                alt="Logística"
+                className="custom-class-icon"
+              />
+              <p>
+                <strong>{content.classes.logistics.name}</strong>{" "}
+                {content.classes.logistics.desc}
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="info-item">
-          <span className="info-icon">⏰</span>
-          <div>
-            <h4>OVERTIME</h4>
-            <p>Your shift is ticking. Poor decisions add hours to your workday. Reach 100% and you're stuck in the office... forever.</p>
-          </div>
+          <h4>{content.choose.title}</h4>
+          <p>{content.choose.description}</p>
         </div>
 
         <div className="info-item">
-          <span className="info-icon">🏢</span>
-          <div>
-            <h4>SPECIALISTS</h4>
-            <p>Each Class (Tank, Support, etc.) reacts differently to crises. Strategy isn't about numbers anymore; it's about who you trust to fix the copier.</p>
-          </div>
+          <h4>{content.chaos.title}</h4>
+          <p>{content.chaos.description}</p>
         </div>
 
         <div className="info-footer">
-          <p>“Safety is a suggestion. Productivity is a requirement.” — Starr Corp Management</p>
+          <p>{content.footer}</p>
         </div>
       </div>
     </div>
